@@ -1,11 +1,11 @@
 # Site settings
-title: Salman Shah
-email: sbs.191197@gmail.com
+title: "Salman Shah"
+email: "sbs.191197@gmail.com"
 description: "The Life of an AI Student"
 baseurl: ""
 url: "http://salman-bhai.github.io"
-twitter_username: salman-bhai
-github_username:  salman-bhai
+twitter_username: "salman-bhai"
+github_username:  "salman-bhai"
 
 # Build settings
 markdown: kramdown
