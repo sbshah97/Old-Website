@@ -3,7 +3,7 @@ layout: post
 comments: true
 title:  "Artificial Intelligence - Do we need to fear it?"
 excerpt: "The field of AI has been booming in recent years. "
-date:   2016-09-07 11:00:00
+date:   2016-11-06 12:00:00
 mathjax: false
 ---
 
