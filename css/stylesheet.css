@@ -6,6 +6,8 @@ body {
 .card {
 	margin-right: 40px;
 	margin-left: 40px;
+	max-width: 760px;
+	vertical-align: center;
 }
 
 nav .nav-wrapper {
