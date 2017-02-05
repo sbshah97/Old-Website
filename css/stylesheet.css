@@ -1,14 +1,14 @@
 body {
 	background-color: rgb(223, 234, 237);
-	text-align: center;
 }
 
 .card {
 	margin-right: 40px;
 	margin-left: 40px;
 	max-width: 760px;
-	vertical-align: center;
 }
+
+
 
 nav .nav-wrapper {
 	background: #00C853;

@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html>
 
-  <head>
-  	<!--Page Title-->
-  	<title>Salman Shah</title>
+<head>
+	<!--Page Title-->
+	<title>Salman Shah</title>
 
-  	<!--Meta tags-->
+	<!--Meta tags-->
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width; initial-scale=1; maximum-scale=1">
 	<meta name="keywords" content="Salman Shah, Intern, Data Science, Machine Learning">
-  	<meta name="author" content="Salman Shah">
+	<meta name="author" content="Salman Shah">
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 
 	<!--CSS Files-->
@@ -24,10 +24,80 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js">
 	</script>
 	<script type="text/javascript" src="js/home.js"></script>
-  </head>
+</head>
 
-  <body onload="init()">
+<body onload="init()">
+	<!--Nav Header-->
+	<header>
+
+		<nav>
+			<div class="nav-wrapper">
+				<ul id="nav-mobile" class="right hide-on-med-and-down">
+					<li><a href="index.html">Home</a></li>
+					<li><a href="projects.html">Projects</a></li>
+					<li><a href="experience.html">Experience</a></li>
+					<li><a href="academics.html">Academics</a></li>
+				</ul>
+			</div>
+		</nav>
+
+	</header>
 
 
-  </body>
+	<main>
+		<div class="container">
+			<div class="card">
+				<div class="card-content" style="position: relative;">
+					<h3>Contact</h3>
+					<div class="row" style="margin-left: -40px !important;">
+						<div class="input-field col s12 m6 l6">
+							<i class="material-icons prefix"></i>
+							<label for="name">Name<font color="red">*</font></label>
+							<input id="name" type="text" class="validate">
+						</div>
+						<div class="input-field col s12 m6 l6">
+							<i class="material-icons prefix"></i>
+							<input id="email" type="email" class="validate">
+							<label for="email">E-Mail<font color="red">*</font></label>
+						</div>
+						<div class="input-field col s12">
+							<i class="material-icons prefix"></i>
+							<textarea id="msg" class="materialize-textarea"></textarea>
+							<label for="msg">Message<font color="red">*</font></label>
+							<button class="btn waves-effect waves-light green right" id="send" onclick="sendMail()">Submit
+								<i class="material-icons right">send</i>
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</main>    
+
+	<!--Footer Here-->
+	<footer class="page-footer">
+		<div class="container">
+			<div class="row">
+				<div class="col l4 offset-l2 s12">
+					<h5 class="white-text">Links</h5>
+					<ul>
+						<li><a class="grey-text text-lighten-3" href="index.html">Home</a></li>
+						<li><a class="grey-text text-lighten-3" href="projects.html">Projects</a></li>
+						<li><a class="grey-text text-lighten-3" href="experience.html">Experience</a></li>
+						<li><a class="grey-text text-lighten-3" href="academics.html">Academics</a></li>
+						<li><a class="grey-text text-lighten-3" href="resume.html">Resume</a></li>
+						<li><a class="grey-text text-lighten-3" href="contact.html">Contact Me</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="footer-copyright">
+			<div class="container">
+				© 2016 Salman Shah
+			</div>
+		</div>
+	</footer>
+
+
+</body>
 </html>
