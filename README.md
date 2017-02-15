@@ -13,3 +13,35 @@
 - [] Change Favicon image quality
 - [] Optimise all images for the website.
 - [] Take screenshots of all the projects done till now!
+
+## List of projects to put up
+
+* Android 
+	* WOR App
+	* ChangePay App
+	* Notes-Nearby
+	* Tic-Tac-Toe
+	* Chess Game
+
+* Web
+	* WOR Website
+
+* Extensions - Chrome and Mozilla
+	* Wheels On Roll
+	* ChangePay
+
+* Python
+	* BattleShip
+	* WhatsApp Web
+	* Music-Share
+
+* C++
+	* E-Manager
+
+* JavaScript
+	* Hand Cricket
+	* JavaScript Designs
+	* Rock-Paper-Scissors
+
+* Java
+	* FTP - Server and Client
