@@ -1,5 +1,5 @@
 body {
-	background-color: rgb(223, 234, 237);
+	background-color: #e8f5e9;
 }
 
 .card {
@@ -9,11 +9,11 @@ body {
 }
 
 nav .nav-wrapper {
-	background: #00C853;
+	background: #1565c0;
 }
 
 footer.page-footer {
-	background-color: #00C853; 
+	background-color: #1565c0; 
 	margin: 0%;
 }
 

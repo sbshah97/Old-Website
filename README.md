@@ -10,12 +10,12 @@
 - [] Add Big Image same as WOR Website!
 - [] Work on Parallel branches for each of the web pages
 - [x] Write content for the Home Page and then later improvise it. 
-- [] Change Favicon image quality
+- [x] Change Favicon image quality
 - [] Optimise all images for the website.
 - [] Take screenshots of all the projects done till now!
 - [] Add images of GitHub, Facebook, LinkedIn and Instagram on the footer!
 - [] Add Side Nav Bar for the website!
-- [] Make common Header and Footer and call via JavaScript function.
+- [x] Make common Header and Footer and call via JavaScript function.
 
 ## List of projects to put up
 
