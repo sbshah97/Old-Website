@@ -2,6 +2,13 @@ body {
 	background-color: #e8f5e9;
 }
 
+.panel {
+	z-index:-1;
+	width: 100%;
+	background-color: #1565c0;
+	margin-bottom: -120px;
+}
+
 .card {
 	margin-right: 40px;
 	margin-left: 40px;
