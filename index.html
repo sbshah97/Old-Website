@@ -25,10 +25,10 @@
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js">
 		</script>
 		<script type="text/javascript" src="js/lib/jquery-1.11.1.min.js" ></script>
-   		<script> 
-    	 	$(function(){ $("#header").load("header.html") });
-   			$(function(){ $("#footer").load("footer.html") });
-   		</script>
+ 		<script> 
+  	 		$(function(){ $("#header").load("header.html") });
+ 			$(function(){ $("#footer").load("footer.html") });
+ 		</script>
   </head>
 
   <body onload="init()">
@@ -37,47 +37,98 @@
 
   	</div>
 
-	<main>
+		<main>
 
-		<!--Beginning Card-->
-
-		<div class="intro">
-			<div class="card">
-				<div class="card-content">
-					<div class="row valign-wrapper">
-						<div class="col s12 m4 l4 valign-wrapper">
-							<img src="images/bhai.jpg" alt="Salman" class="circle responsive-img">
+			<!--Beginning Card-->
+			<div class="container">
+				<div class="card">
+					<div class="card-content">
+						<div class="row valign-wrapper">
+							<div class="col s12 m4 l4 valign-wrapper">
+								<img src="images/bhai.jpg" alt="Salman" class="circle responsive-img">
+							</div>
+							<div class="col s12 m10 l10">
+								<h4>Welcome to my Website</h4><br>
+								I am a sophomore year undergraduate student from India. currently studying B. Tech in the IT Department in NITK Surathkal - Karnataka.</br>
+								I love to code as well as write articles for my blogs. 
+								I love exploring different areas in the field of Computer Science</br>  
+								I love working as a team. I usually team up with my friend Hrily and try to do different projects in the field of Computer Science. I am looking to work as a freelance developer for the next few months before my Summer Internship.
+							</div>
 						</div>
+					</div>
+				</div>
+			</div>
+
+			<!--Carousel -->
+			<div class="container slider-container">
+		    <div class="card slider-container" style="position: relative;">
+		     <div class="slider">
+		        <ul class="slides">
+		          <li>
+		            <img src="images/carousel_image_1.jpg"> 
+		          </li>
+		          <li>
+		            <img src="images/carousel_image_2.jpg"> 
+		          </li>
+		          <li>
+		            <img src="images/carousel_image_3.jpg"> 
+		          </li>
+		          <li>
+		            <img src="images/carousel_image_1.jpg"> 
+		          </li>
+		          <li>
+		            <img src="images/carousel_image_2.jpg"> 
+		          </li>
+		        </ul>
+		      </div>
+		    </div>	
+			</div>
+
+			<!--Second About Card-->
+			<div class="container">
+				<div class="card">
+					<div class="card-content">
 						<div class="col s12 m10 l10">
-							<h4>Welcome to my Website</h4><br>
-							I am a sophomore year undergraduate student from India. currently studying B. Tech in the IT Department in NITK Surathkal - Karnataka.</br>
-							I love to code as well as write articles for my blogs. 
-							I love exploring different areas in the field of Computer Science</br>  
-							I love working as a team. I usually team up with my friend Hrily and try to do different projects in the field of Computer Science. I am looking to work as a freelance developer for the next few months before my Summer Internship.
+							<h4>About Me</h4></br>
+							I am 19 years old (though I feel way older these days). I am mostly in front of my laptop the entire day either doing my projects or writing articles for my blogs.</br>
+							I try to achieve as much as I can and make the maximum of my efforts. I like to learn different skills while browsing the internet! I love reading novels especially the fiction genre. But somehow as I grew older, I haven't been getting much time to read them!</br>
+							I am a huge cricket fan! Even though I don't get to watch matches live these days, I still keep track of the score through mobile apps! My dream is to create a fully functional Artificially Intelligent (AI) personal assistant for myself as I am very careless and often misplace my stuff! 
 						</div>
 					</div>
 				</div>
 			</div>
-		</div>
 
-		<div class="intro">
-			<div class="card">
-				<div class="card-content">
-					<div class="col s12 m10 l10">
-						<h4>About Me</h4></br>
-						I am 19 years old (though I feel way older these days). I am mostly in front of my laptop the entire day either doing my projects or writing articles for my blogs.</br>
-						I try to achieve as much as I can and make the maximum of my efforts. I like to learn different skills while browsing the internet! I love reading novels especially the fiction genre. But somehow as I grew older, I haven't been getting much time to read them!</br>
-						I am a huge cricket fan! Even though I don't get to watch matches live these days, I still keep track of the score through mobile apps! My dream is to create a fully functional Artificially Intelligent (AI) personal assistant for myself as I am very careless and often misplace my stuff! 
+			<!--Contact form-->
+			<div class="container">
+				<div class="card">
+					<div class="card-content" style="position: relative;">
+						<h3>Contact</h3>
+						<div class="row" style="margin-left: -40px !important;">
+							<div class="input-field col s12 m6 l6">
+								<i class="material-icons prefix"></i>
+								<label for="name">Name<font color="red">*</font></label>
+								<input id="name" type="text" class="validate">
+							</div>
+							<div class="input-field col s12 m6 l6">
+								<i class="material-icons prefix"></i>
+								<input id="email" type="email" class="validate">
+								<label for="email">E-Mail<font color="red">*</font></label>
+							</div>
+							<div class="input-field col s12">
+								<i class="material-icons prefix"></i>
+								<textarea id="msg" class="materialize-textarea"></textarea>
+								<label for="msg">Message<font color="red">*</font></label>
+								<button class="btn waves-effect waves-light pink right" id="send" onclick="sendMail()">Submit
+									<i class="material-icons right">send</i>
+								</button>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
-		</div>
-	
-	</main>
 
-	<div id="footer">
+		</main>
 
-	</div>
-
+		<div id="footer"></div>
   </body>
 </html>

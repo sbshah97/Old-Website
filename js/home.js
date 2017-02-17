@@ -1,6 +1,7 @@
 function init() {
 	$(document).ready(function(){
-      $('.carousel').carousel();
+		$('.carousel').carousel();
+		$('.slider').slider({'interval': 4000});
     });
 
 	$( document ).ready(function() {

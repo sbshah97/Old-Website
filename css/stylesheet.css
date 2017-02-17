@@ -5,7 +5,6 @@ body {
 .panel {
 	z-index:-1;
 	width: 100%;
-	background-color: #1565c0;
 	margin-bottom: -120px;
 }
 
@@ -16,18 +15,10 @@ body {
 }
 
 nav .nav-wrapper {
-	background: #1565c0;
 }
 
 footer.page-footer {
-	background-color: #1565c0; 
 	margin: 0%;
-}
-
-.intro {
-	margin-left: 15%;
-	margin-right: 10%;
-	padding-top: 2%; 
 }
 
 .contact {
@@ -55,3 +46,16 @@ footer.page-footer {
 	position: relative;
 	margin-top: 5%;
 }
+
+.carousel img {
+	min-height: 100%;
+}
+
+.slider {
+	height: auto !important;
+}
+
+.slider .slides, .slider li, .photos {
+	max-height: 57vw !important;
+}
+
