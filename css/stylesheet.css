@@ -9,13 +9,9 @@ body {
 }
 
 .card {
-	margin-right: 40px;
-	margin-left: 40px;
 	max-width: 800px;
 }
 
-nav .nav-wrapper {
-}
 
 footer.page-footer {
 	margin: 0%;
@@ -49,13 +45,5 @@ footer.page-footer {
 
 .carousel img {
 	min-height: 100%;
-}
-
-.slider {
-	height: auto !important;
-}
-
-.slider .slides, .slider li, .photos {
-	max-height: 57vw !important;
 }
 
