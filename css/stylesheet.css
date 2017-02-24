@@ -17,8 +17,6 @@ body h1, body h2, body h3, body h4, body h5 {
 
 p {
  	font-size: 1.0em;
-	text-transform:uppercase;
- 	letter-spacing:2px; 
 }
 
 li {
@@ -37,15 +35,20 @@ p img {
 
 .bg-img {
 	position:absolute;
-	top:40%;
-	left:28%;
-	transform: translateY(-50%);
+	top:30%;
+	left:50%;
+	transform: translateX(-50%);
+}
+
+.bg-img img {
+	width: 100%;
 }
 
 .header-icons {
 	position: absolute;
 	top: 60%;
-	left: 40%;
+	left: 50%;
+	transform: translateX(-50%);	
 }
 
 
