@@ -1,6 +1,53 @@
 body {
 	background-color: #e8f5e9;
+	font-size: 1.2em;
+	font-family: cursive;
 }
+
+body h1, body h2, body h3, body h4, body h5 {
+	text-align: center;
+	font-family:Georgia,serif;
+ 	color:#4E443C;
+ 	font-variant: small-caps; 
+ 	text-transform: none; 
+ 	font-weight: 100; 
+ 	margin-bottom: 2%;
+ 
+}
+
+p {
+ 	font-size: 1.0em;
+	text-transform:uppercase;
+ 	letter-spacing:2px; 
+}
+
+li {
+	font-family: "Helvetica Neue", "Lucida Grande", Helvetica, Arial, Verdana, sans-serif;
+    font-size: 20px;
+    margin-top: .5em; 
+    color: #666;
+}
+
+p img {
+	max-width: 90%;
+	display: block;
+    margin: 0 auto;
+    padding: 2%;
+}
+
+.bg-img {
+	position:absolute;
+	top:40%;
+	left:28%;
+	transform: translateY(-50%);
+}
+
+.header-icons {
+	position: absolute;
+	top: 60%;
+	left: 40%;
+}
+
 
 .panel {
 	z-index:-1;
@@ -10,14 +57,32 @@ body {
 
 .card {
 	max-width: 800px;
+	margin-right: 40px;
+	margin-left: 40px;
 }
 
-
 footer.page-footer {
+	text-align: center;
 	margin: 0%;
 }
 
+.footer-text {
+	font-family: times-roman;
+	font-size: 17px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 25px;
+}
+
 .contact {
+	color: #424242;
+    font-family: "Adobe Caslon Pro", "Hoefler Text", Georgia, Garamond, Times, serif;
+	letter-spacing:0.1em;
+	text-align:center;
+	text-transform: lowercase;
+	line-height: 145%;
+	font-size: 14pt;
+	font-variant: small-caps; 
 	padding-left: 10%;
 }
 
@@ -47,3 +112,7 @@ footer.page-footer {
 	min-height: 100%;
 }
 
+pre {
+	padding: 10px;
+	background-color: #dddddd;
+}
