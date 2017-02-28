@@ -1,3 +1,7 @@
+#nav-mobile li, #nav-mobile li a{
+	display:inline-block;
+}
+
 body {
 	background-color: #e8f5e9;
 	font-size: 1.2em;
