@@ -1,5 +1,6 @@
 #nav-mobile li, #nav-mobile li a{
 	display:inline-block;
+	box-sizing: initial;
 }
 
 body {
@@ -125,4 +126,37 @@ footer.page-footer {
 pre {
 	padding: 10px;
 	background-color: #dddddd;
+}
+
+
+@media only screen and (max-width : 720px) {
+	.panel, .header-icons {
+		width: 100%;
+	}
+
+	.header-icons {
+		top:82%;
+		left: 50%;
+		transform: translateX(-50%);
+	}
+
+	.icon-image {
+		text-align: center;
+	}
+
+	.nav-wrapper {
+		overflow-y: hidden; 
+		overflow-x: scroll;
+		height: 100%; 
+	}
+
+	#nav-mobile {
+		height: 100%;
+		width:120%;
+		position: absolute;
+	}
+
+	#nav-mobile li, #nav-mobile li a{
+		height:100%;
+	}
 }
