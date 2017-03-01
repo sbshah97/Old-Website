@@ -26,7 +26,6 @@ p {
 li {
 	font-family: "Helvetica Neue", "Lucida Grande", Helvetica, Arial, Verdana, sans-serif;
     font-size: 20px;
-    margin-top: .5em; 
     color: #666;
 }
 
@@ -39,7 +38,7 @@ p img {
 
 .bg-img {
 	position:absolute;
-	top:18%;
+	top:12%;
 	left:50%;
 	transform: translateX(-50%);
 }
@@ -52,7 +51,7 @@ p img {
 
 .header-icons {
 	position: absolute;
-	top: 60%;
+	top: 50%;
 	left: 50%;
 	transform: translateX(-50%);	
 }
