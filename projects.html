@@ -25,7 +25,10 @@
 	<script type="text/javascript" src="js/home.js"></script>
   	<script> 
  		$(function(){ $("#header").load("header.html") });
-		$(function(){ $("#footer").load("footer.html") });
+		$(function(){ $("#footer").load("footer.html") });	
+	  $(document).ready(function(){
+	    $('ul.tabs').tabs(swipeable, true);
+	  });
 	</script>
   </head>
 
@@ -55,9 +58,24 @@
 				</div>
 			</div>
 
+			<div class="container">
+				<div class=card-horizontal>
+					<ul id="tabs-swipe-demo" class="tabs">
+				    <li class="tab col s3"><a class="active" href="#test-swipe-1">Featured Projects</a></li>
+				    <li class="tab col s3"><a href="#test-swipe-2">Android</a></li>
+				    <li class="tab col s3"><a href="#test-swipe-3">Web</a></li>
+				    <li class="tab col s3"><a href="#test-swipe-4">ML</a></li>
+				    <li class="tab col s3"><a href="#test-swipe-5">Application</a></li>
+				    <li class="tab col s3"><a href="#test-swipe-6">CP</a></li>
+				    <li class="tab col s3"><a href="#test-swipe-7">Others</a></li>
+				  </ul>
+			  </div>
+			</div>
+		  
+		  <div id="test-swipe-1" class="col s12">
   		<!--Project 1-->
   		<div class="container">
-		    <div class="card horizontal">
+  		  <div class="card horizontal">
 		      <div class="row">
 		      	<div class="col s6">
 			      		<img src="images/project11.png" class="responsive-img" style="padding:5%"> 
@@ -89,43 +107,47 @@
 			  	</div>
 			  </div>
 			</div>
+			</div>
+
+		  <div id="test-swipe-2" class="col s12">
  
 			<!--Project 2-->
 	    <div class="container">
-	    <div class="card horizontal">
-	      <div class="row">
-	      	<div class="col s6">
-		      		<img src="images/project21.jpeg" class="responsive-img" style="padding:25%"> 
-	    		</div>
-	    		<div class="col s6">
-			  		<div class="card-stacked">
-		        	<div class="card-title">
-		          	<h4 style="text-align:center">E Manager</h4>
-		        	</div>
-		        	<div class="card-content">
-		        		<p>Expense Manager tool written in C++ to compute and manage expenses for a particular individual.</p>
-			        </div>
-			        <div class="card-content">
-			        	<div class="row">
-			        		<div class="col s4">
-			        			<div class="card-action">
-			        				<a href="https://github.com/salman-bhai/E-Manager/blob/master/README.md">README</a>
-			        			</div>
-			        		</div>
-			        		<div class="col s6 push-s1">
-			        			<div class="card-action">
-			        				<a href="https://github.com/salman-bhai/E-Manager">Source Code</a>
-			        			</div>
-			        		</div>
+		    <div class="card horizontal">
+		      <div class="row">
+		      	<div class="col s6">
+			      		<img src="images/project21.jpeg" class="responsive-img" style="padding:25%"> 
+		    		</div>
+		    		<div class="col s6">
+				  		<div class="card-stacked">
+			        	<div class="card-title">
+			          	<h4 style="text-align:center">E Manager</h4>
 			        	</div>
-			        </div>
-			      </div>
-			    </div>
-		  	</div>
+			        	<div class="card-content">
+			        		<p>Expense Manager tool written in C++ to compute and manage expenses for a particular individual.</p>
+				        </div>
+				        <div class="card-content">
+				        	<div class="row">
+				        		<div class="col s4">
+				        			<div class="card-action">
+				        				<a href="https://github.com/salman-bhai/E-Manager/blob/master/README.md">README</a>
+				        			</div>
+				        		</div>
+				        		<div class="col s6 push-s1">
+				        			<div class="card-action">
+				        				<a href="https://github.com/salman-bhai/E-Manager">Source Code</a>
+				        			</div>
+				        		</div>
+				        	</div>
+				        </div>
+				      </div>
+				    </div>
+			  	</div>
+			  </div>
 		  </div>
 		  </div>
 
-
+		  <div id="test-swipe-3" class="col s12">
 			<!--Project 3-->
 			<div class="container">
 		    <div class="card horizontal">
@@ -265,7 +287,8 @@
 			  	</div>
 			  </div>
 			</div>
-	
+			</div>
+
   	</main>
 
   	<div id="footer">
