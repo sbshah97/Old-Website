@@ -1,253 +1,225 @@
 var featured_projects = [
 	{
 		"title":"Notes Nearby",
-		"image":"",
-		"description":"",
-		"github_link":"",
-		"readme_link":""
+		"image":"android_notes_nearby.png",
+		"description":" Augmented Reality App built both for Android as well as iOS which allows users to navigate using the phone's camera.",
+		"github_link":"https://github.com/salman-bhai/NotesNearby",
+		"readme_link":"https://github.com/salman-bhai/NotesNearby/blob/master/README.md"
 	},
 	{
 		"title":"NITK Website",
-		"image":"",
-		"description":"",
-		"github_link":"",
-		"readme_link":""
+		"image":"web_nitk_website.png",
+		"description":" [ONGOING] Front End code for NITK Website using HTML, CSS and JavaScript. Front End frameworks used are Bootstrap and jQuery. ",
+		"github_link":"https://github.com/salman-bhai/NITKWebsite",
+		"readme_link":"https://github.com/salman-bhai/NITKWebsite/blob/master/README.md"
 	},
 	{
 		"title":"WhatsApp Web",
-		"image":"",
-		"description":"",
-		"github_link":"",
-		"readme_link":""
+		"image":"app_dev_whatsapp_web.png",
+		"description":" Parsing WhatsApp Web on the Linux Terminal and using the terminal with advanced functionality like creating local backups of chats and implementing a chat bot for WhatsApp ",
+		"github_link":"https://github.com/salman-bhai/WhatsApp-Web",
+		"readme_link":"https://github.com/salman-bhai/WhatsApp-Web/blob/master/README.md"
 	},
 	{
 		"title":"Tic Tac Toe",
-		"image":"",
-		"description":"",
-		"github_link":"",
-		"readme_link":""
-	},
-	{
-		"title":"SimpleDB",
-		"image":"",
-		"description":"",
-		"github_link":"",
-		"readme_link":""
+		"image":"app_dev_tictactoe.png",
+		"description":" Simple Tic Tac Toe game to learn Object Oriented Concepts and implementation of Greedy Algorithms ",
+		"github_link":"https://github.com/salman-bhai/TicTacToe",
+		"readme_link":"https://github.com/salman-bhai/TicTacToe/blob/master/README.md"
 	},
 	{
 		"title":"Stockify",
-		"image":"",
-		"description":"",
-		"github_link":"",
-		"readme_link":""
+		"image":"ml_stockify.png",
+		"description":" Predicting Stocks based on News Articles ",
+		"github_link":"https://github.com/salman-bhai/stockify",
+		"readme_link":"https://github.com/salman-bhai/stockify/blob/master/README.md"
 	},
 	{
 		"title":"Battleship",
-		"image":"",
-		"description":"",
-		"github_link":"",
-		"readme_link":""
+		"image":"ml_battleship.png",
+		"description":"[ONGOING] Game of Battleship using Python 3.5 and Artificial Intelligence algorithms ",
+		"github_link":"https://github.com/salman-bhai/battleship",
+		"readme_link":"https://github.com/salman-bhai/battleship/blob/master/README.md"
 	},
 	{
 		"title":"Oak Crest",
-		"image":"",
-		"description":"",
-		"github_link":"",
-		"readme_link":""
+		"image":"web_oak_crest.png",
+		"description":" [ONGOING] Hospital Management System with Android, iOS, Flask App and ChatBot ",
+		"github_link":"https://github.com/salman-bhai/oak-crest",
+		"readme_link":"https://github.com/salman-bhai/oak-crest/blob/master/README.md"
 	},
 ]
 
 var android = [
 	{
 		"title":"Notes Nearby",
-		"image":"",
-		"description":"",
-		"github_link":"",
-		"readme_link":""
+		"image":"android_notes_nearby.png",
+		"description":" Augmented Reality App built both for Android as well as iOS which allows users to navigate using the phone's camera. ",
+		"github_link":"https://github.com/salman-bhai/NotesNearby",
+		"readme_link":"https://github.com/salman-bhai/NotesNearby/blob/master/README.md"
 	},
 	{
 		"title":"Oak Crest",
-		"image":"",
-		"description":"",
-		"github_link":"",
-		"readme_link":""
+		"image":"web_oak_crest.png",
+		"description":" [ONGOING] Hospital Management System with Android, iOS, Flask App and ChatBot ",
+		"github_link":"https://github.com/salman-bhai/oak-crest",
+		"readme_link":"https://github.com/salman-bhai/oak-crest/blob/master/README.md"
 	},
 	{
 		"title":"Bookify",
-		"image":"",
-		"description":"",
-		"github_link":"",
-		"readme_link":""
+		"image":"android_bookify.png",
+		"description":" [ONGOING] A social app to unite book-lovers over Coffee! ",
+		"github_link":"https://github.com/salman-bhai/Coffee-App",
+		"readme_link":"https://github.com/salman-bhai/Coffee-App/blob/master/README.md"
 	},
-	{
-		"title":"Wheels On Roll",
-		"image":"",
-		"description":"",
-		"github_link":"",
-		"readme_link":""
-	},
-	{
-		"title":"ChangePay",
-		"image":"",
-		"description":"",
-		"github_link":"",
-		"readme_link":""
-	}
 ]
 
 var web = [
 	{
 		"title":"NITK Website",
-		"image":"",
-		"description":"",
-		"github_link":"",
-		"readme_link":""
+		"image":"web_nitk_website.png",
+		"description":" [ONGOING] Front End code for NITK Website using HTML, CSS and JavaScript. Front End frameworks used are Bootstrap and jQuery.",
+		"github_link":"https://github.com/salman-bhai/NITKWebsite",
+		"readme_link":"https://github.com/salman-bhai/NITKWebsite/blob/master/README.md"
 	},
 	{
 		"title":"Raj Housing",
-		"image":"",
-		"description":"",
-		"github_link":"",
-		"readme_link":""
+		"image":"web_raj_housing.png",
+		"description":" Front End website for Raj Housing a Real Estate company based in Mumbai. Website link: https://salman-bhai.github.io/RajHousing ",
+		"github_link":"https://github.com/salman-bhai/RajHousing",
+		"readme_link":"https://github.com/salman-bhai/RajHousing/blob/master/README.md"
 	},
 	{
 		"title":"Co-Op Management System",
-		"image":"",
-		"description":"",
-		"github_link":"",
-		"readme_link":""
+		"image":"web_co-op.png",
+		"description":" [ONGOING] Front End website for Co Op Management System for NITK Co-Operative Society http://salman-bhai.github.io/Co-Op-Management-System",
+		"github_link":"https://github.com/salman-bhai/Co-Op-Management-System",
+		"readme_link":"https://github.com/salman-bhai/Co-Op-Management-System/blob/master/README.md"
 	},
 	{
 		"title":"Movies",
-		"image":"",
-		"description":"",
-		"github_link":"",
-		"readme_link":""
+		"image":"web_movies.png",
+		"description":" [ONGOING] A Ruby on Rails Web App to view user reviews on recently released movies that are present! ",
+		"github_link":"https://github.com/salman-bhai/movies",
+		"readme_link":"https://github.com/salman-bhai/movies/blob/master/README.md"
 	},
 	{
 		"title":"Oak Crest",
-		"image":"",
-		"description":"",
-		"github_link":"",
-		"readme_link":""
+		"image":"web_oak_crest.png",
+		"description":"[ONGOING] Hospital Management System with Android, iOS, Flask App and ChatBot ",
+		"github_link":"https://github.com/salman-bhai/oak-crest",
+		"readme_link":"https://github.com/salman-bhai/oak-crest/blob/master/README.md"
 	},
 	{
-		"title":"My Website and Blog",
-		"image":"",
-		"description":"",
-		"github_link":"",
-		"readme_link":""
+		"title":"My Website",
+		"image":"web_my_website.png",
+		"description":"Personal Website",
+		"github_link":"https://github.com/salman-bhai/My-Website",
+		"readme_link":"https://github.com/salman-bhai/My-Website/blob/master/README.md"
 	},
 	{
-		"title":"ChangePay Website",
-		"image":"",
-		"description":"",
-		"github_link":"",
-		"readme_link":""
+		"title":"My Blog",
+		"image":"web_blog.png",
+		"description":"Blog",
+		"github_link":"https://github.com/salman-bhai/Blog",
+		"readme_link":"https://github.com/salman-bhai/Blog/blob/master/README.md"
 	},
 	{
 		"title":"Wheels On Roll Website",
-		"image":"",
-		"description":"",
-		"github_link":"",
-		"readme_link":""
+		"image":"web_wheelsonroll.png",
+		"description":" Static Website for Wheels On Roll, a startup to let users book cycles from docking stations in NITK Campus! Website : https://wheelsonroll.com",
+		"github_link":"https://github.com/WheelsOnRoll/WORWebsite",
+		"readme_link":"https://github.com/WheelsOnRoll/WORWebsite/blob/master/README.md"
 	}
 ]
 
 var ml = [
 	{
 		"title":"Deep NLP",
-		"image":"",
-		"description":"",
-		"github_link":"",
-		"readme_link":""
+		"image":"ml_deep_nlp.png",
+		"description":" Repository for code pertaining to the Deep Learning with NLP Project undertaken by NITK IEEE AI Group",
+		"github_link":"https://github.com/IEEE-NITK/DeepNLP",
+		"readme_link":"https://github.com/IEEE-NITK/DeepNLP/blob/master/README.md"
 	},
 	{
 		"title":"BattleShip",
-		"image":"",
-		"description":"",
-		"github_link":"",
-		"readme_link":""
+		"image":"ml_battleship.png",
+		"description":" [ONGOING] Game of Battleship using Python 3.5 and Artificial Intelligence algorithms ",
+		"github_link":"https://github.com/salman-bhai/battleship",
+		"readme_link":"https://github.com/salman-bhai/battleship/blob/master/README.md"
 	},
 	{
 		"title":"Sentiment Analysis",
-		"image":"",
-		"description":"",
-		"github_link":"",
-		"readme_link":""
+		"image":"ml_senti.png",
+		"description":" [ONGOING] Sentiment Analysis for various datsets found from Kaggle ",
+		"github_link":"https://github.com/salman-bhai/sentiment-analysis",
+		"readme_link":"https://github.com/salman-bhai/sentiment-analysis/blob/master/README.md"
 	},
 		{
 		"title":"MovieLens Movie Reviews",
-		"image":"",
-		"description":"",
-		"github_link":"",
-		"readme_link":""
+		"image":"ml_movielens.png",
+		"description":" [ONGOING] MovieLens Dataset to be used for training reviews for models",
+		"github_link":"https://github.com/salman-bhai/movielens",
+		"readme_link":"https://github.com/salman-bhai/movielens/blob/master/README.md"
 	},
 	{
 		"title":"Pong Game",
-		"image":"",
-		"description":"",
-		"github_link":"",
-		"readme_link":""
+		"image":"ml_pong.png",
+		"description":" Ping Pong Game using Kivy and Python using OOP and implementing Reinforcement Learning for CPU Opponent Player ",
+		"github_link":"https://github.com/salman-bhai/Pong-Game",
+		"readme_link":"https://github.com/salman-bhai/Pong-Game/blob/master/README.md"
 	},
 	{
 		"title":"Stockify",
-		"image":"",
-		"description":"",
-		"github_link":"",
-		"readme_link":""
-	},
-	{
-		"title":"AABO",
-		"image":"",
-		"description":"",
-		"github_link":"",
-		"readme_link":""
+		"image":"ml_stockify.png",
+		"description":" Predicting Stocks based on News Articles",
+		"github_link":"https://github.com/salman-bhai/stockify",
+		"readme_link":"https://github.com/salman-bhai/stockify/blob/master/README.md"
 	}
 ]
 
 var app_dev = [
 	{
 		"title":"E-Manager",
-		"image":"",
-		"description":"",
-		"github_link":"",
-		"readme_link":""
+		"image":"app_dev_e_manager.jpeg",
+		"description":" Used to calculate expenses for a single month using certain self-developed algorithms",
+		"github_link":"https://github.com/salman-bhai/E-Manager",
+		"readme_link":"https://github.com/salman-bhai/E-Manager/blob/master/README.md"
 	},
 	{
 		"title":"Hand Cricket",
-		"image":"",
-		"description":"",
-		"github_link":"",
-		"readme_link":""
+		"image":"app_dev_hand_cricket.png",
+		"description":"Simple Cricket Game to learn JavaScript",
+		"github_link":"https://github.com/salman-bhai/HandCricket",
+		"readme_link":"https://github.com/salman-bhai/HandCricket/blob/master/README.md"
 	},
 	{
 		"title":"WhatsApp Web",
-		"image":"",
-		"description":"",
-		"github_link":"",
-		"readme_link":""
+		"image":"app_dev_whatsapp_web.png",
+		"description":" Parsing WhatsApp Web on the Linux Terminal and using the terminal with advanced functionality like creating local backups of chats and implementing a chat bot for WhatsApp ",
+		"github_link":"https://github.com/salman-bhai/WhatsApp-Web",
+		"readme_link":"https://github.com/salman-bhai/WhatsApp-Web/blob/master/README.md"
 	},
 	{
 		"title":"Tic Tac Toe",
-		"image":"",
-		"description":"",
-		"github_link":"",
-		"readme_link":""
+		"image":"app_dev_tictactoe.png",
+		"description":" Simple Tic Tac Toe game to learn Object Oriented Concepts and implementation of Greedy Algorithms",
+		"github_link":"https://github.com/salman-bhai/TicTacToe",
+		"readme_link":"https://github.com/salman-bhai/TicTacToe/blob/master/README.md"
 	},
 	{
 		"title":"Chess Using OpenGL",
-		"image":"",
-		"description":"",
-		"github_link":"",
-		"readme_link":""
+		"image":"app_dev_chess.png",
+		"description":" Two-Player Multiplayer Chess-Game built using Open-GL in C++. Includes Move Validation and Path Guidance once when user selects a particular chess piece. ",
+		"github_link":"https://github.com/IT-Department-Projects/CG-Project",
+		"readme_link":"https://github.com/IT-Department-Projects/CG-Project/blob/master/README.md"
 	},
 	{
 		"title":"Top Music Pull",
-		"image":"",
-		"description":"",
-		"github_link":"",
-		"readme_link":""
+		"image":"app_dev_top_music_pull.png",
+		"description":"Python script to download Billboard HOT 100 songs from You-tube",
+		"github_link":"https://github.com/Hrily/TopMusicPull",
+		"readme_link":"https://github.com/Hrily/TopMusicPull/blob/master/README.md"
 	}
 ]
 
@@ -255,82 +227,60 @@ var cp = [
 	{
 		"title":"Codeforces",
 		"image":"",
-		"description":"",
-		"github_link":"",
-		"readme_link":""
+		"description":"[ONGOING] Solutions for Competitive Programming Problems solved on Codeforces",
+		"github_link":"https://github.com/salman-bhai/Competitive-Coding/tree/master/Codeforces",
+		"readme_link":"https://github.com/salman-bhai/Competitive-Coding/blob/master/README.md"
 	},
 	{
 		"title":"CodeChef",
 		"image":"",
-		"description":"",
-		"github_link":"",
-		"readme_link":""
+		"description":"[ONGOING] Solutions for Competitive Programming Problems solved on CodeChef",
+		"github_link":"https://github.com/salman-bhai/Competitive-Coding/tree/master/CodeChef",
+		"readme_link":"https://github.com/salman-bhai/Competitive-Coding/blob/master/README.md"
 	},
 	{
 		"title":"Hackerank",
 		"image":"",
-		"description":"",
-		"github_link":"",
-		"readme_link":""
+		"description":"[ONGOING] Solutions for Competitive Programming Problems solved on Hackerrank",
+		"github_link":"https://github.com/salman-bhai/Competitive-Coding/tree/master/HackerRank",
+		"readme_link":"https://github.com/salman-bhai/Competitive-Coding/blob/master/README.md"
 	},
 	{
 		"title":"HackerEarth",
 		"image":"",
-		"description":"",
-		"github_link":"",
-		"readme_link":""
+		"description":"[ONGOING] Solutions for Competitive Programming Problems solved on Hackerearth",
+		"github_link":"https://github.com/salman-bhai/Competitive-Coding/tree/master/HackerEarth",
+		"readme_link":"https://github.com/salman-bhai/Competitive-Coding/blob/master/README.md"
 	},
 	{
 		"title":"Interview Bit",
 		"image":"",
-		"description":"",
-		"github_link":"",
-		"readme_link":""
+		"description":"[ONGOING] Solutions for Competitive Programming Problems solved on Interview Bit",
+		"github_link":"https://github.com/salman-bhai/Competitive-Coding/tree/master/HackerEarth",
+		"readme_link":"https://github.com/salman-bhai/Competitive-Coding/blob/master/README.md"
 	}
 ]
 
 var others = [
 	{
 		"title":"FTPify",
-		"image":"",
-		"description":"",
-		"github_link":"",
-		"readme_link":""
+		"image":"others_ftpify.png",
+		"description":"[ONGOING] Implementing File Transfer Protocol in Java 8 using Eclipse IDE and having security measures to ensure that dangerous files are not sent throught the network. Written using Socket Program",
+		"github_link":"https://github.com/salman-bhai/FTPify",
+		"readme_link":"https://github.com/salman-bhai/FTPify/blob/master/README.md"
 	},
 	{
 		"title":"LFU",
-		"image":"",
-		"description":"",
-		"github_link":"",
-		"readme_link":""
-	},
-	{
-		"title":"SimpleDB",
-		"image":"",
-		"description":"",
-		"github_link":"",
-		"readme_link":""
+		"image":"others_lfu.png",
+		"description":" Least Frequently Used Cache implementation ",
+		"github_link":"https://github.com/salman-bhai/LFU",
+		"readme_link":"https://github.com/salman-bhai/LFU/blob/java/README.md"
 	},
 	{
 		"title":"Stockify",
-		"image":"",
-		"description":"",
-		"github_link":"",
-		"readme_link":""
+		"image":"ml_stockify.png",
+		"description":" Predicting Stocks based on News Articles",
+		"github_link":"https://github.com/salman-bhai/stockify",
+		"readme_link":"https://github.com/salman-bhai/stockify/blob/master/README.md"
 	},
-	{
-		"title":"Oak Crest",
-		"image":"",
-		"description":"",
-		"github_link":"",
-		"readme_link":""
-	},
-	{
-		"title":"BattleShip",
-		"image":"",
-		"description":"",
-		"github_link":"",
-		"readme_link":""
-	}
 ]
-
