@@ -1,0 +1,336 @@
+var featured_projects = [
+	{
+		"title":"Notes Nearby",
+		"image":"",
+		"description":"",
+		"github_link":"",
+		"readme_link":""
+	},
+	{
+		"title":"NITK Website",
+		"image":"",
+		"description":"",
+		"github_link":"",
+		"readme_link":""
+	},
+	{
+		"title":"WhatsApp Web",
+		"image":"",
+		"description":"",
+		"github_link":"",
+		"readme_link":""
+	},
+	{
+		"title":"Tic Tac Toe",
+		"image":"",
+		"description":"",
+		"github_link":"",
+		"readme_link":""
+	},
+	{
+		"title":"SimpleDB",
+		"image":"",
+		"description":"",
+		"github_link":"",
+		"readme_link":""
+	},
+	{
+		"title":"Stockify",
+		"image":"",
+		"description":"",
+		"github_link":"",
+		"readme_link":""
+	},
+	{
+		"title":"Battleship",
+		"image":"",
+		"description":"",
+		"github_link":"",
+		"readme_link":""
+	},
+	{
+		"title":"Oak Crest",
+		"image":"",
+		"description":"",
+		"github_link":"",
+		"readme_link":""
+	},
+]
+
+var android = [
+	{
+		"title":"Notes Nearby",
+		"image":"",
+		"description":"",
+		"github_link":"",
+		"readme_link":""
+	},
+	{
+		"title":"Oak Crest",
+		"image":"",
+		"description":"",
+		"github_link":"",
+		"readme_link":""
+	},
+	{
+		"title":"Bookify",
+		"image":"",
+		"description":"",
+		"github_link":"",
+		"readme_link":""
+	},
+	{
+		"title":"Wheels On Roll",
+		"image":"",
+		"description":"",
+		"github_link":"",
+		"readme_link":""
+	},
+	{
+		"title":"ChangePay",
+		"image":"",
+		"description":"",
+		"github_link":"",
+		"readme_link":""
+	}
+]
+
+var web = [
+	{
+		"title":"NITK Website",
+		"image":"",
+		"description":"",
+		"github_link":"",
+		"readme_link":""
+	},
+	{
+		"title":"Raj Housing",
+		"image":"",
+		"description":"",
+		"github_link":"",
+		"readme_link":""
+	},
+	{
+		"title":"Co-Op Management System",
+		"image":"",
+		"description":"",
+		"github_link":"",
+		"readme_link":""
+	},
+	{
+		"title":"Movies",
+		"image":"",
+		"description":"",
+		"github_link":"",
+		"readme_link":""
+	},
+	{
+		"title":"Oak Crest",
+		"image":"",
+		"description":"",
+		"github_link":"",
+		"readme_link":""
+	},
+	{
+		"title":"My Website and Blog",
+		"image":"",
+		"description":"",
+		"github_link":"",
+		"readme_link":""
+	},
+	{
+		"title":"ChangePay Website",
+		"image":"",
+		"description":"",
+		"github_link":"",
+		"readme_link":""
+	},
+	{
+		"title":"Wheels On Roll Website",
+		"image":"",
+		"description":"",
+		"github_link":"",
+		"readme_link":""
+	}
+]
+
+var ml = [
+	{
+		"title":"Deep NLP",
+		"image":"",
+		"description":"",
+		"github_link":"",
+		"readme_link":""
+	},
+	{
+		"title":"BattleShip",
+		"image":"",
+		"description":"",
+		"github_link":"",
+		"readme_link":""
+	},
+	{
+		"title":"Sentiment Analysis",
+		"image":"",
+		"description":"",
+		"github_link":"",
+		"readme_link":""
+	},
+		{
+		"title":"MovieLens Movie Reviews",
+		"image":"",
+		"description":"",
+		"github_link":"",
+		"readme_link":""
+	},
+	{
+		"title":"Pong Game",
+		"image":"",
+		"description":"",
+		"github_link":"",
+		"readme_link":""
+	},
+	{
+		"title":"Stockify",
+		"image":"",
+		"description":"",
+		"github_link":"",
+		"readme_link":""
+	},
+	{
+		"title":"AABO",
+		"image":"",
+		"description":"",
+		"github_link":"",
+		"readme_link":""
+	}
+]
+
+var app_dev = [
+	{
+		"title":"E-Manager",
+		"image":"",
+		"description":"",
+		"github_link":"",
+		"readme_link":""
+	},
+	{
+		"title":"Hand Cricket",
+		"image":"",
+		"description":"",
+		"github_link":"",
+		"readme_link":""
+	},
+	{
+		"title":"WhatsApp Web",
+		"image":"",
+		"description":"",
+		"github_link":"",
+		"readme_link":""
+	},
+	{
+		"title":"Tic Tac Toe",
+		"image":"",
+		"description":"",
+		"github_link":"",
+		"readme_link":""
+	},
+	{
+		"title":"Chess Using OpenGL",
+		"image":"",
+		"description":"",
+		"github_link":"",
+		"readme_link":""
+	},
+	{
+		"title":"Top Music Pull",
+		"image":"",
+		"description":"",
+		"github_link":"",
+		"readme_link":""
+	}
+]
+
+var cp = [
+	{
+		"title":"Codeforces",
+		"image":"",
+		"description":"",
+		"github_link":"",
+		"readme_link":""
+	},
+	{
+		"title":"CodeChef",
+		"image":"",
+		"description":"",
+		"github_link":"",
+		"readme_link":""
+	},
+	{
+		"title":"Hackerank",
+		"image":"",
+		"description":"",
+		"github_link":"",
+		"readme_link":""
+	},
+	{
+		"title":"HackerEarth",
+		"image":"",
+		"description":"",
+		"github_link":"",
+		"readme_link":""
+	},
+	{
+		"title":"Interview Bit",
+		"image":"",
+		"description":"",
+		"github_link":"",
+		"readme_link":""
+	}
+]
+
+var others = [
+	{
+		"title":"FTPify",
+		"image":"",
+		"description":"",
+		"github_link":"",
+		"readme_link":""
+	},
+	{
+		"title":"LFU",
+		"image":"",
+		"description":"",
+		"github_link":"",
+		"readme_link":""
+	},
+	{
+		"title":"SimpleDB",
+		"image":"",
+		"description":"",
+		"github_link":"",
+		"readme_link":""
+	},
+	{
+		"title":"Stockify",
+		"image":"",
+		"description":"",
+		"github_link":"",
+		"readme_link":""
+	},
+	{
+		"title":"Oak Crest",
+		"image":"",
+		"description":"",
+		"github_link":"",
+		"readme_link":""
+	},
+	{
+		"title":"BattleShip",
+		"image":"",
+		"description":"",
+		"github_link":"",
+		"readme_link":""
+	}
+]
+

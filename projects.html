@@ -23,6 +23,7 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js">
 	</script>
 	<script type="text/javascript" src="js/home.js"></script>
+	<script type="text/javascript" language="javascript" src="js/projects.json"></script> 
   	<script> 
  		$(function(){ $("#header").load("header.html") });
 		$(function(){ $("#footer").load("footer.html") });	
@@ -30,9 +31,97 @@
 	    $('ul.tabs').tabs(swipeable, true);
 	  });
 	</script>
+	<script type="text/javascript">
+		function get_project(project_name) {
+			project = "";
+			project += '<div class="container"><div class="card horizontal">';
+			project += '<div class="row"><div class="col s6">';
+			project += '<img src="images/' + project_name.image + '" class="responsive-img" style="padding:5%">'; 
+			project += '</div><div class="col s6">';
+			project += '<div class="card-stacked"><div class="card-title">';
+			project += '<h4 style="text-align:center">' + project_name.title + '</h4>';
+			project += '</div><div class="card-content">';
+			project += '<p>' + project_name.description + '</p></div>';
+			project += '<div class="card-content"><div class="row">';
+			project += '<div class="col s4"><div class="card-action">';
+			project += '<a href="' + project_name.readme_link + '">README</a></div></div>';
+			project += '<div class="col s6 push-s1"><div class="card-action">';
+			project += '<a href="' + project_name.github_link + '">Source Code</a>'
+			project += '</div></div></div></div></div></div></div></div></div>'
+			return project;
+		}
+
+		function load_projects(val) {
+			if(val == 1) {
+				var project_container = document.getElementById("featured_projects"); 
+				for(var i=0; i < featured_projects.length; i++) {
+					var project = '';
+					var project_name = featured_projects[i];
+					
+					project_container.innerHTML += get_project(project_name);
+				
+					console.log(project_container);
+				}
+			}
+			else if(val == 2) {
+				var project_container = document.getElementById("android"); 
+				for(var i=0; i < android.length; i++) {
+					var project = '';
+					var project_name = android[i];
+					
+					project_container.innerHTML += get_project(project_name);
+				}
+			}
+			else if(val == 3) {
+				var project_container = document.getElementById("web"); 
+				for(var i=0; i < web.length; i++) {
+					var project = '';
+					var project_name = web[i];
+					
+					project_container.innerHTML += get_project(project_name);
+				}
+			}
+			else if(val == 4) {
+				var project_container = document.getElementById("ml"); 
+				for(var i=0; i < ml.length; i++) {
+					var project = '';
+					var project_name = ml[i];
+					
+					project_container.innerHTML += get_project(project_name);
+				}
+			}
+			else if(val == 5) {
+				var project_container = document.getElementById("app_dev"); 
+				for(var i=0; i < app_dev.length; i++) {
+					var project = '';
+					var project_name = app_dev[i];
+					
+					project_container.innerHTML += get_project(project_name);
+				}
+			}
+			else if(val == 6) {
+				var project_container = document.getElementById("cp"); 
+				for(var i=0; i < cp.length; i++) {
+					var project = '';
+					var project_name = cp[i];
+					
+					project_container.innerHTML += get_project(project_name);
+				}
+			}
+			else {
+				var project_container = document.getElementById("others"); 
+				for(var i=0; i < others.length; i++) {
+					var project = '';
+					var project_name = others[i];
+					
+					project_container.innerHTML += get_project(project_name);
+				}	
+			}
+		}
+	</script>
   </head>
 
-  <body onload="init()">
+  <body onload="init(); load_projects(1);">
 
   	<div id="header">
   	</div>
@@ -61,233 +150,38 @@
 			<div class="container">
 				<div class=card-horizontal>
 					<ul id="tabs-swipe-demo" class="tabs">
-				    <li class="tab col s3"><a class="active" href="#test-swipe-1">Featured Projects</a></li>
-				    <li class="tab col s3"><a href="#test-swipe-2">Android</a></li>
-				    <li class="tab col s3"><a href="#test-swipe-3">Web</a></li>
-				    <li class="tab col s3"><a href="#test-swipe-4">ML</a></li>
-				    <li class="tab col s3"><a href="#test-swipe-5">Application</a></li>
-				    <li class="tab col s3"><a href="#test-swipe-6">CP</a></li>
-				    <li class="tab col s3"><a href="#test-swipe-7">Others</a></li>
+				    <li class="tab col s3"><a class="active" href="#featured_projects" onclick="load_projects(1);">Featured Projects</a></li>
+				    <li class="tab col s3"><a href="#android" onclick="load_projects(2);">Android</a></li>
+				    <li class="tab col s3"><a href="#web" onclick="load_projects(3);">Web</a></li>
+				    <li class="tab col s3"><a href="#ml" onclick="load_projects(4);">ML</a></li>
+				    <li class="tab col s3"><a href="#app_dev" onclick="load_projects(5);">Application</a></li>
+				    <li class="tab col s3"><a href="#cp" onclick="load_projects(6);">CP</a></li>
+				    <li class="tab col s3"><a href="#others" onclick="load_projects(7);">Others</a></li>
 				  </ul>
 			  </div>
 			</div>
 		  
-		  <div id="test-swipe-1" class="col s12">
-  		<!--Project 1-->
-  		<div class="container">
-  		  <div class="card horizontal">
-		      <div class="row">
-		      	<div class="col s6">
-			      		<img src="images/project11.png" class="responsive-img" style="padding:5%"> 
-		    		</div>
-		    		<div class="col s6">
-				  		<div class="card-stacked">
-			        	<div class="card-title">
-			          	<h4 style="text-align:center">Tic Tac Toe</h4>
-			        	</div>
-			        	<div class="card-content">
-			        		<p>Tic-Tac-Toe game written in Java with AI as well as Random Move CPU Opponent</p>
-				        </div>
-				        <div class="card-content">
-				        	<div class="row">
-				        		<div class="col s4">
-				        			<div class="card-action">
-				        				<a href="https://github.com/salman-bhai/TicTacToe/blob/master/README.md">README</a>
-				        			</div>
-				        		</div>
-				        		<div class="col s6 push-s1">
-				        			<div class="card-action">
-				        				<a href="https://github.com/salman-bhai/TicTacToe">Source Code</a>
-				        			</div>
-				        		</div>
-				        	</div>
-				        </div>
-				      </div>
-				    </div>
-			  	</div>
-			  </div>
-			</div>
+			<!--First Tab - Featured Projects-->		  
+		  <div id="featured_projects" class="col s12" >					  						
 			</div>
 
-		  <div id="test-swipe-2" class="col s12">
- 
-			<!--Project 2-->
-	    <div class="container">
-		    <div class="card horizontal">
-		      <div class="row">
-		      	<div class="col s6">
-			      		<img src="images/project21.jpeg" class="responsive-img" style="padding:25%"> 
-		    		</div>
-		    		<div class="col s6">
-				  		<div class="card-stacked">
-			        	<div class="card-title">
-			          	<h4 style="text-align:center">E Manager</h4>
-			        	</div>
-			        	<div class="card-content">
-			        		<p>Expense Manager tool written in C++ to compute and manage expenses for a particular individual.</p>
-				        </div>
-				        <div class="card-content">
-				        	<div class="row">
-				        		<div class="col s4">
-				        			<div class="card-action">
-				        				<a href="https://github.com/salman-bhai/E-Manager/blob/master/README.md">README</a>
-				        			</div>
-				        		</div>
-				        		<div class="col s6 push-s1">
-				        			<div class="card-action">
-				        				<a href="https://github.com/salman-bhai/E-Manager">Source Code</a>
-				        			</div>
-				        		</div>
-				        	</div>
-				        </div>
-				      </div>
-				    </div>
-			  	</div>
-			  </div>
-		  </div>
+		  <div id="android" class="col s12"> 
 		  </div>
 
-		  <div id="test-swipe-3" class="col s12">
-			<!--Project 3-->
-			<div class="container">
-		    <div class="card horizontal">
-		      <div class="row">
-		      	<div class="col s6">
-			      		<img src="images/project31.png" class="responsive-img" style="padding:15%"> 
-		    		</div>
-		    		<div class="col s6">
-				  		<div class="card-stacked">
-			        	<div class="card-title">
-			          	<h4 style="text-align:center">WhatsApp Web</h4>
-			        	</div>
-			        	<div class="card-content">
-			        		<p>Terminal based Web-Scraping Tool used for sending messages on WhatsApp Web via the terminal.</p>
-				        </div>
-				        <div class="card-content">
-				        	<div class="row">
-				        		<div class="col s4">
-				        			<div class="card-action">
-				        				<a href="https://github.com/salman-bhai/WhatsApp-Web/blob/master/README.md">README</a>
-				        			</div>
-				        		</div>
-				        		<div class="col s6 push-s1">
-				        			<div class="card-action">
-				        				<a href="https://github.com/salman-bhai/WhatsApp-Web">Source Code</a>
-				        			</div>
-				        		</div>
-				        	</div>
-				        </div>
-				      </div>
-				    </div>
-			  	</div>
-		  	</div>
+		  <div id="web" class="col s12">
 		  </div>
-	
-			<!--Project 4-->
-			<div class="container">
-		    <div class="card horizontal">
-		      <div class="row">
-		      	<div class="col s6">
-			      		<img src="images/project41.png" class="responsive-img" style="padding:25%"> 
-		    		</div>
-		    		<div class="col s6">
-				  		<div class="card-stacked">
-			        	<div class="card-title">
-			          	<h4 style="text-align:center">Notes Nearby</h4>
-			        	</div>
-			        	<div class="card-content">
-			        		<p>Augmented Reality based Android App used for Navigation using Google Maps API and Speech-To-Text Feature</p>
-				        </div>
-				        <div class="card-content">
-				        	<div class="row">
-				        		<div class="col s4">
-				        			<div class="card-action">
-				        				<a href="https://github.com/salman-bhai/NotesNearby/blob/master/README.md">README</a>
-				        			</div>
-				        		</div>
-				        		<div class="col s6 push-s1">
-				        			<div class="card-action">
-				        				<a href="https://github.com/salman-bhai/NotesNearby">Source Code</a>
-				        			</div>
-				        		</div>
-				        	</div>
-				        </div>
-				      </div>
-				    </div>
-			  	</div>
-			  </div>
-			</div>
 
-			<!--Project 5-->
-			<div class="container">
-		    <div class="card horizontal">
-		      <div class="row">
-		      	<div class="col s6">
-			      		<img src="images/project51.png" class="responsive-img" style="padding:10%"> 
-		    		</div>
-		    		<div class="col s6">
-				  		<div class="card-stacked">
-			        	<div class="card-title">
-			          	<h4 style="text-align:center">Top Music Pull</h4>
-			        	</div>
-			        	<div class="card-content">
-			        		<p>Web Scraping Tool used to download Top Ten Trending Music Chartbusters for that week from around the world using BillBoard Top 100!</p>
-				        </div>
-				        <div class="card-content">
-				        	<div class="row">
-				        		<div class="col s4">
-				        			<div class="card-action">
-				        				<a href="https://github.com/Hrily/TopMusicPull/blob/master/README.md">README</a>
-				        			</div>
-				        		</div>
-				        		<div class="col s6 push-s1">
-				        			<div class="card-action">
-				        				<a href="https://github.com/Hrily/TopMusicPull">Source Code</a>
-				        			</div>
-				        		</div>
-				        	</div>
-				        </div>
-				      </div>
-				    </div>
-			  	</div>
-			  </div>
-			</div>
+		  <div id="ml" class="col s12">
+		  </div>
 
-			<!--Project 6-->
-			<div class="container">
-		    <div class="card horizontal">
-		      <div class="row">
-		      	<div class="col s6">
-			      		<img src="images/project61.png" class="responsive-img" style="padding:10%"> 
-		    		</div>
-		    		<div class="col s6">
-				  		<div class="card-stacked">
-			        	<div class="card-title">
-			          	<h4 style="text-align:center">Chat Server Erlang</h4>
-			        	</div>
-			        	<div class="card-content">
-			        		<p>Chat Server written in Erlang(Server Side) and C++ (Client-Side) used for ChatRoom communication</p>
-				        </div>
-				        <div class="card-content">
-				        	<div class="row">
-				        		<div class="col s4">
-				        			<div class="card-action">
-				        				<a href="https://github.com/mohitreddy1996/ChatServerErlang/blob/master/README.md">README</a>
-				        			</div>
-				        		</div>
-				        		<div class="col s6 push-s1">
-				        			<div class="card-action">
-				        				<a href="https://github.com/mohitreddy1996/ChatServerErlang">Source Code</a>
-				        			</div>
-				        		</div>
-				        	</div>
-				        </div>
-				      </div>
-				    </div>
-			  	</div>
-			  </div>
-			</div>
-			</div>
+		  <div id="app_dev" class="col s12">
+		  </div>
+
+		  <div id="cp" class="col s12">
+		  </div>
+
+		  <div id="others" class="col s12">
+		  </div>
 
   	</main>
 
