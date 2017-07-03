@@ -8,7 +8,7 @@
   	<!--Meta tags-->
 	<meta name="viewport" content="width=device-width; initial-scale=1; maximum-scale=1">
 	<meta name="keywords" content="Salman Shah, Intern, Data Science, Machine Learning">
-  	<meta name="author" content="Salman Shah">
+  <meta name="author" content="Salman Shah">
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 
 	<!--CSS Files-->
@@ -23,276 +23,133 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js">
 	</script>
 	<script type="text/javascript" src="js/home.js"></script>
-  	<script> 
- 		$(function(){ $("#header").load("header.html") });
-		$(function(){ $("#footer").load("footer.html") });	
-	  $(document).ready(function(){
-	    $('ul.tabs').tabs(swipeable, true);
-	  });
+	<script type="text/javascript" language="javascript" src="js/projects.json"></script> 
+
+	<script type="text/javascript">
 	</script>
   </head>
 
-  <body onload="init()">
+  <body onload="init(); load_projects(1);">
 
-  	<div id="header">
-  	</div>
+  	<header>
+			<div class="navbar-fixed">
+				<nav class="transparent" role="navigation">
+					<div class="nav-wrapper container">
+						<a href="#" id="sidenav" data-activates="slide-out" class="button-collapse"><i class="material-icons">menu</i></a>
+						
+						<ul class="right hide-on-med-and-down">
+							<li><a href="index.html">Home</a></li>
+							<li><a href="projects.html">Projects</a></li>
+							<li><a href="academics.html">Academics</a></li>
+							<li><a href="https://github.com/salman-bhai/Resume/blob/master/SS_Resume.pdf" target="_blank">Resume</a></li>
+							<li><a href="blog.html">Blog</a></li>
+						</ul>
+						
+						<ul id="slide-out" class="side-nav">
+							<li class="bold"><a href="index.html" class="waves-effect waves-teal">Home</a>
+							</li>
+							<li class="bold"><a href="projects.html" class="waves-effect waves-teal">Projects</a></li>
+							<li class="bold"><a href="academics.html" class="waves-effect waves-teal">Academics</a>
+							</li>
+							<li class="bold"><a a href="https://github.com/salman-bhai/Resume/blob/master/SS_Resume.pdf" target="_blank" class="waves-effect waves-teal">Resume</a>
+							</li>
+							<li class="bold"><a href="blog.html" class="waves-effect waves-teal">Blog</a></li>
+						</ul>
+
+					</div>
+				</nav>
+			</div>
+		</header>
 
   	<main>
 
-  		<!--Beginning Card-->
-			<div class="container">
-				<div class="card">
-					<div class="card-content">
-						<div class="row valign-wrapper">
-							<div class="col s12 m4 l4 valign-wrapper">
-								<img src="images/bhai.jpg" alt="Salman" class="circle responsive-img">
-							</div>
-							<div class="col s12 m10 l10">
-								<h4 class="text-align:center">Welcome to my Projects</h4><br>
-								All my projects listed over here are put up on my GitHub profile! Most of them are Public Repositories in my profile while some of them may be forked from my Friend's repositories</br>
-								Most of my projects are collaborative projects which I've mostly worked with my friend Hrily who's been my wing-mate these two semesters.</br> 
-								All the projects have their Source code on GitHub and can be viewed by clicking the View Source code button near the project description</br>
-							</div>
+			<div class="projects-page-banner">
+				<div style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; background-color: rgba(0,0,0,0.6);"></div>
+				<div style="position: absolute; bottom: 0;width: 100%; color: #fff;">
+					<div class="container">
+						<div class="row">
+							<h2 class="welcome-text">Welcome to my website!</h2>
 						</div>
-					</div>
+						<div class="row">
+							This website has been made to introduce incoming freshers to the life at NITK Surathkal.<br>
+							Please make sure to explore this website and also find all the information that you need. <br><br><br><br>
+						</div>
+						<div class="row" id="icons">
+							<a href="https://github.com/salman-bhai"><img class="responsive-image" src="images/logo_github_white.png"></a>
+							<a href="https://www.linkedin.com/in/sbshah97"><img class="responsive-image" src="images/logo_linkedin_white.png"></a>
+							<a href="https://www.facebook.com/salman.shah.92775"><img class="responsive-image" src="images/logo_fb_white.png"></a>
+							<a href="https://www.instagram.com/salmanbhai_97/?hl=en"><img class="responsive-image" src="images/logo_instagram_white.png"></a>			
+						</div>
+					</div>	
+				</div>
+			</div>
+
+			<div class="container">
+				<h4 class="pt-sans">Welcome to my Projects</h4>
+				<div class="flow-text">
+					All my projects listed over here are put up on my GitHub profile! Most of them are Public Repositories in my profile while some of them may be forked from my Friend's repositories</br>
+					Most of my projects are collaborative projects which I've mostly worked with my friend Hrily who's been my wing-mate these two semesters.</br> 
+					All the projects have their Source code on GitHub and can be viewed by clicking the View Source code button near the project description.</br>
 				</div>
 			</div>
 
 			<div class="container">
 				<div class=card-horizontal>
 					<ul id="tabs-swipe-demo" class="tabs">
-				    <li class="tab col s3"><a class="active" href="#test-swipe-1">Featured Projects</a></li>
-				    <li class="tab col s3"><a href="#test-swipe-2">Android</a></li>
-				    <li class="tab col s3"><a href="#test-swipe-3">Web</a></li>
-				    <li class="tab col s3"><a href="#test-swipe-4">ML</a></li>
-				    <li class="tab col s3"><a href="#test-swipe-5">Application</a></li>
-				    <li class="tab col s3"><a href="#test-swipe-6">CP</a></li>
-				    <li class="tab col s3"><a href="#test-swipe-7">Others</a></li>
+				    <li class="tab col s3"><a class="active" href="#featured_projects" onclick="load_projects(1);">Featured Projects</a></li>
+				    <li class="tab col s3"><a href="#android" onclick="load_projects(2);">Android</a></li>
+				    <li class="tab col s3"><a href="#web" onclick="load_projects(3);">Web</a></li>
+				    <li class="tab col s3"><a href="#ml" onclick="load_projects(4);">ML</a></li>
+				    <li class="tab col s3"><a href="#app_dev" onclick="load_projects(5);">Application</a></li>
+				    <li class="tab col s3"><a href="#cp" onclick="load_projects(6);">CP</a></li>
+				    <li class="tab col s3"><a href="#others" onclick="load_projects(7);">Others</a></li>
 				  </ul>
 			  </div>
 			</div>
 		  
-		  <div id="test-swipe-1" class="col s12">
-  		<!--Project 1-->
-  		<div class="container">
-  		  <div class="card horizontal">
-		      <div class="row">
-		      	<div class="col s6">
-			      		<img src="images/project11.png" class="responsive-img" style="padding:5%"> 
-		    		</div>
-		    		<div class="col s6">
-				  		<div class="card-stacked">
-			        	<div class="card-title">
-			          	<h4 style="text-align:center">Tic Tac Toe</h4>
-			        	</div>
-			        	<div class="card-content">
-			        		<p>Tic-Tac-Toe game written in Java with AI as well as Random Move CPU Opponent</p>
-				        </div>
-				        <div class="card-content">
-				        	<div class="row">
-				        		<div class="col s4">
-				        			<div class="card-action">
-				        				<a href="https://github.com/salman-bhai/TicTacToe/blob/master/README.md">README</a>
-				        			</div>
-				        		</div>
-				        		<div class="col s6 push-s1">
-				        			<div class="card-action">
-				        				<a href="https://github.com/salman-bhai/TicTacToe">Source Code</a>
-				        			</div>
-				        		</div>
-				        	</div>
-				        </div>
-				      </div>
-				    </div>
-			  	</div>
-			  </div>
-			</div>
-			</div>
-
-		  <div id="test-swipe-2" class="col s12">
- 
-			<!--Project 2-->
-	    <div class="container">
-		    <div class="card horizontal">
-		      <div class="row">
-		      	<div class="col s6">
-			      		<img src="images/project21.jpeg" class="responsive-img" style="padding:25%"> 
-		    		</div>
-		    		<div class="col s6">
-				  		<div class="card-stacked">
-			        	<div class="card-title">
-			          	<h4 style="text-align:center">E Manager</h4>
-			        	</div>
-			        	<div class="card-content">
-			        		<p>Expense Manager tool written in C++ to compute and manage expenses for a particular individual.</p>
-				        </div>
-				        <div class="card-content">
-				        	<div class="row">
-				        		<div class="col s4">
-				        			<div class="card-action">
-				        				<a href="https://github.com/salman-bhai/E-Manager/blob/master/README.md">README</a>
-				        			</div>
-				        		</div>
-				        		<div class="col s6 push-s1">
-				        			<div class="card-action">
-				        				<a href="https://github.com/salman-bhai/E-Manager">Source Code</a>
-				        			</div>
-				        		</div>
-				        	</div>
-				        </div>
-				      </div>
-				    </div>
-			  	</div>
-			  </div>
+			<div class="projects-list">
+				<div id="featured_projects" class="col s12" >
+				</div>
+				<div id="android" class="col s12"> 
+				</div>
+				<div id="web" class="col s12">
+				</div>
+				<div id="ml" class="col s12">
+				</div>
+				<div id="app_dev" class="col s12">
+				</div>
+				<div id="cp" class="col s12">
+				</div>
+				<div id="others" class="col s12">
+				</div>
 		  </div>
-		  </div>
-
-		  <div id="test-swipe-3" class="col s12">
-			<!--Project 3-->
-			<div class="container">
-		    <div class="card horizontal">
-		      <div class="row">
-		      	<div class="col s6">
-			      		<img src="images/project31.png" class="responsive-img" style="padding:15%"> 
-		    		</div>
-		    		<div class="col s6">
-				  		<div class="card-stacked">
-			        	<div class="card-title">
-			          	<h4 style="text-align:center">WhatsApp Web</h4>
-			        	</div>
-			        	<div class="card-content">
-			        		<p>Terminal based Web-Scraping Tool used for sending messages on WhatsApp Web via the terminal.</p>
-				        </div>
-				        <div class="card-content">
-				        	<div class="row">
-				        		<div class="col s4">
-				        			<div class="card-action">
-				        				<a href="https://github.com/salman-bhai/WhatsApp-Web/blob/master/README.md">README</a>
-				        			</div>
-				        		</div>
-				        		<div class="col s6 push-s1">
-				        			<div class="card-action">
-				        				<a href="https://github.com/salman-bhai/WhatsApp-Web">Source Code</a>
-				        			</div>
-				        		</div>
-				        	</div>
-				        </div>
-				      </div>
-				    </div>
-			  	</div>
-		  	</div>
-		  </div>
-	
-			<!--Project 4-->
-			<div class="container">
-		    <div class="card horizontal">
-		      <div class="row">
-		      	<div class="col s6">
-			      		<img src="images/project41.png" class="responsive-img" style="padding:25%"> 
-		    		</div>
-		    		<div class="col s6">
-				  		<div class="card-stacked">
-			        	<div class="card-title">
-			          	<h4 style="text-align:center">Notes Nearby</h4>
-			        	</div>
-			        	<div class="card-content">
-			        		<p>Augmented Reality based Android App used for Navigation using Google Maps API and Speech-To-Text Feature</p>
-				        </div>
-				        <div class="card-content">
-				        	<div class="row">
-				        		<div class="col s4">
-				        			<div class="card-action">
-				        				<a href="https://github.com/salman-bhai/NotesNearby/blob/master/README.md">README</a>
-				        			</div>
-				        		</div>
-				        		<div class="col s6 push-s1">
-				        			<div class="card-action">
-				        				<a href="https://github.com/salman-bhai/NotesNearby">Source Code</a>
-				        			</div>
-				        		</div>
-				        	</div>
-				        </div>
-				      </div>
-				    </div>
-			  	</div>
-			  </div>
-			</div>
-
-			<!--Project 5-->
-			<div class="container">
-		    <div class="card horizontal">
-		      <div class="row">
-		      	<div class="col s6">
-			      		<img src="images/project51.png" class="responsive-img" style="padding:10%"> 
-		    		</div>
-		    		<div class="col s6">
-				  		<div class="card-stacked">
-			        	<div class="card-title">
-			          	<h4 style="text-align:center">Top Music Pull</h4>
-			        	</div>
-			        	<div class="card-content">
-			        		<p>Web Scraping Tool used to download Top Ten Trending Music Chartbusters for that week from around the world using BillBoard Top 100!</p>
-				        </div>
-				        <div class="card-content">
-				        	<div class="row">
-				        		<div class="col s4">
-				        			<div class="card-action">
-				        				<a href="https://github.com/Hrily/TopMusicPull/blob/master/README.md">README</a>
-				        			</div>
-				        		</div>
-				        		<div class="col s6 push-s1">
-				        			<div class="card-action">
-				        				<a href="https://github.com/Hrily/TopMusicPull">Source Code</a>
-				        			</div>
-				        		</div>
-				        	</div>
-				        </div>
-				      </div>
-				    </div>
-			  	</div>
-			  </div>
-			</div>
-
-			<!--Project 6-->
-			<div class="container">
-		    <div class="card horizontal">
-		      <div class="row">
-		      	<div class="col s6">
-			      		<img src="images/project61.png" class="responsive-img" style="padding:10%"> 
-		    		</div>
-		    		<div class="col s6">
-				  		<div class="card-stacked">
-			        	<div class="card-title">
-			          	<h4 style="text-align:center">Chat Server Erlang</h4>
-			        	</div>
-			        	<div class="card-content">
-			        		<p>Chat Server written in Erlang(Server Side) and C++ (Client-Side) used for ChatRoom communication</p>
-				        </div>
-				        <div class="card-content">
-				        	<div class="row">
-				        		<div class="col s4">
-				        			<div class="card-action">
-				        				<a href="https://github.com/mohitreddy1996/ChatServerErlang/blob/master/README.md">README</a>
-				        			</div>
-				        		</div>
-				        		<div class="col s6 push-s1">
-				        			<div class="card-action">
-				        				<a href="https://github.com/mohitreddy1996/ChatServerErlang">Source Code</a>
-				        			</div>
-				        		</div>
-				        	</div>
-				        </div>
-				      </div>
-				    </div>
-			  	</div>
-			  </div>
-			</div>
-			</div>
 
   	</main>
 
-  	<div id="footer">
-  	</div>
+		<footer class="orange">
+			<div class="row center">
+				<div class="col s12 m4 l4">
+					<h4 class="welcome-text white-text">Links</h4>
+					<div class="row">
+						<div class="icon-image" id="icons">
+							<a href="https://github.com/salman-bhai"><img class="responsive-image" src="images/logo_github_white.png"></a>
+							<a href="https://www.linkedin.com/in/sbshah97"><img class="responsive-image" src="images/logo_linkedin_white.png"></a>
+							<a href="https://www.facebook.com/salman.shah.92775"><img class="responsive-image" src="images/logo_fb_white.png"></a>
+							<a href="https://www.instagram.com/salmanbhai_97/?hl=en"><img class="responsive-image" src="images/logo_instagram_white.png"></a>			
+						</div>							
+					</div>
+				</div>
+
+				<div class="col s12 m4 l4 right flow-text">
+					<div class="contact">
+						<h4 class="white-text">Contact</h4>
+					</div>
+					<div class="row">
+							<p class="white-text" style="font-size: 18px;">Salman Shah, Room 53 - Block 3, NITK Hostels, Srinivas Nagar, Surathkal, Mangalore, Karnataka - 575025.</p>
+					</div>
+				</div>
+			</div>
+		</footer>
 
   </body>
 

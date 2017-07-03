@@ -25,104 +25,151 @@
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js">
 		</script>
 		<script type="text/javascript" src="js/lib/jquery-1.11.1.min.js" ></script>
- 		<script> 
-  	 	$(function(){ $("#header").load("header.html") });
- 			$(function(){ $("#footer").load("footer.html") });
- 		</script>
   </head>
 
   <body onload="init()">
 
-  	<div id="header">
+  	<header>
+			<div class="navbar-fixed">
+				<nav class="transparent" role="navigation">
+					<div class="nav-wrapper container">
+						<a href="#" id="sidenav" data-activates="slide-out" class="button-collapse"><i class="material-icons">menu</i></a>
+						
+						<ul class="right hide-on-med-and-down">
+							<li><a href="index.html">Home</a></li>
+							<li><a href="projects.html">Projects</a></li>
+							<li><a href="academics.html">Academics</a></li>
+							<li><a href="https://github.com/salman-bhai/Resume/blob/master/SS_Resume.pdf" target="_blank">Resume</a></li>
+							<li><a href="blog.html">Blog</a></li>
+						</ul>
+						
+						<ul id="slide-out" class="side-nav">
+							<li class="bold"><a href="index.html" class="waves-effect waves-teal">Home</a>
+							</li>
+							<li class="bold"><a href="projects.html" class="waves-effect waves-teal">Projects</a></li>
+							<li class="bold"><a href="academics.html" class="waves-effect waves-teal">Academics</a>
+							</li>
+							<li class="bold"><a a href="https://github.com/salman-bhai/Resume/blob/master/SS_Resume.pdf" target="_blank" class="waves-effect waves-teal">Resume</a>
+							</li>
+							<li class="bold"><a href="blog.html" class="waves-effect waves-teal">Blog</a></li>
+						</ul>
 
-  	</div>
+					</div>
+				</nav>
+			</div>
+		</header>
 
   	<main>
 
+			<div class="academics-page-banner">
+				<div style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; background-color: rgba(0,0,0,0.6);">
+				</div>
+				<div style="position: absolute; bottom: 0;width: 100%; color: #fff;">
+					<div class="container">
+						<div class="row">
+							<h2 class="welcome-text">Welcome to my website!</h2>
+						</div>
+						<div class="row">
+							This website has been made to introduce incoming freshers to the life at NITK Surathkal.<br>
+							Please make sure to explore this website and also find all the information that you need. <br><br><br><br>
+						</div>
+						<div class="row" id="icons">
+							<a href="https://github.com/salman-bhai"><img class="responsive-image" src="images/logo_github_white.png"></a>
+							<a href="https://www.linkedin.com/in/sbshah97"><img class="responsive-image" src="images/logo_linkedin_white.png"></a>
+							<a href="https://www.facebook.com/salman.shah.92775"><img class="responsive-image" src="images/logo_fb_white.png"></a>
+							<a href="https://www.instagram.com/salmanbhai_97/?hl=en"><img class="responsive-image" src="images/logo_instagram_white.png"></a>			
+						</div>
+					</div>	
+				</div>
+			</div>
+
+
   		<!--Beginning Card-->
 			<div class="container">
-				<div class="card">
-					<div class="card-content">
-						<div class="row valign-wrapper">
-							<div class="col s12 m4 l4 valign-wrapper">
-								<img src="images/bhai.jpg" alt="Salman" class="circle responsive-img">
-							</div>
-							<div class="col s12 m10 l10">
-								<h4 class="text-align:center">Welcome to the Academics Section</h4><br>
-								This page reveals the details about the educational institutes that I have been associated with! It also speaks about my experience and my participation in Extra-Curricular activities conducted in the institute!</br>
-							</div>
-						</div>
-					</div>
+				<h4 class="pt-sans">Welcome to the Academics Section</h4>
+				<div class="flow-text">
+					This page reveals the details about the educational institutes that I have been associated with! It also speaks about my experience and my participation in Extra-Curricular activities conducted in the institute!</br>
 				</div>
 			</div>
 
   		<!--Undergraduate-->
-  		<div class="container">
+  		<div class="container flow-text">
 	  		<div class="ug">
 		  		<div class="intro">
-						<div class="card">
-							<div class="card-content">
-								<div class="col s12 m10 l10">
-									<h4 style="text-align:center">NITK Surathkal</h4></br>
-									<p>Second year B. Tech Undergraduate in the IT Department.</p>
-									<h5>Clubs and Extra Curricular Activities</h5>
-									<ul>
-										<li>IEEE Student Chapter - Executive Member
-										<li>LSD(Literary Stage and Debating) Society - Core Member
-										<li>Team Shoreline - Core Member</li>
-										<li>NITK Website Team - Member</li>
-									</ul> 
-								</div>
-							</div>
-						</div>
+						<h4 class="pt-sans">NITK Surathkal</h4>
+						<p>Second year B. Tech Undergraduate in the IT Department.</p>
+						<h5 class="pt-sans">Clubs and Extra Curricular Activities</h5>
+						<ul>
+							<li>IEEE Student Chapter - Executive Member
+							<li>LSD(Literary Stage and Debating) Society - Core Member
+							<li>Team Shoreline - Core Member</li>
+							<li>NITK Website Team - Member</li>
+						</ul> 
 					</div>
 				</div>
 			</div>
 
   		<!--Junior College-->
-  		<div class="container">
+  		<div class="container flow-text">
 	  		<div class="jc">
 		  		<div class="intro">
-						<div class="card">
-							<div class="card-content">
-								<div class="col s12 m10 l10">
-									<h4 style="text-align:center">IITians PACE Junior College, Andheri(West)</h4></br>
-									<p>Achieved <b>99.2 Percentile</b> in the <i>JEE Main examination</i> with a <b>rank of 2242</b> out of 13.4 lakh students all over India.</p>
-									<p>Achieved a <b>rank of 10420</b> in the <i>JEE Advanced Examination</i> with over 1.5 lakh people participating in the exam all over India.</p>
-									<p>Scored <b>89.85%</b> in the <i>HSC Board Examination</i> conducted all over the State.</p>
-								</div>
-							</div>
-						</div>
+						<h4 class="pt-sans">IITians PACE Junior College, Andheri(West)</h4>
+						<p>Achieved <b>99.2 Percentile</b> in the <i>JEE Main examination</i> with a <b>rank of 2242</b> out of 13.4 lakh students all over India.</p>
+						<p>Achieved a <b>rank of 10420</b> in the <i>JEE Advanced Examination</i> with over 1.5 lakh people participating in the exam all over India.</p>
+						<p>Scored <b>89.85%</b> in the <i>HSC Board Examination</i> conducted all over the State.</p>
 					</div>
 				</div>
 			</div>
 
   		<!-- School-->
-  		<div class="container">
+  		<div class="container flow-text">
 	  		<div class="school">
 		  		<div class="intro">
-						<div class="card">
-							<div class="card-content">
-								<div class="col s12 m10 l10">
-									<h4 style="text-align:center">Hansraj Morarji Public School</h4></br>
-									<p>Scored <b>92.18 percent</b> in the <i>SSC Board Examination</i> which was conducted for students all over the state.</p>
-									<h5>Extra-Curricular Activities</h5
-									<p>Represented the school in the <b>19th Annual National Children Science Congress</b> to show my team's work on <i>Leafy Vegetables Grown Near Railway Tracks - Safe or Unsafe.</i>
-									<p>Successfully presented a project on <i>Eco Energy for Better Future</i> where Water Hyacinth was used to generate Bio-Gas thereby converting it into a Sustainable Energy Resource.</p>
-									<h5>Clubs and Societies</h5>
-									<p>Part of Green Brigade (aka Nature Club) having won several prizes in Ward and Zonal Level Competitions</p>
-									<p></p>
-								</div>
-							</div>
-						</div>
+						<h4 class="pt-sans">Hansraj Morarji Public School</h4>
+						<p>Scored <b>92.18 percent</b> in the <i>SSC Board Examination</i> which was conducted for students all over the state.</p>
+						<h5>Extra-Curricular Activities</h5>
+						<p>Represented the school in the <b>19th Annual National Children Science Congress</b> to show my team's work on <i>Leafy Vegetables Grown Near Railway Tracks - Safe or Unsafe.</i>
+						<p>Successfully presented a project on <i>Eco Energy for Better Future</i> where Water Hyacinth was used to generate Bio-Gas thereby converting it into a Sustainable Energy Resource.</p>
+						<h5>Clubs and Societies</h5>
+						<p>Part of Green Brigade (aka Nature Club) having won several prizes in Ward and Zonal Level Competitions</p>
+						<p></p>
 					</div>
 				</div>
 			</div>
 
   	</main>
 
-		<div id="footer">
-		</div>
+		<footer class="orange">
+			
+			<div class="row center">
+				<div class="col s12 m4 l4">
+					<h4 class="welcome-text white-text">Links</h4>
+					<div class="row">
+						<div class="icon-image" id="icons">
+							<a href="https://github.com/salman-bhai"><img class="responsive-image" src="images/logo_github_white.png"></a>
+							<a href="https://www.linkedin.com/in/sbshah97"><img class="responsive-image" src="images/logo_linkedin_white.png"></a>
+							<a href="https://www.facebook.com/salman.shah.92775"><img class="responsive-image" src="images/logo_fb_white.png"></a>
+							<a href="https://www.instagram.com/salmanbhai_97/?hl=en"><img class="responsive-image" src="images/logo_instagram_white.png"></a>			
+						</div>							
+					</div>
+				</div>
+
+				<div class="col s12 m4 l4 right flow-text">
+					<div class="contact">
+						<h4 class="white-text">Contact</h4>
+					</div>
+					<div class="row">
+							<p class="white-text" style="font-size: 18px;">Salman Shah, Room 53 - Block 3, NITK Hostels, Srinivas Nagar, Surathkal, Mangalore, Karnataka - 575025.</p>
+					</div>
+				</div>
+			</div>
+
+		</footer>
+
+		<!--JavaScript files-->
+		<script type="text/javascript" src="js/home.js"></script>
+		<script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
 
   </body>
 </html>

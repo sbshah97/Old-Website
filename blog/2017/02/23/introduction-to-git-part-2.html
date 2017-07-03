@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Introduction to Git and GitHub - Part II – Salman Shah - Blog</title>
+
+		<!--Meta tags-->
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width; initial-scale=1; maximum-scale=1">
+		<meta name="keywords" content="Salman Shah, Intern, Data Science, Machine Learning">
+	  	<meta name="author" content="Salman Shah">
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+		<!--Favicon-->
+		<link rel="shortcut icon" href="/Blog/images/favicon.ico">
+
+		<!--CSS Files-->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.min.css">
+		<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+		<link rel="stylesheet" href="/Blog/src/css/stylesheet.css">
+
+		<!--JavaScript files-->
+		<script type="text/javascript" src="/Blog/src/js/home.js"></script>
+		<script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous">
+		</script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js">
+		</script>
+
+		<script type="text/javascript">$crisp=[];CRISP_WEBSITE_ID="95f86ec5-a6d1-4659-a374-847f66e1c963";(function(){d=document;s=d.createElement("script");s.src="https://client.crisp.im/l.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();
+		</script>
+	</head>
+
+	<body>
+
+		<header class='blue-grey darken-1'>
+			
+			<div class="navbar">
+			 	<nav>
+			    <div class="nav-wrapper blue-grey darken-1">
+			    	<ul id="nav-mobile" class="right">
+			        <li><a href="https://salman-bhai.github.io/My-Website/">Home</a></li>
+			        <li><a href="https://salman-bhai.github.io/My-Website/projects.html">Projects</a></li>
+			        <li><a href="https://salman-bhai.github.io/My-Website/academics.html">Academics</a></li>
+			        <li><a href="https://salman-bhai.github.io/My-Website/resume.html">Resume</a></li>
+			        <li><a href="https://salman-bhai.github.io/Blog">Blog</a></li>
+				    </ul>
+				  </div>
+			  </nav>
+			</div>
+
+			<div class="row"
+				<div class="col s12 m4 l4">
+					<div class="panel" style="height: 540px;">
+						<div class="bg-img">
+							<h1>Salman Shah</h1>
+							<h3>Blogger, Coder, Developer</h3>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="header-icons">
+				<div class="col s12 m4 l4">
+  				<div class="icon-image" style="blue-grey darken-1">
+  					<a href="https://github.com/salman-bhai"><img src="/Blog/images/logo_github_white.png"></a>
+  					<a href="https://www.linkedin.com/in/sbshah97"><img src="/Blog/images/logo_linkedin_white.png"></a>
+  					<a href="https://www.facebook.com/salman.shah.92775"><img src="/Blog/images/logo_fb_white.png"></a>
+  					<a href="https://www.instagram.com/salmanbhai_97/?hl=en"><img src="/Blog/images/logo_instagram_white.png"></a>
+  				</div>
+  			</div>
+			</div>
+
+	  </header>
+			
+
+			<!--Content for the blog-->
+			<div class="container" >
+				<div class="card" >
+					<div class="card-content" style="text-align:left">
+						<h4>Introduction to Git and GitHub - Part II</h4>
+<p class="post-meta valign-wrapper white-text"><i class="material-icons white-text">today</i><span class="valign">February 23, 2017</span></p><br>
+<ul>
+  <li>A lot of times it is difficult to coordinate changes in a project while using Version Control especially when there are more than one contributors in a particular repository! At such times it is important to use a particular feature of Git called <strong>branch</strong> <br /><br /></li>
+</ul>
+
+<h5 id="what-are-branches-and-how-to-use-them">What are branches and how to use them?</h5>
+
+<p><img src="/Blog/images/post2_img1.png" alt="git branch commands" /></p>
+
+<ul>
+  <li>Branches are a feature of Git used when multiple collaborators are working on the same project, but want to work on different parts of the project.<br /><br /></li>
+  <li>This is where the concept of branches in Git is particularly useful. A branch is like a copy of the original code which runs parlallely with other branches in the code repository! The default branch in a GitHub repository is called <strong>master</strong>. To create a new branch you need to execute the following command:</li>
+</ul>
+
+<figure class="highlight"><pre><code class="language-git" data-lang="git">git checkout -b &lt;branch_name&gt;
+Switched to a new branch 'salman'</code></pre></figure>
+
+<ul>
+  <li>In case you are looking to switch back to your <strong>master</strong> branch on your local repository, type in the following commands to get back again:</li>
+</ul>
+
+<figure class="highlight"><pre><code class="language-git" data-lang="git">git checkout master
+git checkout &lt;branch_name&gt;</code></pre></figure>
+
+<ul>
+  <li>If you are looking to delete a branch first make sure you aren’t currently on that branch! Use <code class="highlighter-rouge">git checkout</code> to move to another branch and then use the following commands to delete the branch.</li>
+</ul>
+
+<figure class="highlight"><pre><code class="language-git" data-lang="git">git branch -d &lt;branch_name&gt;</code></pre></figure>
+
+<ul>
+  <li>In case your branch is not being deleted because you have certain unmerged changes and you really want to delete them without merging your changes, you can use the following instructions!</li>
+</ul>
+
+<figure class="highlight"><pre><code class="language-git" data-lang="git">git branch -D &lt;branch_name&gt;</code></pre></figure>
+
+<p><br /></p>
+
+<h5 id="how-to-sync-your-branch-with-the-master-branch">How to sync your branch with the Master branch</h5>
+<ul>
+  <li>If you are looking to sync your branch with your master, as in update the online changes that someone else has made to the <strong>master</strong> branch to your branch, type in the following commands:</li>
+</ul>
+
+<figure class="highlight"><pre><code class="language-git" data-lang="git">git pull origin master</code></pre></figure>
+
+<ul>
+  <li>P.S. This can be extended to all branches and isn’t restricted to the <strong>master</strong> branch alone!<br /></li>
+</ul>
+
+<figure class="highlight"><pre><code class="language-git" data-lang="git">git pull origin &lt;branch_name&gt;</code></pre></figure>
+
+<p><br /></p>
+
+<h5 id="how-to-push-branches-on-github">How to push branches on GitHub</h5>
+
+<p><img src="/Blog/images/post2_img2.png" alt="Create GitHub Account" /></p>
+
+<ul>
+  <li>Once you have your local changes made and committed, it is essential for you to push them on GitHub so that ohers can review them as well! To do this you can simply push your branch on to GitHub just like you would push the master branch to GitHub!<br /></li>
+  <li>After you’re done working on them use the following commands to push your new branch on to GitHub.</li>
+</ul>
+
+<figure class="highlight"><pre><code class="language-git" data-lang="git">git add --all
+git commit -m "&lt;your_message&gt;"
+git push origin &lt;branch_name&gt;</code></pre></figure>
+
+<p><br /></p>
+
+<ul>
+  <li>Check out the next tutorial to see how to resolve Merge Conflicts as and when you encounter them using Git.</li>
+</ul>
+
+<br><h5 class="valign-wrapper">Tags</h5>
+
+	<a class="chip" href="/tags#git">Git</a></h5>
+
+	<a class="chip" href="/tags#github">GitHub</a></h5>
+ 
+					</div>
+				</div>
+			</div>
+
+		<footer class="page-footer blue-grey darken-1">
+	  	
+	  	<div class="row">
+
+				<div class="col s12 m4 l4">
+					
+					<h5 class="white-text">Links</h5>
+	        <div class="row">
+	        	<div class="col s12 m6 l6">
+	            <ul>
+								<li><a class="grey-text text-lighten-3" href="https://salman-bhai.github.io/My-Website/" style="font-size: 1.0em;letter-spacing:2px;">Home</a></li>
+								<li><a class="grey-text text-lighten-3" href="https://salman-bhai.github.io/My-Website/projects.html" style="font-size: 1.0em;letter-spacing:2px;">Projects</a></li>
+	            </ul>
+	          	</div>
+	          	<div class="col s12 m6 l6">
+	          		<ul>
+	          			<li><a class="grey-text text-lighten-3" href="https://salman-bhai.github.io/My-Website/academics.html" style="font-size: 1.0em;letter-spacing:2px;">Academics</a></li>
+									<li><a class="grey-text text-lighten-3" href="https://salman-bhai.github.io/My-Website/resume.html" style="font-size: 1.0em;letter-spacing:2px;">Resume</a></li>
+	        			</ul>
+	        		</div>
+	        	</div>
+	    		</div>
+
+			    <div class="col s12 m4 l4 right">
+			    	<div class="contact">
+		    				<h5 class="white-text">Contact</h5>
+		    			</div>
+		    			<div class="row">
+		    				<div class="col">	
+								<p class="grey-text text-lighten-3">Salman Shah, Room D309 - MT 3, NITK Hostels, Srinivas Nagar, Surathkal, Mangalore, Karnataka - 575025.</p>
+		    				</div>
+		    			</div>
+		    		</div>
+		    	</div>
+
+      <div class="footer-copyright">
+    		<div class="row">
+    			<div class="col s5 m8 l8 pull-l3">
+    				© 2016 Salman Shah
+    			</div>
+    			<!-- Add images here-->
+    			<div class="col s7 m4 l4 right">
+    				<div class="icon-image">
+    					<a href="https://github.com/salman-bhai"><img src="/Blog/images/logo_github_white.png"></a>
+    					<a href="https://www.linkedin.com/in/sbshah97"><img src="/Blog/images/logo_linkedin_white.png"></a>
+    					<a href="https://www.facebook.com/salman.shah.92775"><img src="/Blog/images/logo_fb_white.png"></a>
+    					<a href="https://www.instagram.com/salmanbhai_97/?hl=en"><img src="/Blog/images/logo_instagram_white.png"></a>			
+    				</div>
+    			</div>
+    		</div>
+    	</div>
+
+  	</footer>
+	</body>
+</html>
