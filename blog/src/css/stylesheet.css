@@ -1,0 +1,189 @@
+#nav-mobile li, #nav-mobile li a{
+	display:inline-block;
+	box-sizing: initial;
+}
+
+body {
+	background-color: #e8e8e8;
+	font-size: 1.2em;
+}
+
+body h1, body h2, body h3, body h4, body h5, body h6 {
+	text-align: center;
+	color: #000;
+	font-size: 1.6em;
+ 	font-variant: small-caps; 
+ 	text-transform: none; 
+ 	font-weight: 200; 
+ 	margin-bottom: 2%;
+ 
+}
+
+p {
+ 	font-size: 1.0em;
+ 	color: #ccffcc;
+}
+
+li {
+	font-size: 20px; 
+	color: #ccffcc;
+}
+
+ul li p {
+	font-size: 20px;
+    margin-top: .5em; !important 
+    color: #666; !important
+
+}
+
+p img {
+	max-width: 90%;
+	display: block;
+    margin: 0 auto;
+    padding: 2%;
+}
+
+.bg-img {
+	position:absolute;
+	top:12%;
+	left:50%;
+	transform: translateX(-50%);
+}
+
+.bg-img h1, .bg-img h3 {
+	width: 100%;
+	font-family:roboto;
+	color: #ccffcc;
+	font-size: 2.5em;
+}
+
+.bg-img h3 {
+	width: 100%;
+	font-family:roboto;
+	color: #ccffcc;
+	font-size: 2.0em;
+}
+
+.header-icons {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translateX(-50%);	
+}
+
+.post-list {
+	text-align: center;
+}
+
+footer.page-footer {
+	text-align: center;
+}
+
+.footer-text {
+	font-size: 17px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 25px;
+}
+
+.contact {
+	color: #424242;
+	letter-spacing:0.1em;
+	text-align:center;
+	text-transform: lowercase;
+	line-height: 145%;
+	font-size: 14pt;
+	font-variant: small-caps; 
+}
+
+.panel {
+	z-index:-1;
+	width: 100%;
+	margin-bottom: -120px;
+}
+
+.card {
+	margin-right: 40px;
+	margin-left: 40px;
+	max-width: 800px;
+	background-color: #fff;
+}
+
+.card-content {
+}
+
+
+footer.page-footer {
+	margin: 0%;
+}
+
+.contact {
+	padding-left: 10%;
+}
+
+.icon-image {
+	text-align: right;
+}
+
+.icon-image img{
+	display: table-cell;
+	vertical-align: middle;
+	width: 50px;
+	height: 50px;
+	padding: 20%;
+}
+
+.icon-image a {
+	display: inline-block;
+}
+
+.dropdown-content {
+	position: relative;
+	margin-top: 5%;
+}
+
+pre {
+	padding: 10px;
+	background-color: #84ffff;
+	font-family: Roboto;
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only screen and (max-width : 720px) {
+	.panel, .header-icons {
+		width: 100%;
+	}
+
+	.header-icons {
+		top:82%;
+		left: 50%;
+		transform: translateX(-50%);
+	}
+
+	.icon-image {
+		text-align: center;
+	}
+
+	.nav-wrapper {
+		overflow-y: hidden; 
+		overflow-x: scroll;
+		height: 100%; 
+	}
+
+	#nav-mobile {
+		height: 100%;
+		width:120%;
+		position: absolute;
+	}
+
+	#nav-mobile li, #nav-mobile li a{
+		height:100%;
+	}
+
+	.container {
+		width: 100%;
+	}
+}

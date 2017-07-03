@@ -1,0 +1,20 @@
+---
+layout: default
+title: Home
+---
+
+<ul class="post-list"> 
+{% for post in site.posts %}
+	<li>
+		<a class="white-text" href="{{ site.baseurl }}{{ post.url }}">
+			<div class="card waves-effect waves-light blue-grey darken-1 white-text">
+				<div class="card-content">
+					<span class="post-meta" style="opacity: 0.7;">{{ post.date | date: "%B %-d, %Y"  }}</span>
+					<h5 class="white-text" style="opacity: 0.7;">{{ post.title }}</h5>
+					<p class="post-desc" style="opacity: 0.7;">{{ post.description }}</p>
+				</div>
+			</div>
+		</a>
+	</li>
+{% endfor %}
+</ul>

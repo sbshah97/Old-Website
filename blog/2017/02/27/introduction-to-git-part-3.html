@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Introduction to Git and GitHub - Part III – Salman Shah - Blog</title>
+
+		<!--Meta tags-->
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width; initial-scale=1; maximum-scale=1">
+		<meta name="keywords" content="Salman Shah, Intern, Data Science, Machine Learning">
+	  	<meta name="author" content="Salman Shah">
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+		<!--Favicon-->
+		<link rel="shortcut icon" href="/Blog/images/favicon.ico">
+
+		<!--CSS Files-->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.min.css">
+		<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+		<link rel="stylesheet" href="/Blog/src/css/stylesheet.css">
+
+		<!--JavaScript files-->
+		<script type="text/javascript" src="/Blog/src/js/home.js"></script>
+		<script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous">
+		</script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js">
+		</script>
+
+		<script type="text/javascript">$crisp=[];CRISP_WEBSITE_ID="95f86ec5-a6d1-4659-a374-847f66e1c963";(function(){d=document;s=d.createElement("script");s.src="https://client.crisp.im/l.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();
+		</script>
+	</head>
+
+	<body>
+
+		<header class='blue-grey darken-1'>
+			
+			<div class="navbar">
+			 	<nav>
+			    <div class="nav-wrapper blue-grey darken-1">
+			    	<ul id="nav-mobile" class="right">
+			        <li><a href="https://salman-bhai.github.io/My-Website/">Home</a></li>
+			        <li><a href="https://salman-bhai.github.io/My-Website/projects.html">Projects</a></li>
+			        <li><a href="https://salman-bhai.github.io/My-Website/academics.html">Academics</a></li>
+			        <li><a href="https://salman-bhai.github.io/My-Website/resume.html">Resume</a></li>
+			        <li><a href="https://salman-bhai.github.io/Blog">Blog</a></li>
+				    </ul>
+				  </div>
+			  </nav>
+			</div>
+
+			<div class="row"
+				<div class="col s12 m4 l4">
+					<div class="panel" style="height: 540px;">
+						<div class="bg-img">
+							<h1>Salman Shah</h1>
+							<h3>Blogger, Coder, Developer</h3>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="header-icons">
+				<div class="col s12 m4 l4">
+  				<div class="icon-image" style="blue-grey darken-1">
+  					<a href="https://github.com/salman-bhai"><img src="/Blog/images/logo_github_white.png"></a>
+  					<a href="https://www.linkedin.com/in/sbshah97"><img src="/Blog/images/logo_linkedin_white.png"></a>
+  					<a href="https://www.facebook.com/salman.shah.92775"><img src="/Blog/images/logo_fb_white.png"></a>
+  					<a href="https://www.instagram.com/salmanbhai_97/?hl=en"><img src="/Blog/images/logo_instagram_white.png"></a>
+  				</div>
+  			</div>
+			</div>
+
+	  </header>
+			
+
+			<!--Content for the blog-->
+			<div class="container" >
+				<div class="card" >
+					<div class="card-content" style="text-align:left">
+						<h4>Introduction to Git and GitHub - Part III</h4>
+<p class="post-meta valign-wrapper white-text"><i class="material-icons white-text">today</i><span class="valign">February 27, 2017</span></p><br>
+<ul>
+  <li>This post deals with the dreaded word of “Resolving Merge Conflicts” and how it isn’t as bad as we think it is!<br /></li>
+  <li>This often happens when multiple people work on the same branch or when multiple branches are in play and they don’t get pushed sequentially!<br /></li>
+  <li>The only thing you should remember in Git is you cannot break things. You can always go to your previous state and re-start your work again! It is saved as long as you push it properly!</li>
+  <li>Also, Git Merge Conflicts only occur on local systems not on the Git Server, so in case you are facing a Merge Conflict it will not stop your project, just your progress will be halted.</li>
+</ul>
+
+<h5 id="what-are-merge-conflicts-and-how-do-they-occur">What are Merge Conflicts and how do they occur?</h5>
+<ul>
+  <li>Git being a Version Control System, the act of ‘merging’ is simply adding your changes that you’ve made to your copy of the project repository to the main project repository and almost most of the time this process goes on smoothly.<br /></li>
+  <li>However there is a case when two or more people try to access the same file and make changes to it, there is a chance that Git might not be able to figure out what to do and this is where it leads to Merge Conflicts happenning.<br /></li>
+  <li>Merge Conflicts usually occur in the case where ‘Delete Mode’ has occurred! If say, one user has deleted a file and another user has modified the contents of that file, then a Merge Conflict occurs!<br /></li>
+</ul>
+
+<h5 id="how-to-resolve-a-merge-conflict">How to resolve a Merge Conflict?</h5>
+
+<ul>
+  <li>When faced with a Merge Conflict, the first step is to calm down and believe the end of the world isn’t here! After that try to understand what just happened.<br /></li>
+  <li>Open up your terminal and enter the command <code class="highlighter-rouge">git status</code> to see what has happened!</li>
+</ul>
+
+<figure class="highlight"><pre><code class="language-git" data-lang="git">$ git status
+# On branch contact-form
+# You have unmerged paths.
+#   (fix conflicts and run "git commit")
+#
+# Unmerged paths:
+#   (use "git add &lt;file&gt;..." to mark resolution)
+#
+#       both modified:   src/team.html
+#
+no changes added to commit (use "git add" and/or "git commit -a")</code></pre></figure>
+
+<ul>
+  <li>In this example, you can see that since both the users modified the file called team.html in the src folder a merge conflict has occurred. Now you can go to the file and see where the conflict is! If you open the file you will see a line as follows:</li>
+</ul>
+
+<figure class="highlight"><pre><code class="language-git" data-lang="git">&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
+&lt;p&gt; This repository is the work of Salman&lt;/p&gt;
+=======
+This repository is the work of Salman and Hrily&lt;/p&gt;
+&gt;&gt;&gt;&gt;&gt;&gt;&gt; development</code></pre></figure>
+
+<ul>
+  <li>The contents after the HEAD tilte originate from your current working branch. After the angle brackets, Git tells us where (from which branch) the changes came from. A line with “=======” separates the two conflicting changes.<br /></li>
+  <li>Now resolving them is a simple task. All you have to do is remove the angle markers and in place of them place the text that you need. The above text can simply be replaced with the following and the Merge Conflict is solved!</li>
+</ul>
+
+<figure class="highlight"><pre><code class="language-git" data-lang="git">&lt;p&gt; This repository is the work of Salman Shah and Hrily&lt;/p&gt;</code></pre></figure>
+
+<ul>
+  <li>Now after you have done this, you need to mark your file as ‘resolved for Git Merge Conflicts’ To do that, you need to execute the command <code class="highlighter-rouge">git add &lt;filename&gt;</code>. In this case the command would be:</li>
+</ul>
+
+<figure class="highlight"><pre><code class="language-git" data-lang="git">git add src/team.html</code></pre></figure>
+
+<ul>
+  <li>
+    <p>With this we have solved the problem of resolving Merge Conflicts in Git!<br /></p>
+  </li>
+  <li>
+    <p>This is all that you need to start using Git and GitHub in your projects and this brings us to the end of this small tutorial series on Git and GitHub!</p>
+  </li>
+</ul>
+
+
+<br><h5 class="valign-wrapper">Tags</h5>
+
+	<a class="chip" href="/tags#git">Git</a></h5>
+
+	<a class="chip" href="/tags#github">GitHub</a></h5>
+ 
+					</div>
+				</div>
+			</div>
+
+		<footer class="page-footer blue-grey darken-1">
+	  	
+	  	<div class="row">
+
+				<div class="col s12 m4 l4">
+					
+					<h5 class="white-text">Links</h5>
+	        <div class="row">
+	        	<div class="col s12 m6 l6">
+	            <ul>
+								<li><a class="grey-text text-lighten-3" href="https://salman-bhai.github.io/My-Website/" style="font-size: 1.0em;letter-spacing:2px;">Home</a></li>
+								<li><a class="grey-text text-lighten-3" href="https://salman-bhai.github.io/My-Website/projects.html" style="font-size: 1.0em;letter-spacing:2px;">Projects</a></li>
+	            </ul>
+	          	</div>
+	          	<div class="col s12 m6 l6">
+	          		<ul>
+	          			<li><a class="grey-text text-lighten-3" href="https://salman-bhai.github.io/My-Website/academics.html" style="font-size: 1.0em;letter-spacing:2px;">Academics</a></li>
+									<li><a class="grey-text text-lighten-3" href="https://salman-bhai.github.io/My-Website/resume.html" style="font-size: 1.0em;letter-spacing:2px;">Resume</a></li>
+	        			</ul>
+	        		</div>
+	        	</div>
+	    		</div>
+
+			    <div class="col s12 m4 l4 right">
+			    	<div class="contact">
+		    				<h5 class="white-text">Contact</h5>
+		    			</div>
+		    			<div class="row">
+		    				<div class="col">	
+								<p class="grey-text text-lighten-3">Salman Shah, Room D309 - MT 3, NITK Hostels, Srinivas Nagar, Surathkal, Mangalore, Karnataka - 575025.</p>
+		    				</div>
+		    			</div>
+		    		</div>
+		    	</div>
+
+      <div class="footer-copyright">
+    		<div class="row">
+    			<div class="col s5 m8 l8 pull-l3">
+    				© 2016 Salman Shah
+    			</div>
+    			<!-- Add images here-->
+    			<div class="col s7 m4 l4 right">
+    				<div class="icon-image">
+    					<a href="https://github.com/salman-bhai"><img src="/Blog/images/logo_github_white.png"></a>
+    					<a href="https://www.linkedin.com/in/sbshah97"><img src="/Blog/images/logo_linkedin_white.png"></a>
+    					<a href="https://www.facebook.com/salman.shah.92775"><img src="/Blog/images/logo_fb_white.png"></a>
+    					<a href="https://www.instagram.com/salmanbhai_97/?hl=en"><img src="/Blog/images/logo_instagram_white.png"></a>			
+    				</div>
+    			</div>
+    		</div>
+    	</div>
+
+  	</footer>
+	</body>
+</html>
