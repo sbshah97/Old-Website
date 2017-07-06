@@ -1,6 +1,8 @@
 ---
 layout: default
 ---
+{% include fb-root.html %}
+
 <div class="container flow-text">
 	<h2 class="pt-sans">{{page.title}}</h2>
 	<p class="post-meta valign-wrapper orange-text">
@@ -14,4 +16,6 @@ layout: default
 	<a class="chip" href="/tags#{{ atag | downcase }}">{{ atag }}</a>
 	{% endfor %} 
 	<br><br>
+
+	{% include comments.html %}
 </div>

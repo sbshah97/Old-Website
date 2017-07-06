@@ -2,7 +2,9 @@
 layout: post
 title: "Introduction to Git and GitHub - Part I"
 description: "How to start using Git for your projects"
-tags: ["Git","GitHub"]
+tags: 
+- Git
+- GitHub
 ---
 
 ##### Definition
