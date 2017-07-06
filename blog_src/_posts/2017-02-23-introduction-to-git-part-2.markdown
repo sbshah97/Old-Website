@@ -9,7 +9,7 @@ tags: ["Git","GitHub"]
 
 ##### What are branches and how to use them?
 
-![git branch commands]({{ site.baseurl }}/images/post2_img1.png)
+![git branch commands](/images/post2_img1.png)
 
 * Branches are a feature of Git used when multiple collaborators are working on the same project, but want to work on different parts of the project.<br><br>
 * This is where the concept of branches in Git is particularly useful. A branch is like a copy of the original code which runs parlallely with other branches in the code repository! The default branch in a GitHub repository is called __master__. To create a new branch you need to execute the following command:
@@ -51,7 +51,7 @@ git pull origin <branch_name>
 
 ##### How to push branches on GitHub
 
-![Create GitHub Account]({{ site.baseurl }}/images/post2_img2.png)
+![Create GitHub Account](/images/post2_img2.png)
 
 * Once you have your local changes made and committed, it is essential for you to push them on GitHub so that ohers can review them as well! To do this you can simply push your branch on to GitHub just like you would push the master branch to GitHub!<br>
 * After you're done working on them use the following commands to push your new branch on to GitHub.

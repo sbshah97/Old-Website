@@ -1,11 +1,17 @@
 ---
 layout: default
 ---
-
-<h4>{{page.title}}</h4>
-<p class="post-meta valign-wrapper white-text"><i class="material-icons white-text">today</i><span class="valign">{{ page.date | date: "%B %-d, %Y"  }}</span></p><br>
-{{ content }}
-<br><h5 class="valign-wrapper">Tags</h5>
-{% for atag in page.tags %}
-	<a class="chip" href="/tags#{{ atag | downcase }}">{{ atag }}</a></h5>
-{% endfor %} 
+<div class="container flow-text">
+	<h2 class="pt-sans">{{page.title}}</h2>
+	<p class="post-meta valign-wrapper orange-text">
+	<i class="material-icons">today</i>
+	<span class="valign">{{ page.date | date: "%B %-d, %Y"  }}
+	</span>
+	</p>
+	{{ content }}
+	<h4 class="valign-wrapper">Tags</h4>
+	{% for atag in page.tags %}
+	<a class="chip" href="/tags#{{ atag | downcase }}">{{ atag }}</a>
+	{% endfor %} 
+	<br><br>
+</div>

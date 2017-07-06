@@ -1,11 +1,8 @@
-function init() {
-	$(document).ready(function(){
-		$('.carousel').carousel();
-		$('.slider').slider({'interval': 4000});
+$( document ).ready(function(){
+	$("#sidenav").sideNav();
+	$(document).scroll(function() { 
+		var $nav = $('.navbar-fixed');
+		$nav.find('nav').toggleClass('orange', $(this).scrollTop() > $('.home-page-banner').height());
+		$nav.find('nav').toggleClass('transparent', $(this).scrollTop() < $('.home-page-banner').height());
     });
-
-	$( document ).ready(function() {
-		$(".dropdown-button").dropdown();
-	});
-}
-
+});

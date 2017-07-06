@@ -1,24 +1,15 @@
-# Welcome to Jekyll!
-#
-# This config file is meant for settings that affect your whole blog, values
-# which you are expected to set up once and rarely edit after that. If you find
-# yourself editing this file very often, consider using Jekyll's data files
-# feature for the data you need to update frequently.
-#
-# For technical reasons, this file is *NOT* reloaded automatically when you use
-# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
-
-# Site settings
-# These are used to personalize your new site. If you look in the HTML files,
-# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
-# You can create any custom variable you would like, and they will be accessible
-# in the templates via {{ site.myvariable }}.
+# Site Settings
 title: Salman Shah - Blog
-email: sbs.191197@gmail.com
 description: This is my technical blog where I'll be sharing insights to some of the projects that I have undertaken.
-baseurl: "/Blog" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: "/blog" # the subpath of your site, e.g. /blog
+url: "salman-bhai.github.io" # the base hostname & protocol for your site, e.g. http://example.com
+
+#User Settings
+username: Salman Shah
+user_description: 
+email: sbs.191197@gmail.com
 github_username: salman-bhai
+fackebook_username: salman.shah.bhai
 
 # Build settings
 markdown: kramdown
@@ -28,3 +19,16 @@ gems:
 exclude:
   - Gemfile
   - Gemfile.lock
+highlighter: rouge
+permalink: /:title/
+
+# SYntax Highlighting
+syntax-highlighting:
+  enabled : true
+
+# html minify
+compress_html:
+  clippings: all
+  comments: all
+  endings: []
+  profile: false

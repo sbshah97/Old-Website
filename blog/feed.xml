@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 <generator uri="http://jekyllrb.com" version="3.1.6">Jekyll</generator>
-<link href="/Blog/feed.xml" rel="self" type="application/atom+xml" />
-<link href="/Blog/" rel="alternate" type="text/html" />
-<updated>2017-07-03T22:59:49+05:30</updated>
-<id>/Blog/</id>
+<link href="salman-bhai.github.io/blog/feed.xml" rel="self" type="application/atom+xml" />
+<link href="salman-bhai.github.io/blog/" rel="alternate" type="text/html" />
+<updated>2017-07-06T15:54:52+05:30</updated>
+<id>salman-bhai.github.io/blog/</id>
 <subtitle>This is my technical blog where I&#39;ll be sharing insights to some of the projects that I have undertaken.</subtitle>
 <entry>
 <title>Introduction to Python - Part I</title>
-<link href="/Blog/2017/03/07/introduction-to-python-part-1.html" rel="alternate" type="text/html" title="Introduction to Python - Part I" />
+<link href="salman-bhai.github.io/blog/introduction-to-python-part-1/" rel="alternate" type="text/html" title="Introduction to Python - Part I" />
 <published>2017-03-07T00:00:00+05:30</published>
 <updated>2017-03-07T00:00:00+05:30</updated>
-<id>/Blog/2017/03/07/introduction-to-python-part-1</id>
-<content type="html" xml:base="/Blog/2017/03/07/introduction-to-python-part-1.html">&lt;ul&gt;
+<id>salman-bhai.github.io/blog/introduction-to-python-part-1</id>
+<content type="html" xml:base="salman-bhai.github.io/blog/introduction-to-python-part-1/">&lt;ul&gt;
   &lt;li&gt;Welcome to Part - I of the Tutorial Series Introduction to Python. This following series of tutorials  primarily deal about getting programmers with no programming experience to start using Python in their systems and showcase the power of Python across multiple domains and fields in Computer Science.&lt;/li&gt;
   &lt;li&gt;The aim at the end of these blog posts is to get readers acquainted with Python and to be able to use Python for any programming task that is needed across all domains.&lt;/li&gt;
   &lt;li&gt;This post is primarily divided into four parts:&lt;/li&gt;
@@ -85,7 +85,7 @@ class HelloWorldApp {
 {% endhighlight %}&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;However the same program in Python can be run from the Interactive Python Interpreter by typing the following commands in the terminal:
-&lt;img src=&quot;{{ site.baseurl }}/images/post4_img1.png&quot; alt=&quot;Hello World in Python&quot; /&gt;&lt;/li&gt;
+&lt;img src=&quot;/images/post4_img1.png&quot; alt=&quot;Hello World in Python&quot; /&gt;&lt;/li&gt;
   &lt;li&gt;
     &lt;p&gt;That is all it takes to write a simple python program. Just one line is enough to write a simple Python program given the high level of abstraction that Python provides.&lt;/p&gt;
   &lt;/li&gt;
@@ -116,11 +116,11 @@ python3 hello-world.py
 </entry>
 <entry>
 <title>Introduction to Git and GitHub - Part III</title>
-<link href="/Blog/2017/02/27/introduction-to-git-part-3.html" rel="alternate" type="text/html" title="Introduction to Git and GitHub - Part III" />
+<link href="salman-bhai.github.io/blog/introduction-to-git-part-3/" rel="alternate" type="text/html" title="Introduction to Git and GitHub - Part III" />
 <published>2017-02-27T00:00:00+05:30</published>
 <updated>2017-02-27T00:00:00+05:30</updated>
-<id>/Blog/2017/02/27/introduction-to-git-part-3</id>
-<content type="html" xml:base="/Blog/2017/02/27/introduction-to-git-part-3.html">&lt;ul&gt;
+<id>salman-bhai.github.io/blog/introduction-to-git-part-3</id>
+<content type="html" xml:base="salman-bhai.github.io/blog/introduction-to-git-part-3/">&lt;ul&gt;
   &lt;li&gt;This post deals with the dreaded word of “Resolving Merge Conflicts” and how it isn’t as bad as we think it is!&lt;br /&gt;&lt;/li&gt;
   &lt;li&gt;This often happens when multiple people work on the same branch or when multiple branches are in play and they don’t get pushed sequentially!&lt;br /&gt;&lt;/li&gt;
   &lt;li&gt;The only thing you should remember in Git is you cannot break things. You can always go to your previous state and re-start your work again! It is saved as long as you push it properly!&lt;/li&gt;
@@ -206,17 +206,17 @@ git add src/team.html
 </entry>
 <entry>
 <title>Introduction to Git and GitHub - Part II</title>
-<link href="/Blog/2017/02/23/introduction-to-git-part-2.html" rel="alternate" type="text/html" title="Introduction to Git and GitHub - Part II" />
+<link href="salman-bhai.github.io/blog/introduction-to-git-part-2/" rel="alternate" type="text/html" title="Introduction to Git and GitHub - Part II" />
 <published>2017-02-23T00:00:00+05:30</published>
 <updated>2017-02-23T00:00:00+05:30</updated>
-<id>/Blog/2017/02/23/introduction-to-git-part-2</id>
-<content type="html" xml:base="/Blog/2017/02/23/introduction-to-git-part-2.html">&lt;ul&gt;
+<id>salman-bhai.github.io/blog/introduction-to-git-part-2</id>
+<content type="html" xml:base="salman-bhai.github.io/blog/introduction-to-git-part-2/">&lt;ul&gt;
   &lt;li&gt;A lot of times it is difficult to coordinate changes in a project while using Version Control especially when there are more than one contributors in a particular repository! At such times it is important to use a particular feature of Git called &lt;strong&gt;branch&lt;/strong&gt; &lt;br /&gt;&lt;br /&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h5 id=&quot;what-are-branches-and-how-to-use-them&quot;&gt;What are branches and how to use them?&lt;/h5&gt;
 
-&lt;p&gt;&lt;img src=&quot;{{ site.baseurl }}/images/post2_img1.png&quot; alt=&quot;git branch commands&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/images/post2_img1.png&quot; alt=&quot;git branch commands&quot; /&gt;&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;Branches are a feature of Git used when multiple collaborators are working on the same project, but want to work on different parts of the project.&lt;br /&gt;&lt;br /&gt;&lt;/li&gt;
@@ -271,7 +271,7 @@ git pull origin &lt;branch_name&gt;
 
 &lt;h5 id=&quot;how-to-push-branches-on-github&quot;&gt;How to push branches on GitHub&lt;/h5&gt;
 
-&lt;p&gt;&lt;img src=&quot;{{ site.baseurl }}/images/post2_img2.png&quot; alt=&quot;Create GitHub Account&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/images/post2_img2.png&quot; alt=&quot;Create GitHub Account&quot; /&gt;&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;Once you have your local changes made and committed, it is essential for you to push them on GitHub so that ohers can review them as well! To do this you can simply push your branch on to GitHub just like you would push the master branch to GitHub!&lt;br /&gt;&lt;/li&gt;
@@ -295,13 +295,13 @@ git push origin &lt;branch_name&gt;
 </entry>
 <entry>
 <title>Introduction to Git and GitHub - Part I</title>
-<link href="/Blog/2017/02/17/introduction-to-git.html" rel="alternate" type="text/html" title="Introduction to Git and GitHub - Part I" />
+<link href="salman-bhai.github.io/blog/introduction-to-git/" rel="alternate" type="text/html" title="Introduction to Git and GitHub - Part I" />
 <published>2017-02-17T00:00:00+05:30</published>
 <updated>2017-02-17T00:00:00+05:30</updated>
-<id>/Blog/2017/02/17/introduction-to-git</id>
-<content type="html" xml:base="/Blog/2017/02/17/introduction-to-git.html">&lt;h5 id=&quot;definition&quot;&gt;Definition&lt;/h5&gt;
+<id>salman-bhai.github.io/blog/introduction-to-git</id>
+<content type="html" xml:base="salman-bhai.github.io/blog/introduction-to-git/">&lt;h5 id=&quot;definition&quot;&gt;Definition&lt;/h5&gt;
 
-&lt;p&gt;&lt;img src=&quot;{{ site.baseurl }}/images/post1_img5.png&quot; alt=&quot;Create GitHub Account&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/images/post1_img5.png&quot; alt=&quot;Create GitHub Account&quot; /&gt;&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;Git is a version control system (VCS) for tracking changes in computer files and coordinating work on those files when working on projects that involve multiple people. To check if Git is installed in your system or not, or to check the version of Git in your system type in the following command!&lt;br /&gt;
@@ -339,7 +339,7 @@ git config –global user.name “Salman Shah”
 
 &lt;h5 id=&quot;create-a-github-account&quot;&gt;Create a GitHub Account&lt;/h5&gt;
 
-&lt;p&gt;&lt;img src=&quot;{{ site.baseurl }}/images/post1_img1.png&quot; alt=&quot;Create GitHub Account&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/images/post1_img1.png&quot; alt=&quot;Create GitHub Account&quot; /&gt;&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;
@@ -355,7 +355,7 @@ git config –global user.name “Salman Shah”
 
 &lt;h5 id=&quot;make-your-first-commit&quot;&gt;Make your first commit&lt;/h5&gt;
 
-&lt;p&gt;&lt;img src=&quot;{{ site.baseurl }}/images/post1_img2.png&quot; alt=&quot;Create a New Repository&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/images/post1_img2.png&quot; alt=&quot;Create a New Repository&quot; /&gt;&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;
@@ -373,7 +373,7 @@ git config –global user.name “Salman Shah”
   &lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;img src=&quot;{{ site.baseurl }}/images/post1_img3.png&quot; alt=&quot;Select Link Repository to clone&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/images/post1_img3.png&quot; alt=&quot;Select Link Repository to clone&quot; /&gt;&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;
@@ -404,7 +404,7 @@ cd hello-world
   &lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;img src=&quot;{{ site.baseurl }}/images/post1_img4.png&quot; alt=&quot;Pushing Changes to GitHub Account&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/images/post1_img4.png&quot; alt=&quot;Pushing Changes to GitHub Account&quot; /&gt;&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;First save the changes that you made to the local repository.&lt;/li&gt;

@@ -63,7 +63,7 @@ class HelloWorldApp {
 {% endhighlight %}  
 
 * However the same program in Python can be run from the Interactive Python Interpreter by typing the following commands in the terminal:
-![Hello World in Python]({{ site.baseurl }}/images/post4_img1.png)
+![Hello World in Python](/images/post4_img1.png)
 * That is all it takes to write a simple python program. Just one line is enough to write a simple Python program given the high level of abstraction that Python provides.
 
 * Python can also be written in your favourite text editor and save the name of the file as `hello-world.py`. Just open up your text editor and type in the following program.

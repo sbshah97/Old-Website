@@ -7,7 +7,7 @@ tags: ["Git","GitHub"]
 
 ##### Definition
 
-![Create GitHub Account]({{ site.baseurl }}/images/post1_img5.png)
+![Create GitHub Account](/images/post1_img5.png)
 
 * Git is a version control system (VCS) for tracking changes in computer files and coordinating work on those files when working on projects that involve multiple people. To check if Git is installed in your system or not, or to check the version of Git in your system type in the following command!<br>
 {% highlight git %}
@@ -37,7 +37,7 @@ git config --global user.name "Salman Shah"
 
 ##### Create a GitHub Account
 
-![Create GitHub Account]({{ site.baseurl }}/images/post1_img1.png)
+![Create GitHub Account](/images/post1_img1.png)
 
 * Go to the address: [GitHub](https://github.com/) and then fill in the form which is given.<br><br>
 
@@ -48,7 +48,7 @@ git config --global user.name "Salman Shah"
 ##### Make your first commit
 
 
-![Create a New Repository]({{ site.baseurl }}/images/post1_img2.png)
+![Create a New Repository](/images/post1_img2.png)
 
 * Go to the [GitHub website](https://github.com/) and create a New Repository by clicking on the green 'New Repository' button to the right of the page.<br><br> 
 
@@ -60,7 +60,7 @@ git config --global user.name "Salman Shah"
 	5. Finally click on `Create Repository` button and your new repository will be created!<br><br>
 
 
-![Select Link Repository to clone]({{ site.baseurl }}/images/post1_img3.png)
+![Select Link Repository to clone](/images/post1_img3.png)
 
 * Now all you need to do is click on the Green Dropdown on your repository page called `Clone or download`<br><br>
 
@@ -79,7 +79,7 @@ cd hello-world
 
 * After making all the changes that you need to do, you can now push your changes online by the following commands.<br><br>
 
-![Pushing Changes to GitHub Account]({{ site.baseurl }}/images/post1_img4.png)
+![Pushing Changes to GitHub Account](/images/post1_img4.png)
 
 * First save the changes that you made to the local repository.
 
