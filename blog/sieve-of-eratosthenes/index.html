@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Tags – Salman Shah - Blog</title>
+		<title>Sieve of Eratosthenes – Salman Shah - Blog</title>
 
 		<!--Meta tags-->
 		<meta charset="utf-8">
@@ -85,108 +85,68 @@
 			</div>
 
 			<!--Content for the blog-->
-			<h2>Tags</h2>
+			<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.9&appId=718668198321545";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
 
-<ul class="tag-post-list" id="git">
-<a class="tag pink-text" href="#git"><b>git</b></a>
+<div class="container flow-text">
+	<h2 class="pt-sans">Sieve of Eratosthenes</h2>
+	<p class="post-meta valign-wrapper orange-text">
+	<i class="material-icons">today</i>
+	<span class="valign">July 4, 2017
+	</span>
+	</p>
+	<h4 id="introduction">Introduction</h4>
 
-  
-  <li>
-    <span class="post-meta">February 27, 2017</span>
-    <a href="/introduction-to-git-part-3/"><h5>Introduction to Git and GitHub - Part III</h5></a>
-  </li>
-  
+<p>The Sieve of Eratosthenes is an ancient technique to find Prime Numbers. It may be used to find primes in arithmetic progressions.</p>
 
-  
-  <li>
-    <span class="post-meta">February 23, 2017</span>
-    <a href="/introduction-to-git-part-2/"><h5>Introduction to Git and GitHub - Part II</h5></a>
-  </li>
-  
+<h4 id="concept">Concept</h4>
 
-  
-  <li>
-    <span class="post-meta">February 17, 2017</span>
-    <a href="/introduction-to-git/"><h5>Introduction to Git and GitHub - Part I</h5></a>
-  </li>
-  
+<p>The Sieve of Eratosthenes is one of the more efficient ways to find Prime Numbers given prime numbers are below a range of 10 million.</p>
 
-</ul>
+<p><img src="/images/sieve-of-eratosthenes/sieve.gif" alt="Sieve of Eratosthenes" /></p>
 
-<ul class="tag-post-list" id="github">
-<a class="tag pink-text" href="#github"><b>github</b></a>
+<p>A simple idea is to generate a list of numbers in a list or an array. Then each number which is a multiple of a prime number is eliminated turn by turn starting with 2. Sieve of Eratosthenes is a simple algorithm which eliminates the numbers based on the principle that a multiple of a number is not a prime number.</p>
 
-  
-  <li>
-    <span class="post-meta">February 27, 2017</span>
-    <a href="/introduction-to-git-part-3/"><h5>Introduction to Git and GitHub - Part III</h5></a>
-  </li>
-  
+<p>The above GIF shows how the numbers are eliminated each and every number turn by turn.</p>
 
-  
-  <li>
-    <span class="post-meta">February 23, 2017</span>
-    <a href="/introduction-to-git-part-2/"><h5>Introduction to Git and GitHub - Part II</h5></a>
-  </li>
-  
+<h4 id="algorithm">Algorithm</h4>
 
-  
-  <li>
-    <span class="post-meta">February 17, 2017</span>
-    <a href="/introduction-to-git/"><h5>Introduction to Git and GitHub - Part I</h5></a>
-  </li>
-  
+<p>Simple Algorithm to implement Sieve of Eratosthenes thereby printing a list of Prime Numbers till the number n.</p>
 
-</ul>
+<p>{ % highlight c++ % }
+void sieve(int n) {
+	int prime[n+1];
+	for(int i = 2; i &lt;= n; i ++)
+		prime[i] = i;</p>
 
-<ul class="tag-post-list" id="python">
-<a class="tag pink-text" href="#python"><b>python</b></a>
+<div class="highlighter-rouge"><pre class="codehilite"><code>for(int i = 2; i*i &lt;= n; i ++)
+	for(int j = i*i; j &lt;= n; j += i)
+		prime[j] = 0;
 
-  
-  <li>
-    <span class="post-meta">March 7, 2017</span>
-    <a href="/introduction-to-python-part-1/"><h5>Introduction to Python - Part I</h5></a>
-  </li>
-  
+for(int i = 2; i &lt;= n; i ++) 
+	if(prime[i] != 0)
+		printf("%d ",prime[i]); } { % endhighlight % }
+</code></pre></div>
 
-</ul>
+<p>That’s all for today! Kindly post any doubts that you’d have in the comments below!</p>
 
-<ul class="tag-post-list" id="oo programming">
-<a class="tag pink-text" href="#oo programming"><b>oo programming</b></a>
+	<h4 class="valign-wrapper">Tags</h4>
+	
+	<a class="chip" href="/tags#algorithms">Algorithms</a>
+	
+	<a class="chip" href="/tags#data structures">Data Structures</a>
+	 
+	<br><br>
 
-  
-  <li>
-    <span class="post-meta">March 7, 2017</span>
-    <a href="/introduction-to-python-part-1/"><h5>Introduction to Python - Part I</h5></a>
-  </li>
-  
-
-</ul>
-
-<ul class="tag-post-list" id="algorithms">
-<a class="tag pink-text" href="#algorithms"><b>algorithms</b></a>
-
-  
-  <li>
-    <span class="post-meta">July 4, 2017</span>
-    <a href="/sieve-of-eratosthenes/"><h5>Sieve of Eratosthenes</h5></a>
-  </li>
-  
-
-</ul>
-
-<ul class="tag-post-list" id="data structures">
-<a class="tag pink-text" href="#data structures"><b>data structures</b></a>
-
-  
-  <li>
-    <span class="post-meta">July 4, 2017</span>
-    <a href="/sieve-of-eratosthenes/"><h5>Sieve of Eratosthenes</h5></a>
-  </li>
-  
-
-</ul>
-
+	<div class="fb-comments" data-href="salman-bhai.github.io/blog//sieve-of-eratosthenes/" data-width="500px" data-numposts="20">
+</div>
+</div>
 
 		</main>
 

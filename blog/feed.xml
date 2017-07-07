@@ -3,9 +3,54 @@
 <generator uri="http://jekyllrb.com" version="3.1.6">Jekyll</generator>
 <link href="salman-bhai.github.io/blog/feed.xml" rel="self" type="application/atom+xml" />
 <link href="salman-bhai.github.io/blog/" rel="alternate" type="text/html" />
-<updated>2017-07-06T17:19:35+05:30</updated>
+<updated>2017-07-07T23:00:24+05:30</updated>
 <id>salman-bhai.github.io/blog/</id>
 <subtitle>This is my technical blog where I&#39;ll be sharing insights to some of the projects that I have undertaken.</subtitle>
+<entry>
+<title>Sieve of Eratosthenes</title>
+<link href="salman-bhai.github.io/blog/sieve-of-eratosthenes/" rel="alternate" type="text/html" title="Sieve of Eratosthenes" />
+<published>2017-07-04T00:00:00+05:30</published>
+<updated>2017-07-04T00:00:00+05:30</updated>
+<id>salman-bhai.github.io/blog/sieve-of-eratosthenes</id>
+<content type="html" xml:base="salman-bhai.github.io/blog/sieve-of-eratosthenes/">&lt;h4 id=&quot;introduction&quot;&gt;Introduction&lt;/h4&gt;
+
+&lt;p&gt;The Sieve of Eratosthenes is an ancient technique to find Prime Numbers. It may be used to find primes in arithmetic progressions.&lt;/p&gt;
+
+&lt;h4 id=&quot;concept&quot;&gt;Concept&lt;/h4&gt;
+
+&lt;p&gt;The Sieve of Eratosthenes is one of the more efficient ways to find Prime Numbers given prime numbers are below a range of 10 million.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/sieve-of-eratosthenes/sieve.gif&quot; alt=&quot;Sieve of Eratosthenes&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;A simple idea is to generate a list of numbers in a list or an array. Then each number which is a multiple of a prime number is eliminated turn by turn starting with 2. Sieve of Eratosthenes is a simple algorithm which eliminates the numbers based on the principle that a multiple of a number is not a prime number.&lt;/p&gt;
+
+&lt;p&gt;The above GIF shows how the numbers are eliminated each and every number turn by turn.&lt;/p&gt;
+
+&lt;h4 id=&quot;algorithm&quot;&gt;Algorithm&lt;/h4&gt;
+
+&lt;p&gt;Simple Algorithm to implement Sieve of Eratosthenes thereby printing a list of Prime Numbers till the number n.&lt;/p&gt;
+
+&lt;p&gt;{ % highlight c++ % }
+void sieve(int n) {
+	int prime[n+1];
+	for(int i = 2; i &amp;lt;= n; i ++)
+		prime[i] = i;&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;codehilite&quot;&gt;&lt;code&gt;for(int i = 2; i*i &amp;lt;= n; i ++)
+	for(int j = i*i; j &amp;lt;= n; j += i)
+		prime[j] = 0;
+
+for(int i = 2; i &amp;lt;= n; i ++) 
+	if(prime[i] != 0)
+		printf(&quot;%d &quot;,prime[i]); } { % endhighlight % }
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;That’s all for today! Kindly post any doubts that you’d have in the comments below!&lt;/p&gt;
+</content>
+<category term="Algorithms" />
+<category term="Data Structures" />
+<summary>Introduction</summary>
+</entry>
 <entry>
 <title>Introduction to Python - Part I</title>
 <link href="salman-bhai.github.io/blog/introduction-to-python-part-1/" rel="alternate" type="text/html" title="Introduction to Python - Part I" />
@@ -299,7 +344,7 @@ git push origin &lt;branch_name&gt;
 <published>2017-02-17T00:00:00+05:30</published>
 <updated>2017-02-17T00:00:00+05:30</updated>
 <id>salman-bhai.github.io/blog/introduction-to-git</id>
-<content type="html" xml:base="salman-bhai.github.io/blog/introduction-to-git/">&lt;h5 id=&quot;definition&quot;&gt;Definition&lt;/h5&gt;
+<content type="html" xml:base="salman-bhai.github.io/blog/introduction-to-git/">&lt;h4 id=&quot;definition&quot;&gt;Definition&lt;/h4&gt;
 
 &lt;p&gt;&lt;img src=&quot;/images/post1_img5.png&quot; alt=&quot;Create GitHub Account&quot; /&gt;&lt;/p&gt;
 
@@ -314,7 +359,7 @@ git –version
   &lt;li&gt;GitHub is primarily used by large as well as small IT Companies as well as upcoming startups.&lt;br /&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h5 id=&quot;how-to-get-started&quot;&gt;How To Get Started?&lt;/h5&gt;
+&lt;h4 id=&quot;how-to-get-started&quot;&gt;How To Get Started?&lt;/h4&gt;
 
 &lt;ul&gt;
   &lt;li&gt;
@@ -337,7 +382,7 @@ git config –global user.name “Salman Shah”
   &lt;li&gt;After that you are all set to go!&lt;br /&gt;&lt;br /&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h5 id=&quot;create-a-github-account&quot;&gt;Create a GitHub Account&lt;/h5&gt;
+&lt;h4 id=&quot;create-a-github-account&quot;&gt;Create a GitHub Account&lt;/h4&gt;
 
 &lt;p&gt;&lt;img src=&quot;/images/post1_img1.png&quot; alt=&quot;Create GitHub Account&quot; /&gt;&lt;/p&gt;
 
@@ -353,7 +398,7 @@ git config –global user.name “Salman Shah”
   &lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h5 id=&quot;make-your-first-commit&quot;&gt;Make your first commit&lt;/h5&gt;
+&lt;h4 id=&quot;make-your-first-commit&quot;&gt;Make your first commit&lt;/h4&gt;
 
 &lt;p&gt;&lt;img src=&quot;/images/post1_img2.png&quot; alt=&quot;Create a New Repository&quot; /&gt;&lt;/p&gt;
 
@@ -439,7 +484,7 @@ git push origin master
   &lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h5 id=&quot;things-to-remember&quot;&gt;Things To Remember&lt;/h5&gt;
+&lt;h4 id=&quot;things-to-remember&quot;&gt;Things To Remember&lt;/h4&gt;
 
 &lt;ul&gt;
   &lt;li&gt;

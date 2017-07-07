@@ -7,7 +7,7 @@ tags:
 - GitHub
 ---
 
-##### Definition
+#### Definition
 
 ![Create GitHub Account](/images/post1_img5.png)
 
@@ -19,7 +19,7 @@ git --version
 
 * GitHub is primarily used by large as well as small IT Companies as well as upcoming startups.<br>
 
-##### How To Get Started?
+#### How To Get Started?
 
 * All you have to do if you are a Linux user to install Git is to install it via the `apt-get` command.<br><br>
 {% highlight git %}
@@ -37,7 +37,7 @@ git config --global user.name "Salman Shah"
 
 * After that you are all set to go!<br><br>
 
-##### Create a GitHub Account
+#### Create a GitHub Account
 
 ![Create GitHub Account](/images/post1_img1.png)
 
@@ -47,8 +47,7 @@ git config --global user.name "Salman Shah"
 
 * That is all you need to create your GitHub account.<br><br>
 
-##### Make your first commit
-
+#### Make your first commit
 
 ![Create a New Repository](/images/post1_img2.png)
 
@@ -105,7 +104,7 @@ git push origin master
 
 * Congrats you have just finished adding your first commit!<br><br>
 
-##### Things To Remember
+#### Things To Remember
 
 * This is just a basic tutorial to add files on GitHub.<br><br>
 
