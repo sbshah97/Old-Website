@@ -2,33 +2,14 @@ function init() {
 	$(document).ready(function(){
 		$('.carousel').carousel();
 		$('.slider').slider({'interval': 4000});
+	    $('.button-collapse').sideNav();
     });
-	$("#sidenav").sideNav();
+	
 	$(document).scroll(function() { 
 		var $nav = $('.navbar-fixed');
 		$nav.find('nav').toggleClass('orange', $(this).scrollTop() > $('.home-page-banner').height());
 		$nav.find('nav').toggleClass('transparent', $(this).scrollTop() < $('.home-page-banner').height());
     });
-	$(document).scroll(function() { 
-		var $nav = $('.navbar-fixed');
-		$nav.find('nav').toggleClass('orange', $(this).scrollTop() > $('.projects-page-banner').height());
-		$nav.find('nav').toggleClass('transparent', $(this).scrollTop() < $('.projects-page-banner').height());
-    });
-
-	$(document).scroll(function() { 
-		var $nav = $('.navbar-fixed');
-		$nav.find('nav').toggleClass('orange', $(this).scrollTop() > $('.academics-page-banner').height());
-		$nav.find('nav').toggleClass('transparent', $(this).scrollTop() < $('.academics-page-banner').height());
-    });
-
-	$(".dropdown-button").dropdown();
-    $('.dropdown-button').dropdown({
-      hover: true, // Activate on hover
-      belowOrigin: true, // Displays dropdown below the button
-      alignment: 'left', // Displays dropdown with edge aligned to the left of button
-    }
-  );    
-
 }
 
 function get_project(project_name) {

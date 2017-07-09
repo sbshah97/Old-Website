@@ -6,10 +6,10 @@ url: "salman-bhai.github.io" # the base hostname & protocol for your site, e.g. 
 
 #User Settings
 username: Salman Shah
-user_description: 
+user_description: "My life mantra: Eat, Sleep, Code Repeat :p" 
 email: sbs.191197@gmail.com
 github_username: salman-bhai
-fackebook_username: salman.shah.bhai
+facebook_username: salman.shah.bhai
 
 # Build settings
 markdown: kramdown

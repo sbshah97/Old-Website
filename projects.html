@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html>
 
-  <head>
-  	<!--Page Title-->
-  	<title>Salman Shah - Projects</title>
+<head>
+	<!--Page Title-->
+	<title>Salman Shah - Projects</title>
 
-  	<!--Meta tags-->
+	<!--Meta tags-->
 	<meta name="viewport" content="width=device-width; initial-scale=1; maximum-scale=1">
 	<meta name="keywords" content="Salman Shah, Intern, Data Science, Machine Learning">
-  <meta name="author" content="Salman Shah">
+	<meta name="author" content="Salman Shah">
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 
 	<!--CSS Files-->
@@ -25,130 +25,143 @@
 	<script type="text/javascript" src="js/home.js"></script>
 	<script type="text/javascript" language="javascript" src="js/projects.json"></script> 
 
-  </head>
+</head>
 
-  <body onload="init(); load_projects(1);">
+<body onload="load_projects(1);">
 
-  	<header>
-			<div class="navbar-fixed">
-				<nav class="transparent" role="navigation">
-					<div class="nav-wrapper container">
-						<a href="#" id="sidenav" data-activates="slide-out" class="button-collapse"><i class="material-icons">menu</i></a>
-						
-						<ul class="right hide-on-med-and-down">
-							<li><a href="index.html">Home</a></li>
-							<li><a href="projects.html">Projects</a></li>
-							<li><a href="academics.html">Academics</a></li>
-							<li><a href="https://github.com/salman-bhai/Resume/blob/master/SS_Resume.pdf" target="_blank">Resume</a></li>
-							<li><a href="blog/">Blog</a></li>
-						</ul>
-						
-						<ul id="slide-out" class="side-nav">
-							<li class="bold"><a href="index.html" class="waves-effect waves-teal">Home</a>
-							</li>
-							<li class="bold"><a href="projects.html" class="waves-effect waves-teal">Projects</a></li>
-							<li class="bold"><a href="academics.html" class="waves-effect waves-teal">Academics</a>
-							</li>
-							<li class="bold"><a a href="https://github.com/salman-bhai/Resume/blob/master/SS_Resume.pdf" target="_blank" class="waves-effect waves-teal">Resume</a>
-							</li>
-							<li class="bold"><a href="blog/" class="waves-effect waves-teal">Blog</a></li>
-						</ul>
+	<header>
+		<div class="navbar-fixed">
+			<nav class="transparent" role="navigation">
+				<div class="nav-wrapper container">
+					<a href="#" id="sidenav" data-activates="slide-out" class="button-collapse"><i class="material-icons">menu</i></a>
 
-					</div>
-				</nav>
-			</div>
-		</header>
+					<ul class="right hide-on-med-and-down">
+						<li><a href="index.html">Home</a></li>
+						<li><a href="projects.html">Projects</a></li>
+						<li><a href="academics.html">Academics</a></li>
+						<li><a href="https://github.com/salman-bhai/Resume/blob/master/SS_Resume.pdf" target="_blank">Resume</a></li>
+						<li><a href="blog/">Blog</a></li>
+					</ul>
 
-  	<main>
+					<ul id="slide-out" class="side-nav">
+						<li class="bold"><a href="index.html" class="waves-effect waves-teal">Home</a>
+						</li>
+						<li class="bold"><a href="projects.html" class="waves-effect waves-teal">Projects</a></li>
+						<li class="bold"><a href="academics.html" class="waves-effect waves-teal">Academics</a>
+						</li>
+						<li class="bold"><a a href="https://github.com/salman-bhai/Resume/blob/master/SS_Resume.pdf" target="_blank" class="waves-effect waves-teal">Resume</a>
+						</li>
+						<li class="bold"><a href="blog/" class="waves-effect waves-teal">Blog</a></li>
+					</ul>
 
-			<div class="projects-page-banner">
-				<div style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; background-color: rgba(0,0,0,0.6);"></div>
-				<div style="position: absolute; bottom: 0;width: 100%; color: #fff;">
-					<div class="container">
-						<div class="row">
-							<h2 class="welcome-text">Welcome to my website!</h2>
-						</div>
-						<div class="row">
-							This website has been made to introduce incoming freshers to the life at NITK Surathkal.<br>
-							Please make sure to explore this website and also find all the information that you need. <br><br><br><br>
-						</div>
-						<div class="row" id="icons">
-							<a href="https://github.com/salman-bhai"><img class="responsive-image" src="images/logo_github_white.png"></a>
-							<a href="https://www.linkedin.com/in/sbshah97"><img class="responsive-image" src="images/logo_linkedin_white.png"></a>
-							<a href="https://www.facebook.com/salman.shah.92775"><img class="responsive-image" src="images/logo_fb_white.png"></a>
-							<a href="https://www.instagram.com/salmanbhai_97/?hl=en"><img class="responsive-image" src="images/logo_instagram_white.png"></a>			
-						</div>
-					</div>	
 				</div>
-			</div>
+			</nav>
+		</div>
+	</header>
 
-			<div class="container">
-				<h4 class="pt-sans">Welcome to my Projects</h4>
-				<div class="flow-text">
-					All my projects listed over here are put up on my GitHub profile! Most of them are Public Repositories in my profile while some of them may be forked from my Friend's repositories</br>
-					Most of my projects are collaborative projects which I've mostly worked with my friend Hrily who's been my wing-mate these two semesters.</br> 
-					All the projects have their Source code on GitHub and can be viewed by clicking the View Source code button near the project description.</br>
-				</div>
-			</div>
+	<main>
 
-			<div class="container">
-				<div class=card-horizontal>
-					<ul id="tabs-swipe-demo" class="tabs">
-				    <li class="tab col s3"><a class="active" href="#featured_projects" onclick="load_projects(1);">Featured Projects</a></li>
-				    <li class="tab col s3"><a href="#android" onclick="load_projects(2);">Android</a></li>
-				    <li class="tab col s3"><a href="#web" onclick="load_projects(3);">Web</a></li>
-				    <li class="tab col s3"><a href="#ml" onclick="load_projects(4);">ML</a></li>
-				    <li class="tab col s3"><a href="#app_dev" onclick="load_projects(5);">Application</a></li>
-				    <li class="tab col s3"><a href="#cp" onclick="load_projects(6);">CP</a></li>
-				    <li class="tab col s3"><a href="#others" onclick="load_projects(7);">Others</a></li>
-				  </ul>
-			  </div>
-			</div>
-		  
-			<div class="projects-list">
-				<div id="featured_projects" class="col s12" >
-				</div>
-				<div id="android" class="col s12"> 
-				</div>
-				<div id="web" class="col s12">
-				</div>
-				<div id="ml" class="col s12">
-				</div>
-				<div id="app_dev" class="col s12">
-				</div>
-				<div id="cp" class="col s12">
-				</div>
-				<div id="others" class="col s12">
-				</div>
-		  </div>
-
-  	</main>
-
-		<footer class="orange">
-			<div class="row center">
-				<div class="col s12 m4 l4">
-					<h4 class="welcome-text white-text">Links</h4>
+		<div class="projects-page-banner">
+			<div style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; background-color: rgba(0,0,0,0.6);"></div>
+			<div style="position: absolute; bottom: 0;width: 100%; color: #fff;">
+				<div class="container">
 					<div class="row">
-						<div class="icon-image" id="icons">
-							<a href="https://github.com/salman-bhai"><img class="responsive-image" src="images/logo_github_white.png"></a>
-							<a href="https://www.linkedin.com/in/sbshah97"><img class="responsive-image" src="images/logo_linkedin_white.png"></a>
-							<a href="https://www.facebook.com/salman.shah.92775"><img class="responsive-image" src="images/logo_fb_white.png"></a>
-							<a href="https://www.instagram.com/salmanbhai_97/?hl=en"><img class="responsive-image" src="images/logo_instagram_white.png"></a>			
-						</div>							
-					</div>
-				</div>
-
-				<div class="col s12 m4 l4 right flow-text">
-					<div class="contact">
-						<h4 class="white-text">Contact</h4>
+						<h2 class="welcome-text">Welcome to my website!</h2>
 					</div>
 					<div class="row">
-							<p class="white-text" style="font-size: 18px;">Salman Shah, Room 53 - Block 3, NITK Hostels, Srinivas Nagar, Surathkal, Mangalore, Karnataka - 575025.</p>
+						This website has been made to introduce incoming freshers to the life at NITK Surathkal.<br>
+						Please make sure to explore this website and also find all the information that you need. <br><br><br><br>
 					</div>
+					<div class="row" id="icons">
+						<a href="https://github.com/salman-bhai"><img class="responsive-image" src="images/logo_github_white.png"></a>
+						<a href="https://www.linkedin.com/in/sbshah97"><img class="responsive-image" src="images/logo_linkedin_white.png"></a>
+						<a href="https://www.facebook.com/salman.shah.92775"><img class="responsive-image" src="images/logo_fb_white.png"></a>
+						<a href="https://www.instagram.com/salmanbhai_97/?hl=en"><img class="responsive-image" src="images/logo_instagram_white.png"></a>			
+					</div>
+				</div>	
+			</div>
+		</div>
+
+		<div class="container">
+			<h4 class="pt-sans">Welcome to my Projects</h4>
+			<div class="flow-text">
+				All my projects listed over here are put up on my GitHub profile! Most of them are Public Repositories in my profile while some of them may be forked from my Friend's repositories</br>
+				Most of my projects are collaborative projects which I've mostly worked with my friend Hrily who's been my wing-mate these two semesters.</br> 
+				All the projects have their Source code on GitHub and can be viewed by clicking the View Source code button near the project description.</br>
+			</div>
+		</div>
+
+		<div class="container">
+			<div class=card-horizontal>
+				<ul id="tabs-swipe-demo" class="tabs">
+					<li class="tab col s3"><a class="active" href="#featured_projects" onclick="load_projects(1);">Featured Projects</a></li>
+					<li class="tab col s3"><a href="#android" onclick="load_projects(2);">Android</a></li>
+					<li class="tab col s3"><a href="#web" onclick="load_projects(3);">Web</a></li>
+					<li class="tab col s3"><a href="#ml" onclick="load_projects(4);">ML</a></li>
+					<li class="tab col s3"><a href="#app_dev" onclick="load_projects(5);">Application</a></li>
+					<li class="tab col s3"><a href="#cp" onclick="load_projects(6);">CP</a></li>
+					<li class="tab col s3"><a href="#others" onclick="load_projects(7);">Others</a></li>
+				</ul>
+			</div>
+		</div>
+
+		<div class="projects-list">
+			<div id="featured_projects" class="col s12" >
+			</div>
+			<div id="android" class="col s12"> 
+			</div>
+			<div id="web" class="col s12">
+			</div>
+			<div id="ml" class="col s12">
+			</div>
+			<div id="app_dev" class="col s12">
+			</div>
+			<div id="cp" class="col s12">
+			</div>
+			<div id="others" class="col s12">
+			</div>
+		</div>
+
+	</main>
+
+	<footer class="orange">
+		<div class="row center">
+			<div class="col s12 m4 l4">
+				<h4 class="welcome-text white-text">Links</h4>
+				<div class="row">
+					<div class="icon-image" id="icons">
+						<a href="https://github.com/salman-bhai"><img class="responsive-image" src="images/logo_github_white.png"></a>
+						<a href="https://www.linkedin.com/in/sbshah97"><img class="responsive-image" src="images/logo_linkedin_white.png"></a>
+						<a href="https://www.facebook.com/salman.shah.92775"><img class="responsive-image" src="images/logo_fb_white.png"></a>
+						<a href="https://www.instagram.com/salmanbhai_97/?hl=en"><img class="responsive-image" src="images/logo_instagram_white.png"></a>			
+					</div>							
 				</div>
 			</div>
-		</footer>
 
-  </body>
+			<div class="col s12 m4 l4 right flow-text">
+				<div class="contact">
+					<h4 class="white-text">Contact</h4>
+				</div>
+				<div class="row">
+					<p class="white-text" style="font-size: 18px;">Salman Shah, Room 53 - Block 3, NITK Hostels, Srinivas Nagar, Surathkal, Mangalore, Karnataka - 575025.</p>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+			<!--JavaScript files-->
+		<script type="text/javascript" src="js/home.js"></script>
+		<script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous">
+		</script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js">
+		</script>
+		<script type="text/javascript">
+			var $nav = $('.navbar-fixed');
+			$nav.find('nav').toggleClass('orange', $(this).scrollTop() > $('.academics-page-banner').height());
+			$nav.find('nav').toggleClass('transparent', $(this).scrollTop() < $('.academics-page-banner').height());
+		</script>
+
+
+</body>
 
 </html>

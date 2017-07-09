@@ -18,13 +18,6 @@
 		<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 		<link rel="stylesheet" href="css/stylesheet.css">
 
-		<!--JavaScript files-->
-		<script type="text/javascript" src="js/home.js"></script>
-		<script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous">
-		</script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js">
-		</script>
-		<script type="text/javascript" src="js/lib/jquery-1.11.1.min.js" ></script>
   </head>
 
   <body onload="init()">
@@ -168,8 +161,14 @@
 
 		<!--JavaScript files-->
 		<script type="text/javascript" src="js/home.js"></script>
-		<script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
-
+		<script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous">
+		</script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js">
+		</script>
+		<script type="text/javascript">
+			var $nav = $('.navbar-fixed');
+			$nav.find('nav').toggleClass('orange', $(this).scrollTop() > $('.academics-page-banner').height());
+			$nav.find('nav').toggleClass('transparent', $(this).scrollTop() < $('.academics-page-banner').height());
+		</script>
   </body>
 </html>

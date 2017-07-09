@@ -16,6 +16,8 @@ layout: default
 	<a class="chip" href="/tags#{{ atag | downcase }}">{{ atag }}</a>
 	{% endfor %} 
 	<br><br>
+	{% include author.html %}
 
 	{% include comments.html %}
+
 </div>
