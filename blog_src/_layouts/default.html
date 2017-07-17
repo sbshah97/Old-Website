@@ -31,48 +31,19 @@
 
 	<body onload="init();">
 
-		<header>
-			<div class="navbar-fixed">
-				<nav class="transparent" role="navigation">
-					<div class="nav-wrapper container">
-						
-						<ul class="right hide-on-med-and-down">
-							<li><a href="/index.html">Home</a></li>
-							<li><a href="/projects.html">Projects</a></li>
-							<li><a href="/academics.html">Academics</a></li>
-							<li><a href="https://github.com/salman-bhai/Resume/blob/master/SS_Resume.pdf" target="_blank">Resume</a></li>
-							<li><a href="/blog">Blog</a></li>
-						</ul>
-						
-						<ul id="slide-out" class="side-nav">
-							<li class="bold"><a href="/index.html" class="waves-effect waves-teal">Home</a>
-							</li>
-							<li class="bold"><a href="/projects.html" class="waves-effect waves-teal">Projects</a></li>
-							<li class="bold"><a href="/academics.html" class="waves-effect waves-teal">Academics</a>
-							</li>
-							<li class="bold"><a href="https://github.com/salman-bhai/Resume/blob/master/SS_Resume.pdf" target="_blank" class="waves-effect waves-teal">Resume</a>
-							</li>
-							<li class="bold"><a href="/blog" class="waves-effect waves-teal">Blog</a></li>
-						</ul>
-
-						<a href="#" id="sidenav" data-activates="slide-out" class="button-collapse"><i class="material-icons">menu</i></a>
-					</div>
-				</nav>
-			</div>
-		</header>
-
+	{% include header.html %}
 		<main>
-			<div class="home-page-banner">
+			<div class="blog-page-banner">
 				<div style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; background-color: rgba(0,0,0,0.6);">
 				</div>
 				<div style="position: absolute; bottom: 0;width: 100%; color: #fff;">
 					<div class="container">
 						<div class="row">
-							<h1 class="welcome-text">Welcome to my website!</h1>
+							<h1 class="welcome-text">Welcome to my Blog!</h1>
 						</div>
 						<div class="row">
-							This website has been made to introduce incoming freshers to the life at NITK Surathkal.<br>
-							Please make sure to explore this website and also find all the information that you need. <br><br><br><br>
+							The following blog contains a brief overview of my work and the daily projects that I do.<br>
+							Please feel free to comment at the end of each article to give your valuable feedback. <br><br><br><br>
 						</div>
 						<div class="row" id="icons">
 							<a href="https://github.com/salman-bhai"><img class="responsive-image" src="/images/logo_github_white.png"></a>
@@ -89,32 +60,6 @@
 
 		</main>
 
-		<footer class="orange">
-			
-			<div class="row center">
-				<div class="col s12 m4 l4">
-					<h4 class="welcome-text white-text">Links</h4>
-					<div class="row">
-						<div class="icon-image" id="icons">
-							<a href="https://github.com/salman-bhai"><img class="responsive-image" src="/images/logo_github_white.png"></a>
-							<a href="https://www.linkedin.com/in/sbshah97"><img class="responsive-image" src="/images/logo_linkedin_white.png"></a>
-							<a href="https://www.facebook.com/salman.shah.92775"><img class="responsive-image" src="/images/logo_fb_white.png"></a>
-							<a href="https://www.instagram.com/salmanbhai_97/?hl=en"><img class="responsive-image" src="/images/logo_instagram_white.png"></a>			
-						</div>							
-					</div>
-				</div>
-
-				<div class="col s12 m4 l4 right flow-text">
-					<div class="contact">
-						<h4 class="white-text">Contact</h4>
-					</div>
-					<div class="row">
-							<p class="white-text" style="font-size: 18px;">Salman Shah, Room 53 - Block 3, NITK Hostels, Srinivas Nagar, Surathkal, Mangalore, Karnataka - 575025.</p>
-					</div>
-				</div>
-			</div>
-
-		</footer>
-
+		{% include footer.html %}
 	</body>
 </html>

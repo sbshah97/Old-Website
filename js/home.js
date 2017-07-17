@@ -1,14 +1,55 @@
+function init_home() {
+	
+	(function($){
+  		$(function(){
+    		$('.button-collapse').sideNav();
+  		}); // end of document ready
+	})(jQuery); // end of jQuery name space
+	
+	$(document).scroll(function() { 
+		var $nav = $('.navbar-fixed');
+		$nav.find('nav').toggleClass('orange', $(this).scrollTop() > $('.home-page-banner').height());
+		$nav.find('nav').toggleClass('transparent', $(this).scrollTop() < $('.home-page-banner').height());
+    });
+}
+
+function init_projects() {
+	$(document).ready(function(){
+		$('.carousel').carousel();
+		$('.slider').slider({'interval': 4000});
+	    $('.button-collapse').sideNav();
+    });
+	$(document).scroll(function() { 
+		var $nav = $('.navbar-fixed');
+		$nav.find('nav').toggleClass('orange', $(this).scrollTop() > $('.projects-page-banner').height());
+		$nav.find('nav').toggleClass('transparent', $(this).scrollTop() <= $('.projects-page-banner').height());
+    });	
+    load_projects(1);
+}
+
+function init_academics() {
+	$(document).ready(function(){
+		$('.carousel').carousel();
+		$('.slider').slider({'interval': 4000});
+	    $('.button-collapse').sideNav();
+    });
+	$(document).scroll(function() { 
+		var $nav = $('.navbar-fixed');
+		$nav.find('nav').toggleClass('orange', $(this).scrollTop() > $('.academics-page-banner').height());
+		$nav.find('nav').toggleClass('transparent', $(this).scrollTop() < $('.academics-page-banner').height());
+    });		
+}
+
 function init() {
 	$(document).ready(function(){
 		$('.carousel').carousel();
 		$('.slider').slider({'interval': 4000});
 	    $('.button-collapse').sideNav();
     });
-	
 	$(document).scroll(function() { 
 		var $nav = $('.navbar-fixed');
-		$nav.find('nav').toggleClass('orange', $(this).scrollTop() > $('.home-page-banner').height());
-		$nav.find('nav').toggleClass('transparent', $(this).scrollTop() < $('.home-page-banner').height());
+		$nav.find('nav').toggleClass('orange', $(this).scrollTop() > $('.blog-page-banner').height());
+		$nav.find('nav').toggleClass('transparent', $(this).scrollTop() < $('.blog-page-banner').height());
     });
 }
 

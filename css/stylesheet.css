@@ -23,6 +23,14 @@
 	background-size: cover;
 }
 
+.blog-page-banner {
+	margin-top: -64px;
+	width: 100%;
+	height: 100vh;
+	background: url('/images/carousel_image_2.jpg') no-repeat center center;
+	background-size: cover;	
+}
+
 .welcome-text {
 	font-family: 'PT Sans', sans-serif;
 	margin-bottom: 10px;
@@ -84,6 +92,25 @@ footer {
 img {
 	width: 100%;
 }
+
+.tabs .tab a{
+    color:#000;
+} /*Black color to the text*/
+
+.tabs .tab a:hover {
+    background-color:#eee;
+    color:#000;
+} /*Text color on hover*/
+
+.tabs .tab a.active {
+    background-color:#ffd8a6;
+    color:#fff;
+} /*Background and text color when a tab is active*/
+
+.tabs .indicator {
+    background-color:#ff9800;
+} /*Color of underline*/
+
 
 /*Syntax Highlighting from here*/
 .highlight { background-color: #002b36; color: #93a1a1; max-width: 56.25rem; padding: 1rem; border-radius: 1rem; margin: 0px auto 2em; }
