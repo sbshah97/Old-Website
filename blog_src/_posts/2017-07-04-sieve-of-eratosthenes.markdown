@@ -25,7 +25,7 @@ The above GIF shows how the numbers are eliminated each and every number turn by
 
 Simple Algorithm to implement Sieve of Eratosthenes thereby printing a list of Prime Numbers till the number n. 
 
-{ % highlight c++ % }
+```c++
 void sieve(int n) {
 	int prime[n+1];
 	for(int i = 2; i <= n; i ++)
@@ -39,6 +39,6 @@ void sieve(int n) {
 		if(prime[i] != 0)
 			printf("%d ",prime[i]);
 }
-{ % endhighlight % }
+```
 
 That's all for today! Kindly post any doubts that you'd have in the comments below!

@@ -119,19 +119,19 @@
 
 <p>Simple Algorithm to implement Sieve of Eratosthenes thereby printing a list of Prime Numbers till the number n.</p>
 
-<p>{ % highlight c++ % }
-void sieve(int n) {
+<div class="highlighter-rouge"><pre class="codehilite"><code>void sieve(int n) {
 	int prime[n+1];
 	for(int i = 2; i &lt;= n; i ++)
-		prime[i] = i;</p>
+		prime[i] = i;
 
-<div class="highlighter-rouge"><pre class="codehilite"><code>for(int i = 2; i*i &lt;= n; i ++)
-	for(int j = i*i; j &lt;= n; j += i)
-		prime[j] = 0;
+	for(int i = 2; i*i &lt;= n; i ++)
+		for(int j = i*i; j &lt;= n; j += i)
+			prime[j] = 0;
 
-for(int i = 2; i &lt;= n; i ++) 
-	if(prime[i] != 0)
-		printf("%d ",prime[i]); } { % endhighlight % }
+	for(int i = 2; i &lt;= n; i ++) 
+		if(prime[i] != 0)
+			printf("%d ",prime[i]);
+}
 </code></pre></div>
 
 <p>That’s all for today! Kindly post any doubts that you’d have in the comments below!</p>
