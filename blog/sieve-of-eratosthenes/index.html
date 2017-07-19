@@ -31,36 +31,35 @@
 
 	<body onload="init();">
 
-			<header>
-			<div class="navbar-fixed">
-				<nav class="transparent" role="navigation">
-					<div class="nav-wrapper container">
-						
-						<ul class="right hide-on-med-and-down">
-							<li><a href="/index.html">Home</a></li>
-							<li><a href="/projects.html">Projects</a></li>
-							<li><a href="/academics.html">Academics</a></li>
-							<li><a href="https://github.com/salman-bhai/Resume/blob/master/SS_Resume.pdf" target="_blank">Resume</a></li>
-							<li><a href="/blog">Blog</a></li>
-						</ul>
-						
-						<ul id="slide-out" class="side-nav">
-							<li class="bold"><a href="/index.html" class="waves-effect waves-teal">Home</a>
-							</li>
-							<li class="bold"><a href="/projects.html" class="waves-effect waves-teal">Projects</a></li>
-							<li class="bold"><a href="/academics.html" class="waves-effect waves-teal">Academics</a>
-							</li>
-							<li class="bold"><a href="https://github.com/salman-bhai/Resume/blob/master/SS_Resume.pdf" target="_blank" class="waves-effect waves-teal">Resume</a>
-							</li>
-							<li class="bold"><a href="/blog" class="waves-effect waves-teal">Blog</a></li>
-						</ul>
+		<header>
+		<div class="navbar-fixed">
+			<nav class="transparent" role="navigation">
+				<div class="nav-wrapper container">
+					<a href="#" id="sidenav" data-activates="slide-out" class="button-collapse"><i class="material-icons">menu</i></a>
+					
+					<ul class="right hide-on-med-and-down">
+						<li><a href="/">Home</a></li>
+						<li><a href="projects.html">Projects</a></li>
+						<li><a href="academics.html">Academics</a></li>
+						<li><a href="https://github.com/salman-bhai/Resume/blob/master/SS_Resume.pdf" target="_blank">Resume</a></li>
+						<li><a href="blog/">Blog</a></li>
+					</ul>
+				</div>
+			</nav>
+					
+		</div>
+		<ul id="slide-out" class="side-nav">
+			<li class="bold"><a href="/" class="waves-effect waves-teal">Home</a>
+			</li>
+			<li class="bold"><a href="/projects.html" class="waves-effect waves-teal">Projects</a></li>
+			<li class="bold"><a href="/academics.html" class="waves-effect waves-teal">Academics</a>
+			</li>
+			<li class="bold"><a href="https://github.com/salman-bhai/Resume/blob/master/SS_Resume.pdf" target="_blank" class="waves-effect waves-teal">Resume</a>
+			</li>
+			<li class="bold"><a href="/blog" class="waves-effect waves-teal">Blog</a></li>
+		</ul>
 
-						<a href="#" id="sidenav" data-activates="slide-out" class="button-collapse"><i class="material-icons">menu</i></a>
-					</div>
-				</nav>
-			</div>
-		</header>
-
+	</header>
 		<main>
 			<div class="blog-page-banner">
 				<div style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; background-color: rgba(0,0,0,0.6);">
@@ -119,19 +118,19 @@
 
 <p>Simple Algorithm to implement Sieve of Eratosthenes thereby printing a list of Prime Numbers till the number n.</p>
 
-<div class="highlighter-rouge"><pre class="codehilite"><code>void sieve(int n) {
-	int prime[n+1];
-	for(int i = 2; i &lt;= n; i ++)
-		prime[i] = i;
+<div class="language-c++ highlighter-rouge"><pre class="codehilite"><code><span class="kt">void</span> <span class="nf">sieve</span><span class="p">(</span><span class="kt">int</span> <span class="n">n</span><span class="p">)</span> <span class="p">{</span>
+	<span class="kt">int</span> <span class="n">prime</span><span class="p">[</span><span class="n">n</span><span class="o">+</span><span class="mi">1</span><span class="p">];</span>
+	<span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;=</span> <span class="n">n</span><span class="p">;</span> <span class="n">i</span> <span class="o">++</span><span class="p">)</span>
+		<span class="n">prime</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">i</span><span class="p">;</span>
 
-	for(int i = 2; i*i &lt;= n; i ++)
-		for(int j = i*i; j &lt;= n; j += i)
-			prime[j] = 0;
+	<span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span> <span class="n">i</span><span class="o">*</span><span class="n">i</span> <span class="o">&lt;=</span> <span class="n">n</span><span class="p">;</span> <span class="n">i</span> <span class="o">++</span><span class="p">)</span>
+		<span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="n">i</span><span class="o">*</span><span class="n">i</span><span class="p">;</span> <span class="n">j</span> <span class="o">&lt;=</span> <span class="n">n</span><span class="p">;</span> <span class="n">j</span> <span class="o">+=</span> <span class="n">i</span><span class="p">)</span>
+			<span class="n">prime</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
 
-	for(int i = 2; i &lt;= n; i ++) 
-		if(prime[i] != 0)
-			printf("%d ",prime[i]);
-}
+	<span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;=</span> <span class="n">n</span><span class="p">;</span> <span class="n">i</span> <span class="o">++</span><span class="p">)</span> 
+		<span class="k">if</span><span class="p">(</span><span class="n">prime</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">)</span>
+			<span class="n">printf</span><span class="p">(</span><span class="s">"%d "</span><span class="p">,</span><span class="n">prime</span><span class="p">[</span><span class="n">i</span><span class="p">]);</span>
+<span class="p">}</span>
 </code></pre></div>
 
 <p>That’s all for today! Kindly post any doubts that you’d have in the comments below!</p>
@@ -170,7 +169,7 @@
 						<div class="icon-image" id="icons">
 							<a href="https://github.com/salman-bhai"><img class="responsive-image" src="/images/logo_github_white.png"></a>
 							<a href="https://www.linkedin.com/in/sbshah97"><img class="responsive-image" src="/images/logo_linkedin_white.png"></a>
-							<a href="https://www.facebook.com/salman.shah.92775"><img class="responsive-image" src="/images/logo_fb_white.png"></a>
+							<a href="https://www.facebook.com/shah.salman.bhai"><img class="responsive-image" src="/images/logo_fb_white.png"></a>
 							<a href="https://www.instagram.com/salmanbhai_97/?hl=en"><img class="responsive-image" src="/images/logo_instagram_white.png"></a>			
 						</div>							
 					</div>
@@ -181,7 +180,7 @@
 						<h4 class="white-text">Contact</h4>
 					</div>
 					<div class="row">
-							<p class="white-text" style="font-size: 18px;">Salman Shah, Room 53 - Block 3, NITK Hostels, Srinivas Nagar, Surathkal, Mangalore, Karnataka - 575025.</p>
+							<p class="white-text" style="font-size: 18px;">Salman Shah, Room D209, Mega Tower 3, NITK Hostels, Srinivas Nagar, Surathkal, Mangalore, Karnataka - 575025.</p>
 					</div>
 				</div>
 			</div>

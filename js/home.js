@@ -1,7 +1,10 @@
 function init_home() {
-	
-	$('.button-collapse').sideNav();
-	
+	$( document ).ready(function(){
+		$('.button-collapse').sideNav({
+		      closeOnClick: true
+		    }
+		  );
+	});	
 	$(document).scroll(function() { 
 		var $nav = $('.navbar-fixed');
 		$nav.find('nav').toggleClass('orange', $(this).scrollTop() > $('.home-page-banner').height());
@@ -10,11 +13,12 @@ function init_home() {
 }
 
 function init_projects() {
-	$(document).ready(function(){
-		$('.carousel').carousel();
-		$('.slider').slider({'interval': 4000});
-	    $('.button-collapse').sideNav();
-    });
+	$( document ).ready(function(){
+		$('.button-collapse').sideNav({
+		      closeOnClick: true
+		    }
+		  );
+	});	
 	$(document).scroll(function() { 
 		var $nav = $('.navbar-fixed');
 		$nav.find('nav').toggleClass('orange', $(this).scrollTop() > $('.projects-page-banner').height());
@@ -24,11 +28,12 @@ function init_projects() {
 }
 
 function init_academics() {
-	$(document).ready(function(){
-		$('.carousel').carousel();
-		$('.slider').slider({'interval': 4000});
-	    $('.button-collapse').sideNav();
-    });
+	$( document ).ready(function(){
+		$('.button-collapse').sideNav({
+		      closeOnClick: true
+		    }
+		  );
+	});	
 	$(document).scroll(function() { 
 		var $nav = $('.navbar-fixed');
 		$nav.find('nav').toggleClass('orange', $(this).scrollTop() > $('.academics-page-banner').height());
@@ -37,11 +42,12 @@ function init_academics() {
 }
 
 function init() {
-	$(document).ready(function(){
-		$('.carousel').carousel();
-		$('.slider').slider({'interval': 4000});
-	    $('.button-collapse').sideNav();
-    });
+	$( document ).ready(function(){
+		$('.button-collapse').sideNav({
+		      closeOnClick: true
+		    }
+		  );
+	});	
 	$(document).scroll(function() { 
 		var $nav = $('.navbar-fixed');
 		$nav.find('nav').toggleClass('orange', $(this).scrollTop() > $('.blog-page-banner').height());
