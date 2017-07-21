@@ -2,7 +2,12 @@
 layout: post
 title: "Introduction to Git and GitHub - Part III"
 description: "How to resolve Merge Conflicts in Git"
-tags: ["Git","GitHub"]
+tags: 
+- Git
+- GitHub
+- Version Control
+languages:
+- Git
 ---
 
 * This post deals with the dreaded word of "Resolving Merge Conflicts" and how it isn't as bad as we think it is!<br>

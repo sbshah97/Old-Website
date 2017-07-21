@@ -2,7 +2,12 @@
 layout: post
 title: "Introduction to Git and GitHub - Part II"
 description: "Introduction to Branches in Git"
-tags: ["Git","GitHub"]
+tags: 
+- Git
+- GitHub
+- Version Control
+languages:
+- Git
 ---
 
 * A lot of times it is difficult to coordinate changes in a project while using Version Control especially when there are more than one contributors in a particular repository! At such times it is important to use a particular feature of Git called **branch** <br><br>

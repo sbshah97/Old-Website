@@ -5,6 +5,9 @@ description: "How to start using Git for your projects"
 tags: 
 - Git
 - GitHub
+- Version Control
+languages:
+- Git
 ---
 
 #### Definition

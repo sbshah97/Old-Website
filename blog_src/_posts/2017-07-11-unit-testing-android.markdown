@@ -5,6 +5,8 @@ description: "An Introduction to what Unit Testing is and how to use it in Andro
 tags: 
 - Android
 - Software Testing
+languages:
+- Java
 ---
 
 Hi! This is a small tutorial and article on Unit Testing and why to use it in everyday development. I've made a small tutorial on how you can get started with Roboelectric. You can check out the sample code in the Github repository [here](https://github.com/salman-bhai/Calculator-Demo-App). Feel free to leave your comments at the bottom of the page! 
@@ -20,7 +22,7 @@ Unit Testing allows developers to vaidate their code with a set of inputs and ou
 
 #### Why use Unit Testing?
 
-There is a certain myth that Unit Tests slows the process of development as you have to do the work of writing both Unit Tests and coidng your application. Then why use Unit Testing if the application can be tested manually later? 
+There is a certain myth that Unit Tests slows the process of development as you have to do the work of writing both Unit Tests and coding your application. Then why use Unit Testing if the application can be tested manually later? 
 
 This claim however can be contradicted by the fact that Unit Tests allow Developers especially the ones who develop their applications iteratively (including me!), to waste less time on unaccounted bugs once the application is in Beta mode. A lot of time developers spend a lot of time correcting their code after it has been deployed and this can be easily reduced (though not completely avoided) using Unit Tests.
 
@@ -49,25 +51,6 @@ dependencies {
 After that you can go to the Unit Tests directory and create a new file named <b>MainActivityUnitTest.java</b> and add the following code to it. Your tests should be stored in the src/test directory.
 
 ```java
-package com.example.salman.calculatordemoapp;
-
-import android.view.View;
-import android.widget.Button;
-import android.widget.EditText;
-import android.widget.TextView;
-
-import org.apache.tools.ant.Main;
-import org.junit.Before;
-import org.junit.Test;
-import org.junit.runner.RunWith;
-import org.robolectric.Robolectric;
-import org.robolectric.RobolectricTestRunner;
-import org.robolectric.annotation.Config;
-import org.robolectric.shadows.ShadowTextView;
-
-import static org.hamcrest.Matchers.equalTo;
-import static org.junit.Assert.*;
-
 @RunWith(RobolectricTestRunner.class)
 @Config(constants = BuildConfig.class)
 public class MainActivityUnitTest {

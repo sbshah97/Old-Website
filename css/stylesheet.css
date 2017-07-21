@@ -57,8 +57,8 @@ h1, h2, h3, h4, h5, h6 {
 	align-self: center;
 	margin-top: 10px; 
 	border: 2px solid white;
-	padding: 15px;
-	font-size: x-large;
+	padding: 9px;
+	font-size: medium;
 	border-radius: 5px;
 	transition: all 0.2s linear;
 }

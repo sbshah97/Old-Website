@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<title>Introduction to UI Testing in Android using Espresso – Salman Shah - Blog</title>
+
+		<head>
+		<title>Introduction to Intrumentation Tests in Android using Espresso – Salman Shah - Blog</title>
 
 		<!--Meta tags-->
 		<meta charset="utf-8">
@@ -61,7 +62,8 @@
 
 	</header>
 		<main>
-			<div class="blog-page-banner">
+
+						<div class="blog-page-banner">
 				<div style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; background-color: rgba(0,0,0,0.6);">
 				</div>
 				<div style="position: absolute; bottom: 0;width: 100%; color: #fff;">
@@ -83,6 +85,7 @@
 				</div>
 			</div>
 
+			
 			<!--Content for the blog-->
 			<div id="fb-root"></div>
 <script>(function(d, s, id) {
@@ -94,27 +97,144 @@
 }(document, 'script', 'facebook-jssdk'));</script>
 
 <div class="container flow-text">
-	<h2 class="pt-sans">Introduction to UI Testing in Android using Espresso</h2>
+	<h2 class="pt-sans">Introduction to Intrumentation Tests in Android using Espresso</h2>
 	<p class="post-meta valign-wrapper orange-text">
 	<i class="material-icons">today</i>
 	<span class="valign">July 18, 2017
 	</span>
 	</p>
-	<h4 id="what-is-ui-testing">What is UI Testing?</h4>
+	<p>In the <a href="/blog/unit-testing-android/">previous tutorial</a>, the article how to write a simple Unit Test for Android. This article however deals with Instrumentation Tests and how to get started with them for Android. Like the previous article, for this article we will re-use the same simple <a href="https://github.com/salman-bhai/Calculator-Demo-App/tree/ui-testing">Calculator App</a> that we built.</p>
 
-<h4 id="why-is-ui-testing-needed">Why is UI Testing needed?</h4>
+<p><em>Instrumentation tests they are also into the Junit package, but the control of the Android API is quite total because Instrumentation Tests are instantiated in the system before any application code is run, and to test you need to open the real application(emulator or a phone connected with USB).</em></p>
+
+<p>To read more about the differences between Instrumentation Tests and Unit Tests, kindly refer <a href="https://stackoverflow.com/questions/30393629/difference-between-android-instrumentation-test-and-unit-test-in-android-studio">this StackOverflow answer</a>.</p>
+
+<h4 id="what-is-intrumentation-testing">What is Intrumentation Testing?</h4>
+
+<p>Instrumentation tests are made to run on a Physical device or the Android emulator. In the background, the main app will be installed and then a testing app will also be installed which will control the main app, launching it and running UI tests as you hav edefined for your app. Instrumentation Tests are especially useful when you need to test code that has a dependency on a context.</p>
+
+<h4 id="why-is-intrumentation-testing-needed">Why is Intrumentation Testing needed?</h4>
+
+<p>As Android quotes it for us,</p>
+<blockquote>
+<em>Using instrumented unit tests also helps to reduce the effort required to write and maintain mock code. You are still free to use a mocking framework, if you choose, to simulate any dependency relationships.</em>
+</blockquote>
+
+<p>Instrumentation Testing is extremely important because after you have tested each and every Unit of your code via Unit Testing it is important to understand how the entire code base works when you combine all of the code together. Another important factor is the manner in which activities and fragments behave in Android. It is extremely difficult to manage these Android dependencies if you plan to use a mocking framework like Mockito along with a Unit Testing framework like Roboelectric.</p>
 
 <h4 id="espresso---ui-testing-framework-for-android">Espresso - UI Testing Framework for Android</h4>
 
+<blockquote>
+<em>Espresso is a UI test framework (part of the Android Testing Support Library) that allows you to create automated UI tests for your Android app. Espresso tests run on actual device or emulator (they are instrumentation based tests) and behave as if an actual user is using the app (i.e. if a particular view is off screen, the test won't be able to interact with it).</em>
+</blockquote>
+
+<p>Espresso’s simple and extensible API, automatic synchronization of test actions with the UI of the app under test, and rich failure information make it a great choice for UI testing. It allows for automated testing where all actions undertaken by the user are performed by the test itself and thus if any activity isn’t loading on clicking, the test will automatically show an error for that.</p>
+
 <h4 id="a-brief-tutorial-on-using-espresso">A Brief Tutorial on using Espresso</h4>
 
+<p>So to get started you can either clone the Github repository <a href="https://github.com/salman-bhai/Calculator-Demo-App/tree/ui-testing">here</a> or you can create a new app of your own and get code from this repository! Make sure you’re on the branch <b>ui-testing</b> else you wont be able to view the code!</p>
 
-	<h4 class="valign-wrapper">Tags</h4>
+<p>You can start off by adding the Espresso dependency to the app build.gradle file. The Espresso Core library module might have a different gradle dependency for the Android Support Annotations library. To understand why this piece of code is necessary, check out this <a href="https://stackoverflow.com/questions/33317555/conflict-with-dependency-com-android-supportsupport-annotations-resolved-ver">link</a> to know more about the same!</p>
+
+<div class="language-java highlighter-rouge"><pre class="codehilite"><code>    <span class="n">androidTestCompile</span><span class="o">(</span><span class="err">'</span><span class="n">com</span><span class="o">.</span><span class="na">android</span><span class="o">.</span><span class="na">support</span><span class="o">.</span><span class="na">test</span><span class="o">.</span><span class="na">espresso</span><span class="o">:</span><span class="n">espresso</span><span class="o">-</span><span class="nl">core:</span><span class="mf">2.2</span><span class="o">.</span><span class="mi">2</span><span class="err">'</span><span class="o">,</span> <span class="o">{</span>
+        <span class="n">exclude</span> <span class="nl">group:</span> <span class="err">'</span><span class="n">com</span><span class="o">.</span><span class="na">android</span><span class="o">.</span><span class="na">support</span><span class="err">'</span><span class="o">,</span> <span class="nl">module:</span> <span class="err">'</span><span class="n">support</span><span class="o">-</span><span class="n">annotations</span><span class="err">'</span>
+    <span class="o">})</span>
+</code></pre></div>
+
+<p>After that you can go to app/java/<project-name>(androidTest) in the Android View and create a new class named <em>MainActivityUITest.java</em> or edit the code in the existing <em>ExampleInstrumentedTest.java</em> file itself and rename the file if possible! After that you can paste the exisiting code in the file below! This code can also be found [here](https://github.com/salman-bhai/Calculator-Demo-App/blob/ui-testing/app/src/androidTest/java/com/example/salman/calculatordemoapp/MainActivityUITest.java).</project-name></p>
+
+<div class="language-java highlighter-rouge"><pre class="codehilite"><code><span class="nd">@RunWith</span><span class="o">(</span><span class="n">AndroidJUnit4</span><span class="o">.</span><span class="na">class</span><span class="o">)</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">MainActivityUITest</span> <span class="o">{</span>
+
+    <span class="kd">private</span> <span class="n">String</span> <span class="n">inp1</span><span class="o">;</span>
+    <span class="kd">private</span> <span class="n">String</span> <span class="n">inp2</span><span class="o">;</span>
+    <span class="kd">private</span> <span class="n">String</span> <span class="n">output_add</span><span class="o">;</span>
+
+    <span class="nd">@Rule</span>
+    <span class="kd">public</span> <span class="n">ActivityTestRule</span><span class="o">&lt;</span><span class="n">MainActivity</span><span class="o">&gt;</span> <span class="n">mActivityRule</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ActivityTestRule</span><span class="o">&lt;&gt;(</span>
+            <span class="n">MainActivity</span><span class="o">.</span><span class="na">class</span><span class="o">);</span>
+
+    <span class="nd">@Before</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">init</span><span class="o">()</span> <span class="o">{</span>
+        <span class="c1">// Specify a valid string.</span>
+        <span class="n">inp1</span> <span class="o">=</span> <span class="s">"8"</span><span class="o">;</span>
+        <span class="n">inp2</span> <span class="o">=</span> <span class="s">"4"</span><span class="o">;</span>
+        <span class="n">output_add</span> <span class="o">=</span> <span class="s">"12.0"</span><span class="o">;</span>
+    <span class="o">}</span>
+
+    <span class="nd">@Test</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">checkAddition</span><span class="o">()</span> <span class="o">{</span>
+        <span class="c1">// Type text and then press the button.</span>
+        <span class="n">onView</span><span class="o">(</span><span class="n">withId</span><span class="o">(</span><span class="n">R</span><span class="o">.</span><span class="na">id</span><span class="o">.</span><span class="na">input1</span><span class="o">))</span>
+                <span class="o">.</span><span class="na">perform</span><span class="o">(</span><span class="n">typeText</span><span class="o">(</span><span class="n">inp1</span><span class="o">),</span> <span class="n">closeSoftKeyboard</span><span class="o">());</span>
+        <span class="n">onView</span><span class="o">(</span><span class="n">withId</span><span class="o">(</span><span class="n">R</span><span class="o">.</span><span class="na">id</span><span class="o">.</span><span class="na">input2</span><span class="o">))</span>
+                <span class="o">.</span><span class="na">perform</span><span class="o">(</span><span class="n">typeText</span><span class="o">(</span><span class="n">inp2</span><span class="o">),</span> <span class="n">closeSoftKeyboard</span><span class="o">());</span>
+
+        <span class="n">onView</span><span class="o">(</span><span class="n">withId</span><span class="o">(</span><span class="n">R</span><span class="o">.</span><span class="na">id</span><span class="o">.</span><span class="na">add</span><span class="o">)).</span><span class="na">perform</span><span class="o">(</span><span class="n">click</span><span class="o">());</span>
+
+        <span class="c1">// Check that the text was changed.</span>
+        <span class="n">onView</span><span class="o">(</span><span class="n">withId</span><span class="o">(</span><span class="n">R</span><span class="o">.</span><span class="na">id</span><span class="o">.</span><span class="na">result</span><span class="o">))</span>
+                <span class="o">.</span><span class="na">check</span><span class="o">(</span><span class="n">matches</span><span class="o">(</span><span class="n">withText</span><span class="o">(</span><span class="n">output_add</span><span class="o">)));</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div>
+
+<p>Now you can select run this Instrumented Test and select your own device that you have connected via a USB Cable or run it on the Android Emulator. Now let’s try to understand what the above code does!</p>
+
+<div class="language-java highlighter-rouge"><pre class="codehilite"><code><span class="nd">@Rule</span>
+<span class="kd">public</span> <span class="n">ActivityTestRule</span><span class="o">&lt;</span><span class="n">MainActivity</span><span class="o">&gt;</span> <span class="n">mActivityRule</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ActivityTestRule</span><span class="o">&lt;&gt;(</span>
+        <span class="n">MainActivity</span><span class="o">.</span><span class="na">class</span><span class="o">);</span>
+
+<span class="nd">@Before</span>
+<span class="kd">public</span> <span class="kt">void</span> <span class="nf">init</span><span class="o">()</span> <span class="o">{</span>
+    <span class="c1">// Specify a valid string.</span>
+    <span class="n">inp1</span> <span class="o">=</span> <span class="s">"8"</span><span class="o">;</span>
+    <span class="n">inp2</span> <span class="o">=</span> <span class="s">"4"</span><span class="o">;</span>
+    <span class="n">output_add</span> <span class="o">=</span> <span class="s">"12.0"</span><span class="o">;</span>
+<span class="o">}</span>
+</code></pre></div>
+<p>A <b>@Rule</b> is used to define a definition or an object that you want to define for the test case that you are going to test your code on. For more information about <a href="http://junit.org/junit4/javadoc/4.12/org/junit/Rule.html">@Rule</a> check out the link here. <b>@Before</b> is used to initialize variables that may be used for the testcase. For more information about @Before check out this <a href="http://junit.sourceforge.net/javadoc/org/junit/Before.html">link</a>.</p>
+
+<p>Now these two annotations are primarily used for initializing variables and the Test Activity that is used to test the Main Activity.</p>
+
+<div class="language-java highlighter-rouge"><pre class="codehilite"><code><span class="nd">@Test</span>
+<span class="kd">public</span> <span class="kt">void</span> <span class="nf">checkAddition</span><span class="o">()</span> <span class="o">{</span>
+    <span class="c1">// Type text and then press the button.</span>
+    <span class="n">onView</span><span class="o">(</span><span class="n">withId</span><span class="o">(</span><span class="n">R</span><span class="o">.</span><span class="na">id</span><span class="o">.</span><span class="na">input1</span><span class="o">))</span>
+            <span class="o">.</span><span class="na">perform</span><span class="o">(</span><span class="n">typeText</span><span class="o">(</span><span class="n">inp1</span><span class="o">),</span> <span class="n">closeSoftKeyboard</span><span class="o">());</span>
+    <span class="n">onView</span><span class="o">(</span><span class="n">withId</span><span class="o">(</span><span class="n">R</span><span class="o">.</span><span class="na">id</span><span class="o">.</span><span class="na">input2</span><span class="o">))</span>
+            <span class="o">.</span><span class="na">perform</span><span class="o">(</span><span class="n">typeText</span><span class="o">(</span><span class="n">inp2</span><span class="o">),</span> <span class="n">closeSoftKeyboard</span><span class="o">());</span>
+
+    <span class="n">onView</span><span class="o">(</span><span class="n">withId</span><span class="o">(</span><span class="n">R</span><span class="o">.</span><span class="na">id</span><span class="o">.</span><span class="na">add</span><span class="o">)).</span><span class="na">perform</span><span class="o">(</span><span class="n">click</span><span class="o">());</span>
+
+    <span class="c1">// Check that the text was changed.</span>
+    <span class="n">onView</span><span class="o">(</span><span class="n">withId</span><span class="o">(</span><span class="n">R</span><span class="o">.</span><span class="na">id</span><span class="o">.</span><span class="na">result</span><span class="o">))</span>
+            <span class="o">.</span><span class="na">check</span><span class="o">(</span><span class="n">matches</span><span class="o">(</span><span class="n">withText</span><span class="o">(</span><span class="n">output_add</span><span class="o">)));</span>
+</code></pre></div>
+
+<p>This method simulates the action of typing two numbers on the two EditText options respectively and then checking if the result text is displayed or not!</p>
+
+<p>All in all this is a very simple example of how Instrumented Tests work in Android! I’ve attached a list of resources that are useful below. Feel free to ping me in case you have any doubts on this or want to work on a project on this! Till next time this is <b><em>salman-bhai</em></b> signing off.</p>
+
+<h4 id="resources">Resources</h4>
+
+<ul>
+  <li><a href="https://developer.android.com/training/testing/unit-testing/instrumented-unit-tests.html">Building Instrumented Unit Tests - Android Developers</a></li>
+  <li><a href="https://github.com/salman-bhai/Calculator-Demo-App/tree/ui-testing">Calculator Android App</a></li>
+  <li><a href="https://google.github.io/android-testing-support-library/docs/espresso/setup/index.html">Espresso Documentation</a></li>
+  <li><a href="https://stackoverflow.com/questions/30393629/difference-between-android-instrumentation-test-and-unit-test-in-android-studio">Difference between Instrumentation and Unit Tests</a></li>
+</ul>
+
 	
-	<a class="chip" href="/tags#android">Android</a>
+	<h4 class="pt-sans">Tags</h4>
 	
-	<a class="chip" href="/tags#software testing">Software Testing</a>
+		<!-- <a class="chip" href="/tags#"></a> -->
+		<a href="/tags#android" class="button orange-text" style="border: 1px solid orange; display: inline-block;">Android</a>
+	
+		<!-- <a class="chip" href="/tags#"></a> -->
+		<a href="/tags#software testing" class="button orange-text" style="border: 1px solid orange; display: inline-block;">Software Testing</a>
 	 
+	
 	<br><br>
 	<h3 class="pt-sans">About the Author</h2>
 <div class="row">

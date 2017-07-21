@@ -11,10 +11,13 @@ layout: default
 	</span>
 	</p>
 	{{ content }}
-	<h4 class="valign-wrapper">Tags</h4>
-	{% for atag in page.tags %}
-	<a class="chip" href="/tags#{{ atag | downcase }}">{{ atag }}</a>
+	
+	<h4 class="pt-sans">Tags</h4>
+	{% for tag in page.tags %}
+		<!-- <a class="chip" href="/tags#{{ atag | downcase }}">{{ atag }}</a> -->
+		<a href="/tags#{{ tag | downcase }}" class="button orange-text" style="border: 1px solid orange; display: inline-block;">{{ tag }}</a>
 	{% endfor %} 
+	
 	<br><br>
 	{% include author.html %}
 

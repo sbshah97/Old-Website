@@ -5,6 +5,8 @@ description: "How to use Sieve of Eratosthenes to find Prime Numbers"
 tags: 
 - Algorithms
 - Data Structures
+languages:
+- C++
 ---
 
 #### Introduction
