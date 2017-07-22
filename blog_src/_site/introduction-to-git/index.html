@@ -2,7 +2,7 @@
 <html>
 
 		<head>
-		<title>Introduction to Git and GitHub - Part III – Salman Shah - Blog</title>
+		<title>Introduction to Git and GitHub - Part I – Salman Shah - Blog</title>
 
 		<!--Meta tags-->
 		<meta charset="utf-8">
@@ -97,77 +97,157 @@
 }(document, 'script', 'facebook-jssdk'));</script>
 
 <div class="container flow-text">
-	<h2 class="pt-sans">Introduction to Git and GitHub - Part III</h2>
+	<h2 class="pt-sans">Introduction to Git and GitHub - Part I</h2>
 	<p class="post-meta valign-wrapper orange-text">
 	<i class="material-icons">today</i>
-	<span class="valign">February 27, 2017
+	<span class="valign">February 17, 2017
 	</span>
 	</p>
-	<ul>
-  <li>This post deals with the dreaded word of “Resolving Merge Conflicts” and how it isn’t as bad as we think it is!<br /></li>
-  <li>This often happens when multiple people work on the same branch or when multiple branches are in play and they don’t get pushed sequentially!<br /></li>
-  <li>The only thing you should remember in Git is you cannot break things. You can always go to your previous state and re-start your work again! It is saved as long as you push it properly!</li>
-  <li>Also, Git Merge Conflicts only occur on local systems not on the Git Server, so in case you are facing a Merge Conflict it will not stop your project, just your progress will be halted.</li>
-</ul>
+	<h4 id="definition">Definition</h4>
 
-<h5 id="what-are-merge-conflicts-and-how-do-they-occur">What are Merge Conflicts and how do they occur?</h5>
-<ul>
-  <li>Git being a Version Control System, the act of ‘merging’ is simply adding your changes that you’ve made to your copy of the project repository to the main project repository and almost most of the time this process goes on smoothly.<br /></li>
-  <li>However there is a case when two or more people try to access the same file and make changes to it, there is a chance that Git might not be able to figure out what to do and this is where it leads to Merge Conflicts happenning.<br /></li>
-  <li>Merge Conflicts usually occur in the case where ‘Delete Mode’ has occurred! If say, one user has deleted a file and another user has modified the contents of that file, then a Merge Conflict occurs!<br /></li>
-</ul>
-
-<h5 id="how-to-resolve-a-merge-conflict">How to resolve a Merge Conflict?</h5>
+<p><img src="/images/post1_img5.png" alt="Create GitHub Account" /></p>
 
 <ul>
-  <li>When faced with a Merge Conflict, the first step is to calm down and believe the end of the world isn’t here! After that try to understand what just happened.<br /></li>
-  <li>Open up your terminal and enter the command <code class="highlighter-rouge">git status</code> to see what has happened!</li>
+  <li>Git is a version control system (VCS) for tracking changes in computer files and coordinating work on those files when working on projects that involve multiple people. To check if Git is installed in your system or not, or to check the version of Git in your system type in the following command!<br /></li>
 </ul>
 
-<figure class="highlight"><pre><code class="language-git" data-lang="git">$ git status
-# On branch contact-form
-# You have unmerged paths.
-#   (fix conflicts and run "git commit")
-#
-# Unmerged paths:
-#   (use "git add &lt;file&gt;..." to mark resolution)
-#
-#       both modified:   src/team.html
-#
-no changes added to commit (use "git add" and/or "git commit -a")</code></pre></figure>
-
-<ul>
-  <li>In this example, you can see that since both the users modified the file called team.html in the src folder a merge conflict has occurred. Now you can go to the file and see where the conflict is! If you open the file you will see a line as follows:</li>
-</ul>
-
-<figure class="highlight"><pre><code class="language-git" data-lang="git">&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
-&lt;p&gt; This repository is the work of Salman&lt;/p&gt;
-=======
-This repository is the work of Salman and Hrily&lt;/p&gt;
-&gt;&gt;&gt;&gt;&gt;&gt;&gt; development</code></pre></figure>
-
-<ul>
-  <li>The contents after the HEAD tilte originate from your current working branch. After the angle brackets, Git tells us where (from which branch) the changes came from. A line with “=======” separates the two conflicting changes.<br /></li>
-  <li>Now resolving them is a simple task. All you have to do is remove the angle markers and in place of them place the text that you need. The above text can simply be replaced with the following and the Merge Conflict is solved!</li>
-</ul>
-
-<figure class="highlight"><pre><code class="language-git" data-lang="git">&lt;p&gt; This repository is the work of Salman Shah and Hrily&lt;/p&gt;</code></pre></figure>
-
-<ul>
-  <li>Now after you have done this, you need to mark your file as ‘resolved for Git Merge Conflicts’ To do that, you need to execute the command <code class="highlighter-rouge">git add &lt;filename&gt;</code>. In this case the command would be:</li>
-</ul>
-
-<figure class="highlight"><pre><code class="language-git" data-lang="git">git add src/team.html</code></pre></figure>
+<figure class="highlight"><pre><code class="language-git" data-lang="git">git --version</code></pre></figure>
 
 <ul>
   <li>
-    <p>With this we have solved the problem of resolving Merge Conflicts in Git!<br /></p>
+    <p>Git is primarily used for software development, but it can be used to keep track of changes for any type of file/s. GitHub is a website which allows users to use Git and store their files online and keep a track of the changes in them as well as helping in coordinating work between different people who are connected online.<br /></p>
   </li>
   <li>
-    <p>This is all that you need to start using Git and GitHub in your projects and this brings us to the end of this small tutorial series on Git and GitHub!</p>
+    <p>GitHub is primarily used by large as well as small IT Companies as well as upcoming startups.<br /></p>
   </li>
 </ul>
 
+<h4 id="how-to-get-started">How To Get Started?</h4>
+
+<ul>
+  <li>All you have to do if you are a Linux user to install Git is to install it via the <code class="highlighter-rouge">apt-get</code> command.<br /><br /></li>
+</ul>
+
+<figure class="highlight"><pre><code class="language-git" data-lang="git">sudo apt-get update
+sudo apt-get install git</code></pre></figure>
+
+<ul>
+  <li>And that is all that you need to do to get Git up and running in your system.<br /><br /></li>
+  <li>After that you have to configure Git according to your settings. This is done via the <code class="highlighter-rouge">config --global</code> command.<br /><br /></li>
+</ul>
+
+<figure class="highlight"><pre><code class="language-git" data-lang="git">git config --global user.email "sbs.191197@gmail.com"
+git config --global user.name "Salman Shah"</code></pre></figure>
+
+<ul>
+  <li>After that you are all set to go!<br /><br /></li>
+</ul>
+
+<h4 id="create-a-github-account">Create a GitHub Account</h4>
+
+<p><img src="/images/post1_img1.png" alt="Create GitHub Account" /></p>
+
+<ul>
+  <li>
+    <p>Go to the address: <a href="https://github.com/">GitHub</a> and then fill in the form which is given.<br /><br /></p>
+  </li>
+  <li>
+    <p>Choose a unique user-name that you can be identified with, your email address and your unique password.<br /><br /></p>
+  </li>
+  <li>
+    <p>That is all you need to create your GitHub account.<br /><br /></p>
+  </li>
+</ul>
+
+<h4 id="make-your-first-commit">Make your first commit</h4>
+
+<p><img src="/images/post1_img2.png" alt="Create a New Repository" /></p>
+
+<ul>
+  <li>
+    <p>Go to the <a href="https://github.com/">GitHub website</a> and create a New Repository by clicking on the green ‘New Repository’ button to the right of the page.<br /><br /></p>
+  </li>
+  <li>
+    <p>After that do the following:<br /><br /></p>
+    <ol>
+      <li>Add the Repository Name as <code class="highlighter-rouge">hello-world</code></li>
+      <li>Write the description as <code class="highlighter-rouge">First GitHub repository</code>.</li>
+      <li>Make sure it is marked <code class="highlighter-rouge">public</code>.</li>
+      <li>Check the <code class="highlighter-rouge">Initialize this repository with a README</code></li>
+      <li>Finally click on <code class="highlighter-rouge">Create Repository</code> button and your new repository will be created!<br /><br /></li>
+    </ol>
+  </li>
+</ul>
+
+<p><img src="/images/post1_img3.png" alt="Select Link Repository to clone" /></p>
+
+<ul>
+  <li>
+    <p>Now all you need to do is click on the Green Dropdown on your repository page called <code class="highlighter-rouge">Clone or download</code><br /><br /></p>
+  </li>
+  <li>
+    <p>Then copy the HTTPS or SSH link given over there via the ‘Copy to Clipboard’ button and then go to your Terminal.<br /><br /></p>
+  </li>
+  <li>
+    <p>Add the following commands to your terminal.</p>
+  </li>
+</ul>
+
+<figure class="highlight"><pre><code class="language-git" data-lang="git">git clone https://github.com/&lt;your_name&gt;/hello-world.git
+cd hello-world</code></pre></figure>
+
+<ul>
+  <li>
+    <p>Basically, you have to paste the HTTPS or SSH link that you’ve copied from the repository page and paste it after the <code class="highlighter-rouge">git clone</code> command.<br /><br /></p>
+  </li>
+  <li>
+    <p>Now that you have created a local instance of your repository on your computer. You can add/remove files in the repository like you normally would.<br /><br /></p>
+  </li>
+  <li>
+    <p>After making all the changes that you need to do, you can now push your changes online by the following commands.<br /><br /></p>
+  </li>
+</ul>
+
+<p><img src="/images/post1_img4.png" alt="Pushing Changes to GitHub Account" /></p>
+
+<ul>
+  <li>First save the changes that you made to the local repository.</li>
+</ul>
+
+<figure class="highlight"><pre><code class="language-git" data-lang="git">git add --all</code></pre></figure>
+
+<ul>
+  <li>Then create a new commit and add a message associated with it with the following command:</li>
+</ul>
+
+<figure class="highlight"><pre><code class="language-git" data-lang="git"> 
+git commit -m "Initial Commit"</code></pre></figure>
+
+<ul>
+  <li>Lastly ‘push’ your commits to your online repository with the following command:</li>
+</ul>
+
+<figure class="highlight"><pre><code class="language-git" data-lang="git">git push origin master</code></pre></figure>
+
+<ul>
+  <li>
+    <p>After this you will be asked for your login credentials which you have to enter and then your commit will be pushed!<br /><br /></p>
+  </li>
+  <li>
+    <p>Congrats you have just finished adding your first commit!<br /><br /></p>
+  </li>
+</ul>
+
+<h4 id="things-to-remember">Things To Remember</h4>
+
+<ul>
+  <li>
+    <p>This is just a basic tutorial to add files on GitHub.<br /><br /></p>
+  </li>
+  <li>
+    <p>Check out the next two articles on how to use more advanced features of Git.<br /></p>
+  </li>
+</ul>
 
 	
 	<h4 class="pt-sans">Tags</h4>
@@ -194,23 +274,23 @@ This repository is the work of Salman and Hrily&lt;/p&gt;
 	</div>
 </div>
 
-	<div class="fb-comments" data-href="salman-bhai.github.io/blog//introduction-to-git-part-3/" data-width="500px" data-numposts="20">
+	<div class="fb-comments" data-href="salman-bhai.github.io/blog//introduction-to-git/" data-width="500px" data-numposts="20">
 </div>
-	<!-- <div class="share">
-    <h3 class="pt-sans">Share</h3>
-    <a aria-label="Share on Twitter" href="https://twitter.com/intent/tweet?text=&quot;&quot;%20salman-bhai.github.io/blog/introduction-to-git-part-3/%20via%20&#64;&hashtags=Git,GitHub,Version Control,"
+	<section class="share">
+    <h3>Share</h3>
+    <a aria-label="Share on Twitter" href="https://twitter.com/intent/tweet?text=&quot;&quot;%20http://localhost:4000/blog/introduction-to-git/%20via%20&#64;&hashtags=Git,GitHub,Version Control,"
     onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;" title="Share on Twitter">
         <svg class="icon icon-twitter"><use xlink:href="#icon-twitter"></use></svg>
     </a>
-    <a aria-label="Share on Facebook" href="https://www.facebook.com/sharer/sharer.php?u=salman-bhai.github.io//blog//introduction-to-git-part-3/"
+    <a aria-label="Share on Facebook" href="https://www.facebook.com/sharer/sharer.php?u=http://localhost:4000//blog//introduction-to-git/"
     onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;" title="Share on Facebook">
         <svg class="icon icon-facebook"><use xlink:href="#icon-facebook"></use></svg>
     </a>
-    <a aria-label="Share on Google Plus" href="https://plus.google.com/share?url=salman-bhai.github.io//blog//introduction-to-git-part-3/"
+    <a aria-label="Share on Google Plus" href="https://plus.google.com/share?url=http://localhost:4000//blog//introduction-to-git/"
     onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;" title="Share on Google+">
         <svg class="icon icon-google-plus"><use xlink:href="#icon-google-plus"></use></svg>
     </a>
-</div> -->
+</section>
 
 </div>
 

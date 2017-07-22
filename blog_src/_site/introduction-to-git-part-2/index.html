@@ -2,7 +2,7 @@
 <html>
 
 		<head>
-		<title>Introduction to Git and GitHub - Part III – Salman Shah - Blog</title>
+		<title>Introduction to Git and GitHub - Part II – Salman Shah - Blog</title>
 
 		<!--Meta tags-->
 		<meta charset="utf-8">
@@ -97,77 +97,82 @@
 }(document, 'script', 'facebook-jssdk'));</script>
 
 <div class="container flow-text">
-	<h2 class="pt-sans">Introduction to Git and GitHub - Part III</h2>
+	<h2 class="pt-sans">Introduction to Git and GitHub - Part II</h2>
 	<p class="post-meta valign-wrapper orange-text">
 	<i class="material-icons">today</i>
-	<span class="valign">February 27, 2017
+	<span class="valign">February 23, 2017
 	</span>
 	</p>
 	<ul>
-  <li>This post deals with the dreaded word of “Resolving Merge Conflicts” and how it isn’t as bad as we think it is!<br /></li>
-  <li>This often happens when multiple people work on the same branch or when multiple branches are in play and they don’t get pushed sequentially!<br /></li>
-  <li>The only thing you should remember in Git is you cannot break things. You can always go to your previous state and re-start your work again! It is saved as long as you push it properly!</li>
-  <li>Also, Git Merge Conflicts only occur on local systems not on the Git Server, so in case you are facing a Merge Conflict it will not stop your project, just your progress will be halted.</li>
+  <li>A lot of times it is difficult to coordinate changes in a project while using Version Control especially when there are more than one contributors in a particular repository! At such times it is important to use a particular feature of Git called <strong>branch</strong> <br /><br /></li>
 </ul>
 
-<h5 id="what-are-merge-conflicts-and-how-do-they-occur">What are Merge Conflicts and how do they occur?</h5>
-<ul>
-  <li>Git being a Version Control System, the act of ‘merging’ is simply adding your changes that you’ve made to your copy of the project repository to the main project repository and almost most of the time this process goes on smoothly.<br /></li>
-  <li>However there is a case when two or more people try to access the same file and make changes to it, there is a chance that Git might not be able to figure out what to do and this is where it leads to Merge Conflicts happenning.<br /></li>
-  <li>Merge Conflicts usually occur in the case where ‘Delete Mode’ has occurred! If say, one user has deleted a file and another user has modified the contents of that file, then a Merge Conflict occurs!<br /></li>
-</ul>
+<h5 id="what-are-branches-and-how-to-use-them">What are branches and how to use them?</h5>
 
-<h5 id="how-to-resolve-a-merge-conflict">How to resolve a Merge Conflict?</h5>
+<p><img src="/images/post2_img1.png" alt="git branch commands" /></p>
 
 <ul>
-  <li>When faced with a Merge Conflict, the first step is to calm down and believe the end of the world isn’t here! After that try to understand what just happened.<br /></li>
-  <li>Open up your terminal and enter the command <code class="highlighter-rouge">git status</code> to see what has happened!</li>
+  <li>Branches are a feature of Git used when multiple collaborators are working on the same project, but want to work on different parts of the project.<br /><br /></li>
+  <li>This is where the concept of branches in Git is particularly useful. A branch is like a copy of the original code which runs parlallely with other branches in the code repository! The default branch in a GitHub repository is called <strong>master</strong>. To create a new branch you need to execute the following command:</li>
 </ul>
 
-<figure class="highlight"><pre><code class="language-git" data-lang="git">$ git status
-# On branch contact-form
-# You have unmerged paths.
-#   (fix conflicts and run "git commit")
-#
-# Unmerged paths:
-#   (use "git add &lt;file&gt;..." to mark resolution)
-#
-#       both modified:   src/team.html
-#
-no changes added to commit (use "git add" and/or "git commit -a")</code></pre></figure>
+<figure class="highlight"><pre><code class="language-git" data-lang="git">git checkout -b &lt;branch_name&gt;
+Switched to a new branch 'salman'</code></pre></figure>
 
 <ul>
-  <li>In this example, you can see that since both the users modified the file called team.html in the src folder a merge conflict has occurred. Now you can go to the file and see where the conflict is! If you open the file you will see a line as follows:</li>
+  <li>In case you are looking to switch back to your <strong>master</strong> branch on your local repository, type in the following commands to get back again:</li>
 </ul>
 
-<figure class="highlight"><pre><code class="language-git" data-lang="git">&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
-&lt;p&gt; This repository is the work of Salman&lt;/p&gt;
-=======
-This repository is the work of Salman and Hrily&lt;/p&gt;
-&gt;&gt;&gt;&gt;&gt;&gt;&gt; development</code></pre></figure>
+<figure class="highlight"><pre><code class="language-git" data-lang="git">git checkout master
+git checkout &lt;branch_name&gt;</code></pre></figure>
 
 <ul>
-  <li>The contents after the HEAD tilte originate from your current working branch. After the angle brackets, Git tells us where (from which branch) the changes came from. A line with “=======” separates the two conflicting changes.<br /></li>
-  <li>Now resolving them is a simple task. All you have to do is remove the angle markers and in place of them place the text that you need. The above text can simply be replaced with the following and the Merge Conflict is solved!</li>
+  <li>If you are looking to delete a branch first make sure you aren’t currently on that branch! Use <code class="highlighter-rouge">git checkout</code> to move to another branch and then use the following commands to delete the branch.</li>
 </ul>
 
-<figure class="highlight"><pre><code class="language-git" data-lang="git">&lt;p&gt; This repository is the work of Salman Shah and Hrily&lt;/p&gt;</code></pre></figure>
+<figure class="highlight"><pre><code class="language-git" data-lang="git">git branch -d &lt;branch_name&gt;</code></pre></figure>
 
 <ul>
-  <li>Now after you have done this, you need to mark your file as ‘resolved for Git Merge Conflicts’ To do that, you need to execute the command <code class="highlighter-rouge">git add &lt;filename&gt;</code>. In this case the command would be:</li>
+  <li>In case your branch is not being deleted because you have certain unmerged changes and you really want to delete them without merging your changes, you can use the following instructions!</li>
 </ul>
 
-<figure class="highlight"><pre><code class="language-git" data-lang="git">git add src/team.html</code></pre></figure>
+<figure class="highlight"><pre><code class="language-git" data-lang="git">git branch -D &lt;branch_name&gt;</code></pre></figure>
+
+<p><br /></p>
+
+<h5 id="how-to-sync-your-branch-with-the-master-branch">How to sync your branch with the Master branch</h5>
+<ul>
+  <li>If you are looking to sync your branch with your master, as in update the online changes that someone else has made to the <strong>master</strong> branch to your branch, type in the following commands:</li>
+</ul>
+
+<figure class="highlight"><pre><code class="language-git" data-lang="git">git pull origin master</code></pre></figure>
 
 <ul>
-  <li>
-    <p>With this we have solved the problem of resolving Merge Conflicts in Git!<br /></p>
-  </li>
-  <li>
-    <p>This is all that you need to start using Git and GitHub in your projects and this brings us to the end of this small tutorial series on Git and GitHub!</p>
-  </li>
+  <li>P.S. This can be extended to all branches and isn’t restricted to the <strong>master</strong> branch alone!<br /></li>
 </ul>
 
+<figure class="highlight"><pre><code class="language-git" data-lang="git">git pull origin &lt;branch_name&gt;</code></pre></figure>
+
+<p><br /></p>
+
+<h5 id="how-to-push-branches-on-github">How to push branches on GitHub</h5>
+
+<p><img src="/images/post2_img2.png" alt="Create GitHub Account" /></p>
+
+<ul>
+  <li>Once you have your local changes made and committed, it is essential for you to push them on GitHub so that ohers can review them as well! To do this you can simply push your branch on to GitHub just like you would push the master branch to GitHub!<br /></li>
+  <li>After you’re done working on them use the following commands to push your new branch on to GitHub.</li>
+</ul>
+
+<figure class="highlight"><pre><code class="language-git" data-lang="git">git add --all
+git commit -m "&lt;your_message&gt;"
+git push origin &lt;branch_name&gt;</code></pre></figure>
+
+<p><br /></p>
+
+<ul>
+  <li>Check out the next tutorial to see how to resolve Merge Conflicts as and when you encounter them using Git.</li>
+</ul>
 
 	
 	<h4 class="pt-sans">Tags</h4>
@@ -194,23 +199,23 @@ This repository is the work of Salman and Hrily&lt;/p&gt;
 	</div>
 </div>
 
-	<div class="fb-comments" data-href="salman-bhai.github.io/blog//introduction-to-git-part-3/" data-width="500px" data-numposts="20">
+	<div class="fb-comments" data-href="salman-bhai.github.io/blog//introduction-to-git-part-2/" data-width="500px" data-numposts="20">
 </div>
-	<!-- <div class="share">
-    <h3 class="pt-sans">Share</h3>
-    <a aria-label="Share on Twitter" href="https://twitter.com/intent/tweet?text=&quot;&quot;%20salman-bhai.github.io/blog/introduction-to-git-part-3/%20via%20&#64;&hashtags=Git,GitHub,Version Control,"
+	<section class="share">
+    <h3>Share</h3>
+    <a aria-label="Share on Twitter" href="https://twitter.com/intent/tweet?text=&quot;&quot;%20http://localhost:4000/blog/introduction-to-git-part-2/%20via%20&#64;&hashtags=Git,GitHub,Version Control,"
     onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;" title="Share on Twitter">
         <svg class="icon icon-twitter"><use xlink:href="#icon-twitter"></use></svg>
     </a>
-    <a aria-label="Share on Facebook" href="https://www.facebook.com/sharer/sharer.php?u=salman-bhai.github.io//blog//introduction-to-git-part-3/"
+    <a aria-label="Share on Facebook" href="https://www.facebook.com/sharer/sharer.php?u=http://localhost:4000//blog//introduction-to-git-part-2/"
     onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;" title="Share on Facebook">
         <svg class="icon icon-facebook"><use xlink:href="#icon-facebook"></use></svg>
     </a>
-    <a aria-label="Share on Google Plus" href="https://plus.google.com/share?url=salman-bhai.github.io//blog//introduction-to-git-part-3/"
+    <a aria-label="Share on Google Plus" href="https://plus.google.com/share?url=http://localhost:4000//blog//introduction-to-git-part-2/"
     onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;" title="Share on Google+">
         <svg class="icon icon-google-plus"><use xlink:href="#icon-google-plus"></use></svg>
     </a>
-</div> -->
+</section>
 
 </div>
 

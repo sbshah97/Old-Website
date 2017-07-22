@@ -2,7 +2,7 @@
 <html>
 
 		<head>
-		<title>Introduction to Git and GitHub - Part III – Salman Shah - Blog</title>
+		<title>Sieve of Eratosthenes – Salman Shah - Blog</title>
 
 		<!--Meta tags-->
 		<meta charset="utf-8">
@@ -97,89 +97,56 @@
 }(document, 'script', 'facebook-jssdk'));</script>
 
 <div class="container flow-text">
-	<h2 class="pt-sans">Introduction to Git and GitHub - Part III</h2>
+	<h2 class="pt-sans">Sieve of Eratosthenes</h2>
 	<p class="post-meta valign-wrapper orange-text">
 	<i class="material-icons">today</i>
-	<span class="valign">February 27, 2017
+	<span class="valign">July 4, 2017
 	</span>
 	</p>
-	<ul>
-  <li>This post deals with the dreaded word of “Resolving Merge Conflicts” and how it isn’t as bad as we think it is!<br /></li>
-  <li>This often happens when multiple people work on the same branch or when multiple branches are in play and they don’t get pushed sequentially!<br /></li>
-  <li>The only thing you should remember in Git is you cannot break things. You can always go to your previous state and re-start your work again! It is saved as long as you push it properly!</li>
-  <li>Also, Git Merge Conflicts only occur on local systems not on the Git Server, so in case you are facing a Merge Conflict it will not stop your project, just your progress will be halted.</li>
-</ul>
+	<h4 id="introduction">Introduction</h4>
 
-<h5 id="what-are-merge-conflicts-and-how-do-they-occur">What are Merge Conflicts and how do they occur?</h5>
-<ul>
-  <li>Git being a Version Control System, the act of ‘merging’ is simply adding your changes that you’ve made to your copy of the project repository to the main project repository and almost most of the time this process goes on smoothly.<br /></li>
-  <li>However there is a case when two or more people try to access the same file and make changes to it, there is a chance that Git might not be able to figure out what to do and this is where it leads to Merge Conflicts happenning.<br /></li>
-  <li>Merge Conflicts usually occur in the case where ‘Delete Mode’ has occurred! If say, one user has deleted a file and another user has modified the contents of that file, then a Merge Conflict occurs!<br /></li>
-</ul>
+<p>The Sieve of Eratosthenes is an ancient technique to find Prime Numbers. It may be used to find primes in arithmetic progressions.</p>
 
-<h5 id="how-to-resolve-a-merge-conflict">How to resolve a Merge Conflict?</h5>
+<h4 id="concept">Concept</h4>
 
-<ul>
-  <li>When faced with a Merge Conflict, the first step is to calm down and believe the end of the world isn’t here! After that try to understand what just happened.<br /></li>
-  <li>Open up your terminal and enter the command <code class="highlighter-rouge">git status</code> to see what has happened!</li>
-</ul>
+<p>The Sieve of Eratosthenes is one of the more efficient ways to find Prime Numbers given prime numbers are below a range of 10 million.</p>
 
-<figure class="highlight"><pre><code class="language-git" data-lang="git">$ git status
-# On branch contact-form
-# You have unmerged paths.
-#   (fix conflicts and run "git commit")
-#
-# Unmerged paths:
-#   (use "git add &lt;file&gt;..." to mark resolution)
-#
-#       both modified:   src/team.html
-#
-no changes added to commit (use "git add" and/or "git commit -a")</code></pre></figure>
+<p><img src="/images/sieve-of-eratosthenes/sieve.gif" alt="Sieve of Eratosthenes" /></p>
 
-<ul>
-  <li>In this example, you can see that since both the users modified the file called team.html in the src folder a merge conflict has occurred. Now you can go to the file and see where the conflict is! If you open the file you will see a line as follows:</li>
-</ul>
+<p>A simple idea is to generate a list of numbers in a list or an array. Then each number which is a multiple of a prime number is eliminated turn by turn starting with 2. Sieve of Eratosthenes is a simple algorithm which eliminates the numbers based on the principle that a multiple of a number is not a prime number.</p>
 
-<figure class="highlight"><pre><code class="language-git" data-lang="git">&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
-&lt;p&gt; This repository is the work of Salman&lt;/p&gt;
-=======
-This repository is the work of Salman and Hrily&lt;/p&gt;
-&gt;&gt;&gt;&gt;&gt;&gt;&gt; development</code></pre></figure>
+<p>The above GIF shows how the numbers are eliminated each and every number turn by turn.</p>
 
-<ul>
-  <li>The contents after the HEAD tilte originate from your current working branch. After the angle brackets, Git tells us where (from which branch) the changes came from. A line with “=======” separates the two conflicting changes.<br /></li>
-  <li>Now resolving them is a simple task. All you have to do is remove the angle markers and in place of them place the text that you need. The above text can simply be replaced with the following and the Merge Conflict is solved!</li>
-</ul>
+<h4 id="algorithm">Algorithm</h4>
 
-<figure class="highlight"><pre><code class="language-git" data-lang="git">&lt;p&gt; This repository is the work of Salman Shah and Hrily&lt;/p&gt;</code></pre></figure>
+<p>Simple Algorithm to implement Sieve of Eratosthenes thereby printing a list of Prime Numbers till the number n.</p>
 
-<ul>
-  <li>Now after you have done this, you need to mark your file as ‘resolved for Git Merge Conflicts’ To do that, you need to execute the command <code class="highlighter-rouge">git add &lt;filename&gt;</code>. In this case the command would be:</li>
-</ul>
+<div class="language-c++ highlighter-rouge"><pre class="highlight"><code><span class="kt">void</span> <span class="nf">sieve</span><span class="p">(</span><span class="kt">int</span> <span class="n">n</span><span class="p">)</span> <span class="p">{</span>
+	<span class="kt">int</span> <span class="n">prime</span><span class="p">[</span><span class="n">n</span><span class="o">+</span><span class="mi">1</span><span class="p">];</span>
+	<span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;=</span> <span class="n">n</span><span class="p">;</span> <span class="n">i</span> <span class="o">++</span><span class="p">)</span>
+		<span class="n">prime</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">i</span><span class="p">;</span>
 
-<figure class="highlight"><pre><code class="language-git" data-lang="git">git add src/team.html</code></pre></figure>
+	<span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span> <span class="n">i</span><span class="o">*</span><span class="n">i</span> <span class="o">&lt;=</span> <span class="n">n</span><span class="p">;</span> <span class="n">i</span> <span class="o">++</span><span class="p">)</span>
+		<span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="n">i</span><span class="o">*</span><span class="n">i</span><span class="p">;</span> <span class="n">j</span> <span class="o">&lt;=</span> <span class="n">n</span><span class="p">;</span> <span class="n">j</span> <span class="o">+=</span> <span class="n">i</span><span class="p">)</span>
+			<span class="n">prime</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
 
-<ul>
-  <li>
-    <p>With this we have solved the problem of resolving Merge Conflicts in Git!<br /></p>
-  </li>
-  <li>
-    <p>This is all that you need to start using Git and GitHub in your projects and this brings us to the end of this small tutorial series on Git and GitHub!</p>
-  </li>
-</ul>
+	<span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;=</span> <span class="n">n</span><span class="p">;</span> <span class="n">i</span> <span class="o">++</span><span class="p">)</span> 
+		<span class="k">if</span><span class="p">(</span><span class="n">prime</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">)</span>
+			<span class="n">printf</span><span class="p">(</span><span class="s">"%d "</span><span class="p">,</span><span class="n">prime</span><span class="p">[</span><span class="n">i</span><span class="p">]);</span>
+<span class="p">}</span>
+</code></pre>
+</div>
 
+<p>That’s all for today! Kindly post any doubts that you’d have in the comments below!</p>
 
 	
 	<h4 class="pt-sans">Tags</h4>
 	
 		<!-- <a class="chip" href="/tags#"></a> -->
-		<a href="/tags#git" class="button orange-text" style="border: 1px solid orange; display: inline-block;">Git</a>
+		<a href="/tags#algorithms" class="button orange-text" style="border: 1px solid orange; display: inline-block;">Algorithms</a>
 	
 		<!-- <a class="chip" href="/tags#"></a> -->
-		<a href="/tags#github" class="button orange-text" style="border: 1px solid orange; display: inline-block;">GitHub</a>
-	
-		<!-- <a class="chip" href="/tags#"></a> -->
-		<a href="/tags#version control" class="button orange-text" style="border: 1px solid orange; display: inline-block;">Version Control</a>
+		<a href="/tags#data structures" class="button orange-text" style="border: 1px solid orange; display: inline-block;">Data Structures</a>
 	 
 	
 	<br><br>
@@ -194,23 +161,23 @@ This repository is the work of Salman and Hrily&lt;/p&gt;
 	</div>
 </div>
 
-	<div class="fb-comments" data-href="salman-bhai.github.io/blog//introduction-to-git-part-3/" data-width="500px" data-numposts="20">
+	<div class="fb-comments" data-href="salman-bhai.github.io/blog//sieve-of-eratosthenes/" data-width="500px" data-numposts="20">
 </div>
-	<!-- <div class="share">
-    <h3 class="pt-sans">Share</h3>
-    <a aria-label="Share on Twitter" href="https://twitter.com/intent/tweet?text=&quot;&quot;%20salman-bhai.github.io/blog/introduction-to-git-part-3/%20via%20&#64;&hashtags=Git,GitHub,Version Control,"
+	<section class="share">
+    <h3>Share</h3>
+    <a aria-label="Share on Twitter" href="https://twitter.com/intent/tweet?text=&quot;&quot;%20http://localhost:4000/blog/sieve-of-eratosthenes/%20via%20&#64;&hashtags=Algorithms,Data Structures,"
     onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;" title="Share on Twitter">
         <svg class="icon icon-twitter"><use xlink:href="#icon-twitter"></use></svg>
     </a>
-    <a aria-label="Share on Facebook" href="https://www.facebook.com/sharer/sharer.php?u=salman-bhai.github.io//blog//introduction-to-git-part-3/"
+    <a aria-label="Share on Facebook" href="https://www.facebook.com/sharer/sharer.php?u=http://localhost:4000//blog//sieve-of-eratosthenes/"
     onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;" title="Share on Facebook">
         <svg class="icon icon-facebook"><use xlink:href="#icon-facebook"></use></svg>
     </a>
-    <a aria-label="Share on Google Plus" href="https://plus.google.com/share?url=salman-bhai.github.io//blog//introduction-to-git-part-3/"
+    <a aria-label="Share on Google Plus" href="https://plus.google.com/share?url=http://localhost:4000//blog//sieve-of-eratosthenes/"
     onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;" title="Share on Google+">
         <svg class="icon icon-google-plus"><use xlink:href="#icon-google-plus"></use></svg>
     </a>
-</div> -->
+</section>
 
 </div>
 
