@@ -49,6 +49,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  ffi
   jekyll
   jekyll-feed
   minima

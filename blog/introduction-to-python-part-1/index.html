@@ -43,7 +43,7 @@
 						<li><a href="projects.html">Projects</a></li>
 						<li><a href="academics.html">Academics</a></li>
 						<li><a href="https://github.com/salman-bhai/Resume/blob/master/SS_Resume.pdf" target="_blank">Resume</a></li>
-						<li><a href="blog/">Blog</a></li>
+						<li><a href="/blog">Blog</a></li>
 					</ul>
 				</div>
 			</nav>
@@ -103,11 +103,9 @@
 	<span class="valign">March 7, 2017
 	</span>
 	</p>
-	<ul>
-  <li>Welcome to Part - I of the Tutorial Series Introduction to Python. This following series of tutorials  primarily deal about getting programmers with no programming experience to start using Python in their systems and showcase the power of Python across multiple domains and fields in Computer Science.</li>
-  <li>The aim at the end of these blog posts is to get readers acquainted with Python and to be able to use Python for any programming task that is needed across all domains.</li>
-  <li>This post is primarily divided into four parts:</li>
-</ul>
+	<p>Welcome to Part - I of the Tutorial Series Introduction to Python. This following series of tutorials  primarily deal about getting programmers with no programming experience to start using Python in their systems and showcase the power of Python across multiple domains and fields in Computer Science.</p>
+
+<p>The aim at the end of these blog posts is to get readers acquainted with Python and to be able to use Python for any programming task that is needed across all domains. This post is primarily divided into four parts:</p>
 <ol>
 	<li><b>About Python</b>: History of Python.</li>
 	<li><b>Why Python</b>: Reasons for rise of Python.</li>
@@ -116,92 +114,77 @@
 </ol>
 
 <h4 id="about-python">About Python</h4>
-<ul>
-  <li>Python is a general-purpose interactive, object-oriented, high-level yet at the same time interpreted programming language created in the period 1985-1990 by Guido van Rossum.</li>
-  <li>Python source code like one of the famous languages of the time Perl, is also available under the <a href="https://www.gnu.org/licenses/gpl-3.0.en.html">GNU General Public License</a>.</li>
-  <li>Python along with Ruby is basically designed for software programmers who need to learn programming from scratch or from start a language that focusses less on syntax and more on implementation</li>
-</ul>
+
+<p>Python is a general-purpose interactive, object-oriented, high-level yet at the same time interpreted programming language created in the period 1985-1990 by Guido van Rossum. Python source code like one of the famous languages of the time Perl, is also available under the <a href="https://www.gnu.org/licenses/gpl-3.0.en.html">GNU General Public License</a>.</p>
+
+<p>Python along with Ruby is basically designed for software programmers who need to learn programming from scratch or from start a language that focusses less on syntax and more on implementation  .</p>
 
 <h4 id="why-python">Why Python?</h4>
-<ul>
-  <li>Python is easy to read and understand, so it is often recommended as a starter langauge. Often it is used to teach people who have no programming experience whatsoever about programming.</li>
-  <li>Python is basically used in situations where the speed of the program does not matter. In general, Python is used for rapid prototyping as also making software on a faster basis.</li>
-  <li>Python has loads of application and almost every industry uses Python in some manner or the other! Python in enterprise can be used in scripting, systems monitoring, logging tools, security scripts, etc. It can do also be used for web development, server side development(Flask, Sanic, Django) as also for gaming.</li>
-</ul>
+
+<p>Python is easy to read and understand, so it is often recommended as a starter langauge. Often it is used to teach people who have no programming experience whatsoever about programming. Python is basically used in situations where the speed of the program does not matter. In general, Python is used for rapid prototyping as also making software on a faster basis.</p>
+
+<p>Python has loads of application and almost every industry uses Python in some manner or the other! Python in enterprise can be used in scripting, systems monitoring, logging tools, security scripts, etc. It can do also be used for web development, server side development(Flask, Sanic, Django) as also for gaming.</p>
 
 <h4 id="installation">Installation</h4>
 
-<ul>
-  <li>
-    <p>Python is installed by default on Ubuntu systems with Python 2.7 being the default version. Python 3.6 is currently installed by default in Ubuntu systems from Ubuntu 16.10 but for older versions of Ubuntu you can download the PPA using <code class="highlighter-rouge">apt-get</code>. <br /><br /></p>
-  </li>
-  <li>
-    <p>The following instructions can be used to download the PPA for Python 3.6.</p>
-  </li>
-</ul>
+<p>Python is installed by default on Ubuntu systems with Python 2.7 being the default version. Python 3.6 is currently installed by default in Ubuntu systems from Ubuntu 16.10 but for older versions of Ubuntu you can download the PPA using <b>apt-get</b>.</p>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash">sudo add-apt-repository ppa:jonathonf/python-3.6
+<p>The following instructions can be used to download the PPA for Python 3.6.</p>
+<div class="highlighter-rouge"><pre class="highlight"><code>sudo add-apt-repository ppa:jonathonf/python-3.6
 sudo apt-get update
-sudo apt-get install python3.6</code></pre></figure>
+sudo apt-get install python3.6
+</code></pre>
+</div>
 
-<ul>
-  <li>To check which python version you are currently using you can type in the following command:</li>
-</ul>
+<p>To check which python version you are currently using you can type in the following command:</p>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash">python --version</code></pre></figure>
+<div class="highlighter-rouge"><pre class="highlight"><code>python --version
+</code></pre>
+</div>
 
-<h5 style="text-align:left;">Note:</h5>
-<ul>
-  <li>In case you want to write your python programs in Python3 and follow along with this tutorial series(all programs in this tutorial series are in Python3), you can type in <code class="highlighter-rouge">python3</code> while running your Python programs instead of just <code class="highlighter-rouge">python</code>.</li>
-  <li>For example to check the Python version, you can type in the following commands:</li>
-</ul>
+<h4 id="note">Note</h4>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash">python3 --version</code></pre></figure>
+<p>In case you want to write your python programs in Python3 and follow along with this tutorial series(all programs in this tutorial series are in Python3), you can type in <em>python3</em> while running your Python programs instead of just <em>python</em>. For example to check the Python version, you can type in the following commands:</p>
 
-<ul>
-  <li>You will see that you would be getting the Python version as Python 3.x .</li>
-</ul>
+<div class="highlighter-rouge"><pre class="highlight"><code>python3 --version
+</code></pre>
+</div>
+
+<p>You will see that you would be getting the Python version as Python 3.x .</p>
 
 <h4 id="hello-world-in-python">Hello World in Python</h4>
 
-<ul>
-  <li>For people familiar with Imperative languages like C or Object Oriented languages like C++ or Java, a simple program like Hello World takes multiple lines of code. For example, a Hello World program in Java would look something like this.</li>
-</ul>
+<p>For people familiar with Imperative languages like C or Object Oriented languages like C++ or Java, a simple program like Hello World takes multiple lines of code. For example, a Hello World program in Java would look something like this.</p>
 
-<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">class</span> <span class="nc">HelloWorldApp</span> <span class="o">{</span> 
+<div class="language-java highlighter-rouge"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">HelloWorldApp</span> <span class="o">{</span> 
 	<span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span> 
 		<span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Hello World!"</span><span class="o">);</span> 
 		<span class="o">}</span> 
 	<span class="o">}</span>
-<span class="o">}</span></code></pre></figure>
+<span class="o">}</span>
+</code></pre>
+</div>
 
-<ul>
-  <li>However the same program in Python can be run from the Interactive Python Interpreter by typing the following commands in the terminal:
-<img src="/images/post4_img1.png" alt="Hello World in Python" /></li>
-  <li>
-    <p>That is all it takes to write a simple python program. Just one line is enough to write a simple Python program given the high level of abstraction that Python provides.</p>
-  </li>
-  <li>Python can also be written in your favourite text editor and save the name of the file as <code class="highlighter-rouge">hello-world.py</code>. Just open up your text editor and type in the following program.</li>
-</ul>
+<p>However the same program in Python can be run from the Interactive Python Interpreter by typing the following commands in the terminal:</p>
 
-<figure class="highlight"><pre><code class="language-python3" data-lang="python3">#!/usr/bin/python
+<p><img src="/images/post4_img1.png" alt="Hello World in Python" /></p>
 
-print("Hello World")</code></pre></figure>
+<p>That is all it takes to write a simple python program. Just one line is enough to write a simple Python program given the high level of abstraction that Python provides.</p>
 
-<ul>
-  <li>Now open up your terminal and type in the follwing command to run the program.</li>
-</ul>
+<p>Python can also be written in your favourite text editor and save the name of the file as <code class="highlighter-rouge">hello-world.py</code>. Just open up your text editor and type in the following program.</p>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash">python3 hello-world.py</code></pre></figure>
+<pre><code class="language-python3">#!/usr/bin/python
 
-<ul>
-  <li>Voila! You’ll find your program running smoothly and without a glitch. Make sure you do this properly and in case you are getting an error make sure you copied all the instructions properly!</li>
-</ul>
+print("Hello World")
+</code></pre>
 
-<h4 id="conclusion">Conclusion</h4>
-<ul>
-  <li>Thus we set up Python into our systems and even printed out a Hello World program using Python! In the next tutorial we’ll look at how to use Flow Control and Loops in Python.</li>
-</ul>
+<p>Now open up your terminal and type in the follwing command to run the program.</p>
+
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code>python3 hello-world.py
+</code></pre>
+</div>
+
+<p>Voila! You’ll find your program running smoothly and without a glitch. Make sure you do this properly and in case you are getting an error make sure you copied all the instructions properly!</p>
 
 	
 	<h4 class="pt-sans">Tags</h4>

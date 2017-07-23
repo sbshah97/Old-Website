@@ -43,7 +43,7 @@
 						<li><a href="projects.html">Projects</a></li>
 						<li><a href="academics.html">Academics</a></li>
 						<li><a href="https://github.com/salman-bhai/Resume/blob/master/SS_Resume.pdf" target="_blank">Resume</a></li>
-						<li><a href="blog/">Blog</a></li>
+						<li><a href="/blog">Blog</a></li>
 					</ul>
 				</div>
 			</nav>
@@ -103,28 +103,21 @@
 	<span class="valign">February 27, 2017
 	</span>
 	</p>
-	<ul>
-  <li>This post deals with the dreaded word of “Resolving Merge Conflicts” and how it isn’t as bad as we think it is!<br /></li>
-  <li>This often happens when multiple people work on the same branch or when multiple branches are in play and they don’t get pushed sequentially!<br /></li>
-  <li>The only thing you should remember in Git is you cannot break things. You can always go to your previous state and re-start your work again! It is saved as long as you push it properly!</li>
-  <li>Also, Git Merge Conflicts only occur on local systems not on the Git Server, so in case you are facing a Merge Conflict it will not stop your project, just your progress will be halted.</li>
-</ul>
+	<p>This post deals with the dreaded word of <b>Resolving Merge Conflicts</b> and how it isn’t as bad as we think it is! This often happens when multiple people work on the same branch or when multiple branches are in play and they don’t get pushed sequentially! The only thing you should remember in Git is you cannot break things. You can always go to your previous state and re-start your work again! It is saved as long as you push it properly!</p>
+
+<p>Also, Git Merge Conflicts only occur on local systems not on the Git Server, so in case you are facing a Merge Conflict it will not stop your project, just your progress will be halted.</p>
 
 <h5 id="what-are-merge-conflicts-and-how-do-they-occur">What are Merge Conflicts and how do they occur?</h5>
-<ul>
-  <li>Git being a Version Control System, the act of ‘merging’ is simply adding your changes that you’ve made to your copy of the project repository to the main project repository and almost most of the time this process goes on smoothly.<br /></li>
-  <li>However there is a case when two or more people try to access the same file and make changes to it, there is a chance that Git might not be able to figure out what to do and this is where it leads to Merge Conflicts happenning.<br /></li>
-  <li>Merge Conflicts usually occur in the case where ‘Delete Mode’ has occurred! If say, one user has deleted a file and another user has modified the contents of that file, then a Merge Conflict occurs!<br /></li>
-</ul>
+
+<p>Git being a Version Control System, the act of <b>merging</b> is simply adding your changes that you’ve made to your copy of the project repository to the main project repository and almost most of the time this process goes on smoothly. However there is a case when two or more people try to access the same file and make changes to it, there is a chance that Git might not be able to figure out what to do and this is where it leads to Merge Conflicts happenning.</p>
+
+<p>Merge Conflicts usually occur in the case where <b>Delete Mode</b> has occurred! If say, one user has deleted a file and another user has modified the contents of that file, then a Merge Conflict occurs!</p>
 
 <h5 id="how-to-resolve-a-merge-conflict">How to resolve a Merge Conflict?</h5>
 
-<ul>
-  <li>When faced with a Merge Conflict, the first step is to calm down and believe the end of the world isn’t here! After that try to understand what just happened.<br /></li>
-  <li>Open up your terminal and enter the command <code class="highlighter-rouge">git status</code> to see what has happened!</li>
-</ul>
+<p>When faced with a Merge Conflict, the first step is to calm down and believe the end of the world isn’t here! After that try to understand what just happened. Open up your terminal and enter the command <b>git status</b> to see what has happened!</p>
 
-<figure class="highlight"><pre><code class="language-git" data-lang="git">$ git status
+<div class="highlighter-rouge"><pre class="highlight"><code>$ git status
 # On branch contact-form
 # You have unmerged paths.
 #   (fix conflicts and run "git commit")
@@ -134,39 +127,33 @@
 #
 #       both modified:   src/team.html
 #
-no changes added to commit (use "git add" and/or "git commit -a")</code></pre></figure>
+no changes added to commit (use "git add" and/or "git commit -a")
+</code></pre>
+</div>
 
-<ul>
-  <li>In this example, you can see that since both the users modified the file called team.html in the src folder a merge conflict has occurred. Now you can go to the file and see where the conflict is! If you open the file you will see a line as follows:</li>
-</ul>
+<p>In this example, you can see that since both the users modified the file called team.html in the src folder a merge conflict has occurred. Now you can go to the file and see where the conflict is! If you open the file you will see a line as follows:</p>
 
-<figure class="highlight"><pre><code class="language-git" data-lang="git">&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
+<div class="highlighter-rouge"><pre class="highlight"><code>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
 &lt;p&gt; This repository is the work of Salman&lt;/p&gt;
 =======
 This repository is the work of Salman and Hrily&lt;/p&gt;
-&gt;&gt;&gt;&gt;&gt;&gt;&gt; development</code></pre></figure>
+&gt;&gt;&gt;&gt;&gt;&gt;&gt; development
+</code></pre>
+</div>
 
-<ul>
-  <li>The contents after the HEAD tilte originate from your current working branch. After the angle brackets, Git tells us where (from which branch) the changes came from. A line with “=======” separates the two conflicting changes.<br /></li>
-  <li>Now resolving them is a simple task. All you have to do is remove the angle markers and in place of them place the text that you need. The above text can simply be replaced with the following and the Merge Conflict is solved!</li>
-</ul>
+<p>The contents after the HEAD tilte originate from your current working branch. After the angle brackets, Git tells us where (from which branch) the changes came from. A line with <b>=======</b> separates the two conflicting changes. Now resolving them is a simple task. All you have to do is remove the angle markers and in place of them place the text that you need. The above text can simply be replaced with the following and the Merge Conflict is solved!</p>
 
-<figure class="highlight"><pre><code class="language-git" data-lang="git">&lt;p&gt; This repository is the work of Salman Shah and Hrily&lt;/p&gt;</code></pre></figure>
+<div class="highlighter-rouge"><pre class="highlight"><code>&lt;p&gt; This repository is the work of Salman Shah and Hrily&lt;/p&gt;
+</code></pre>
+</div>
 
-<ul>
-  <li>Now after you have done this, you need to mark your file as ‘resolved for Git Merge Conflicts’ To do that, you need to execute the command <code class="highlighter-rouge">git add &lt;filename&gt;</code>. In this case the command would be:</li>
-</ul>
+<p>Now after you have done this, you need to mark your file as ‘resolved for Git Merge Conflicts’ To do that, you need to execute the command <b>git add <filename>&lt;/&gt;. In this case the command would be:</filename></b></p>
 
-<figure class="highlight"><pre><code class="language-git" data-lang="git">git add src/team.html</code></pre></figure>
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code>git add src/team.html
+</code></pre>
+</div>
 
-<ul>
-  <li>
-    <p>With this we have solved the problem of resolving Merge Conflicts in Git!<br /></p>
-  </li>
-  <li>
-    <p>This is all that you need to start using Git and GitHub in your projects and this brings us to the end of this small tutorial series on Git and GitHub!</p>
-  </li>
-</ul>
+<p>With this we have solved the problem of resolving Merge Conflicts in Git! This is all that you need to start using Git and GitHub in your projects and this brings us to the end of this small tutorial series on Git and GitHub!</p>
 
 
 	

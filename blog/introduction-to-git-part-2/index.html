@@ -43,7 +43,7 @@
 						<li><a href="projects.html">Projects</a></li>
 						<li><a href="academics.html">Academics</a></li>
 						<li><a href="https://github.com/salman-bhai/Resume/blob/master/SS_Resume.pdf" target="_blank">Resume</a></li>
-						<li><a href="blog/">Blog</a></li>
+						<li><a href="/blog">Blog</a></li>
 					</ul>
 				</div>
 			</nav>
@@ -103,76 +103,60 @@
 	<span class="valign">February 23, 2017
 	</span>
 	</p>
-	<ul>
-  <li>A lot of times it is difficult to coordinate changes in a project while using Version Control especially when there are more than one contributors in a particular repository! At such times it is important to use a particular feature of Git called <strong>branch</strong> <br /><br /></li>
-</ul>
+	<p>A lot of times it is difficult to coordinate changes in a project while using Version Control especially when there are more than one contributors in a particular repository! At such times it is important to use a particular feature of Git called <b>branch</b>.</p>
 
 <h5 id="what-are-branches-and-how-to-use-them">What are branches and how to use them?</h5>
 
 <p><img src="/images/post2_img1.png" alt="git branch commands" /></p>
 
-<ul>
-  <li>Branches are a feature of Git used when multiple collaborators are working on the same project, but want to work on different parts of the project.<br /><br /></li>
-  <li>This is where the concept of branches in Git is particularly useful. A branch is like a copy of the original code which runs parlallely with other branches in the code repository! The default branch in a GitHub repository is called <strong>master</strong>. To create a new branch you need to execute the following command:</li>
-</ul>
+<p>Branches are a feature of Git used when multiple collaborators are working on the same project, but want to work on different parts of the project. This is where the concept of branches in Git is particularly useful. A branch is like a copy of the original code which runs parlallely with other branches in the code repository! The default branch in a GitHub repository is called <strong>master</strong>. To create a new branch you need to execute the following command:</p>
 
-<figure class="highlight"><pre><code class="language-git" data-lang="git">git checkout -b &lt;branch_name&gt;
-Switched to a new branch 'salman'</code></pre></figure>
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code>git checkout -b &lt;branch_name&gt;
+Switched to a new branch <span class="s1">'salman'</span>
+</code></pre>
+</div>
 
-<ul>
-  <li>In case you are looking to switch back to your <strong>master</strong> branch on your local repository, type in the following commands to get back again:</li>
-</ul>
+<p>In case you are looking to switch back to your <strong>master</strong> branch on your local repository, type in the following commands to get back again:</p>
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code>git checkout master
+git checkout &lt;branch_name&gt;
+</code></pre>
+</div>
 
-<figure class="highlight"><pre><code class="language-git" data-lang="git">git checkout master
-git checkout &lt;branch_name&gt;</code></pre></figure>
+<p>If you are looking to delete a branch first make sure you aren’t currently on that branch! Use <b>git checkout</b> to move to another branch and then use the following commands to delete the branch.</p>
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code>git branch -d &lt;branch_name&gt;
+</code></pre>
+</div>
 
-<ul>
-  <li>If you are looking to delete a branch first make sure you aren’t currently on that branch! Use <code class="highlighter-rouge">git checkout</code> to move to another branch and then use the following commands to delete the branch.</li>
-</ul>
-
-<figure class="highlight"><pre><code class="language-git" data-lang="git">git branch -d &lt;branch_name&gt;</code></pre></figure>
-
-<ul>
-  <li>In case your branch is not being deleted because you have certain unmerged changes and you really want to delete them without merging your changes, you can use the following instructions!</li>
-</ul>
-
-<figure class="highlight"><pre><code class="language-git" data-lang="git">git branch -D &lt;branch_name&gt;</code></pre></figure>
-
-<p><br /></p>
+<p>In case your branch is not being deleted because you have certain unmerged changes and you really want to delete them without merging your changes, you can use the following instructions!</p>
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code>git branch -D &lt;branch_name&gt;
+</code></pre>
+</div>
 
 <h5 id="how-to-sync-your-branch-with-the-master-branch">How to sync your branch with the Master branch</h5>
-<ul>
-  <li>If you are looking to sync your branch with your master, as in update the online changes that someone else has made to the <strong>master</strong> branch to your branch, type in the following commands:</li>
-</ul>
 
-<figure class="highlight"><pre><code class="language-git" data-lang="git">git pull origin master</code></pre></figure>
+<p>If you are looking to sync your branch with your master, as in update the online changes that someone else has made to the <strong>master</strong> branch to your branch, type in the following commands:</p>
+<pre><code class="language-git">git pull origin master
+</code></pre>
 
-<ul>
-  <li>P.S. This can be extended to all branches and isn’t restricted to the <strong>master</strong> branch alone!<br /></li>
-</ul>
+<p>P.S. This can be extended to all branches and isn’t restricted to the <strong>master</strong> branch alone!</p>
 
-<figure class="highlight"><pre><code class="language-git" data-lang="git">git pull origin &lt;branch_name&gt;</code></pre></figure>
-
-<p><br /></p>
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code>git pull origin &lt;branch_name&gt;
+</code></pre>
+</div>
 
 <h5 id="how-to-push-branches-on-github">How to push branches on GitHub</h5>
 
 <p><img src="/images/post2_img2.png" alt="Create GitHub Account" /></p>
 
-<ul>
-  <li>Once you have your local changes made and committed, it is essential for you to push them on GitHub so that ohers can review them as well! To do this you can simply push your branch on to GitHub just like you would push the master branch to GitHub!<br /></li>
-  <li>After you’re done working on them use the following commands to push your new branch on to GitHub.</li>
-</ul>
+<p>Once you have your local changes made and committed, it is essential for you to push them on GitHub so that ohers can review them as well! To do this you can simply push your branch on to GitHub just like you would push the master branch to GitHub! After you’re done working on them use the following commands to push your new branch on to GitHub.</p>
 
-<figure class="highlight"><pre><code class="language-git" data-lang="git">git add --all
-git commit -m "&lt;your_message&gt;"
-git push origin &lt;branch_name&gt;</code></pre></figure>
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code>git add --all
+git commit -m <span class="s2">"&lt;your_message&gt;"</span>
+git push origin &lt;branch_name&gt;
+</code></pre>
+</div>
 
-<p><br /></p>
-
-<ul>
-  <li>Check out the next tutorial to see how to resolve Merge Conflicts as and when you encounter them using Git.</li>
-</ul>
+<p>Check out the next tutorial to see how to resolve Merge Conflicts as and when you encounter them using Git.</p>
 
 	
 	<h4 class="pt-sans">Tags</h4>
