@@ -1,10 +1,10 @@
 ---
 layout: post
-title: "Introduction to Intrumentation Tests in Android using Espresso"
-description: "An Introduction to what Intrumentation Tests is and how to use it in Android with the Espresso framework"
+title: "How to use Travis for CI and CD"
+description: "An Introduction to what TRavis is and how automated testing reduces your work while debugging code"
 tags: 
-- Android
+- Travis CI/CD
 - Software Testing
 languages:
-- Java
+- Bash
 ---
