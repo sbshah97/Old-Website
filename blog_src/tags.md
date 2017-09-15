@@ -13,7 +13,7 @@ title: Tags
   {% if post.tags contains t %}
   <li>
     <span class="post-meta">{{ post.date | date: "%B %-d, %Y"  }}</span>
-    <a href="{{ post.url }}"><h5>{{ post.title }}</h5></a>
+    <a href="{{ site.baseurl }}/{{ post.url }}"><h5>{{ post.title }}</h5></a>
   </li>
   {% endif %}
 {% endfor %}
