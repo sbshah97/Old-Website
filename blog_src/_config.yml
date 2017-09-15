@@ -22,9 +22,11 @@ exclude:
 highlighter: rouge
 permalink: /:title/
 
-# SYntax Highlighting
+# Syntax Highlighting
 syntax-highlighting:
   enabled : true
+
+google_analytics: UA-106590424-1
 
 # html minify
 compress_html:
