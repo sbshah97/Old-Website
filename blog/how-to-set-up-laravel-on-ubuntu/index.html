@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html>
+
+		<head>
+		<title>How to set up Laravel on Ubuntu – Salman Shah - Blog</title>
+
+		<!--Meta tags-->
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width; initial-scale=1; maximum-scale=1">
+		<meta name="keywords" content="Salman Shah, Intern, Data Science, Machine Learning">
+		<meta name="author" content="Salman Shah">
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta property="fb:app_id" content="718668198321545" />
+		<!--Favicon-->
+		<link rel="shortcut icon" href="/images/favicon.ico">
+
+		<!--CSS Files-->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.min.css">
+		<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+		<link rel="stylesheet" href="/css/stylesheet.min.css">
+
+		<!--JavaScript files-->
+		<script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous">
+		</script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js">
+		</script>
+		<script type="text/javascript" src="/js/home.min.js"></script>
+
+		<script type="text/javascript">$crisp=[];CRISP_WEBSITE_ID="95f86ec5-a6d1-4659-a374-847f66e1c963";(function(){d=document;s=d.createElement("script");s.src="https://client.crisp.im/l.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();
+		</script>
+
+		
+
+	</head>
+
+	<body onload="init();">
+
+		<header>
+		<div class="navbar-fixed">
+			<nav class="transparent" role="navigation">
+				<div class="nav-wrapper container">
+					<a href="#" id="sidenav" data-activates="slide-out" class="button-collapse"><i class="material-icons">menu</i></a>
+					
+					<ul class="right hide-on-med-and-down">
+						<li><a href="/">Home</a></li>
+						<li><a href="/projects.html">Projects</a></li>
+						<li><a href="/academics.html">Academics</a></li>
+						<li><a href="https://github.com/salman-bhai/Resume/blob/master/SS_Resume.pdf" target="_blank">Resume</a></li>
+						<li><a href="/blog">Blog</a></li>
+					</ul>
+				</div>
+			</nav>
+					
+		</div>
+		<ul id="slide-out" class="side-nav">
+			<li class="bold"><a href="/" class="waves-effect waves-teal">Home</a>
+			</li>
+			<li class="bold"><a href="/projects.html" class="waves-effect waves-teal">Projects</a></li>
+			<li class="bold"><a href="/academics.html" class="waves-effect waves-teal">Academics</a>
+			</li>
+			<li class="bold"><a href="https://github.com/salman-bhai/Resume/blob/master/SS_Resume.pdf" target="_blank" class="waves-effect waves-teal">Resume</a>
+			</li>
+			<li class="bold"><a href="/blog" class="waves-effect waves-teal">Blog</a></li>
+		</ul>
+
+	</header>
+		<main>
+
+						<div class="blog-page-banner">
+				<div style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; background-color: rgba(0,0,0,0.6);">
+				</div>
+				<div style="position: absolute; bottom: 0;width: 100%; color: #fff;">
+					<div class="container">
+						<div class="row">
+							<h1 class="welcome-text">Welcome to my Blog!</h1>
+						</div>
+						<div class="row">
+							The following blog contains a brief overview of my work and the daily projects that I do.<br>
+							Please feel free to comment at the end of each article to give your valuable feedback. <br><br><br><br>
+						</div>
+						<div class="row" id="icons">
+						<a href="https://github.com/salman-bhai"><img class="responsive-image" src="/images/logo_github_white.png" alt="GitHub"></a>
+						<a href="https://www.linkedin.com/in/sbshah97"><img class="responsive-image" src="/images/logo_linkedin_white.png" alt="LinkedIn"></a>
+						<a href="https://www.facebook.com/salman.shah.92775"><img class="responsive-image" src="/images/logo_fb_white.png" alt="Facebook"></a>
+						<a href="https://www.instagram.com/salmanbhai_97/?hl=en"><img class="responsive-image" src="/images/logo_instagram_white.png" alt="Instagram"></a>
+						</div>
+					</div>	
+				</div>
+			</div>
+
+			
+			<!--Content for the blog-->
+			<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.9&appId=718668198321545";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+<div class="container flow-text">
+	<h2 class="pt-sans">How to set up Laravel on Ubuntu</h2>
+	<p class="post-meta valign-wrapper orange-text">
+	<i class="material-icons">today</i>
+	<span class="valign">September 22, 2017
+	</span>
+	</p>
+	<h2 id="what-is-laravel">What is Laravel?</h2>
+<p>Laravel is a simple PHP based framework which implements the <a href="https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93controller">Model View Controller</a> architectural pattern to allow complete organisation of code to deploy a web app. Laravel with its simple architecture makes common tasks such as authentication, routing, sessions and caching very simple. This allows developers to code more elegantly without compromising application functionality.</p>
+
+<blockquote>
+  <p>Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable, creative experience to be truly fulfilling. Laravel attempts to take the pain out of development by easing common tasks used in the majority of web projects, such as authentication, routing, sessions, and caching.</p>
+</blockquote>
+
+<h2 id="why-laravel">Why Laravel?</h2>
+
+<p>Among the major reasons why I personally favour Laravel are some of these:</p>
+
+<h4 id="1-artisan">1. Artisan</h4>
+
+<p>Laravel offers a builtin tool called Artisan which allows developers to interact with the Laravel instance using a command line that creates and handles the Laravel Project Environment. Artisan basically allows developers to avoid tasks that would have to be done manually and instead performs these tasks by itself!</p>
+
+<h4 id="2-mvc-support">2. MVC Support</h4>
+
+<p>Another reason which makes Laravel an amazing choice is MVC Architecture which allows developers to differentiate between logic and presentation/view. MVC in Laravel has its own set of functionality and allows for better performance and easier documentation.</p>
+
+<h4 id="3-blade-templates">3. Blade Templates</h4>
+
+<p>Blade Templating allows developers to work with the Views efficiently rather than writing inefficient code to do simple tasks like restrict the amount of words in a particular text. The blade engine also allows developers to avoid repetitive piece of codes like header and footer where the code can be simply called by the includes folder.</p>
+
+<h2 id="pre-requisite-installation">Pre-Requisite Installation</h2>
+
+<h4 id="warning-">Warning :</h4>
+<p>This tutorial assumes you’re working on a Linux environment and not any other Operating System. For other Operating Systems please look at the resources link for more information.</p>
+
+<p>Now as a pre-requisite, it is preferable that you install PHP7 on your local machine. You can do that by running the following commands.</p>
+
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code>sudo apt update
+sudo apt upgrade
+
+sudo apt install php libapache2-mod-php
+sudo apt install php-cli
+sudo apt install php-mysql
+</code></pre>
+</div>
+
+<p>The above commands install PHP7 on your system. Now to install required dependencies on your system.</p>
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code>sudo apt install curl php-curl php-mcrypt php-mbstring php-gettext php-gd
+</code></pre>
+</div>
+
+<p>After that you can enable mods by,</p>
+<div class="highlighter-rouge"><pre class="highlight"><code>sudo phpenmod mcrypt
+sudo phpenmod mbstring
+</code></pre>
+</div>
+
+<p>After that a PHP7 ZIP update needs to be installed for working with composer</p>
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code>sudo apt-get install php7.0-zip
+
+</code></pre>
+</div>
+
+<h2 id="installing-composer-and-laravel-via-composer">Installing Composer and Laravel via Composer</h2>
+
+<h4 id="installing-composer">Installing Composer</h4>
+
+<p>Composer installation can be done in a single command with the following command.</p>
+<div class="highlighter-rouge"><pre class="highlight"><code>curl -sS https://getcomposer.org/installer | sudo php -- --install-dir=/usr/local/bin --filename=composer
+</code></pre>
+</div>
+
+<p>The output for this will look something like this:
+<strong>Output</strong></p>
+<div class="highlighter-rouge"><pre class="highlight"><code>#!/usr/bin/env php
+All settings correct for using Composer
+Downloading...
+
+Composer successfully installed to: /usr/local/bin/composer
+Use it: php /usr/local/bin/composer
+</code></pre>
+</div>
+
+<p>To test if you’ve installed Composer, properly or not run the following command:</p>
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code>composer
+</code></pre>
+</div>
+
+<p>It should give you an appropriate output which should help you understand the output value.</p>
+
+<h4 id="installing-laravel-via-composer">Installing Laravel via Composer</h4>
+
+<p>Now you can install Laravel via Composer.</p>
+<div class="highlighter-rouge"><pre class="highlight"><code>composer global require "laravel/installer"
+</code></pre>
+</div>
+
+<p>As the documentation tells us,</p>
+
+<blockquote>
+  <p>Make sure to place the $HOME/.composer/vendor/bin directory (or the equivalent directory for your OS) in your $PATH so the laravel executable can be located by your system.</p>
+</blockquote>
+
+<p>Make sure you configure your path properly for the same and it needs to be updated along those lines! Take a look at your <strong>bashrc</strong> file for understanding how it works.</p>
+
+<p>To check if you’re laravel has been installed correctly or not run the following commad to check for the same.</p>
+
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code>laravel
+</code></pre>
+</div>
+
+<h4 id="troubleshooting">Troubleshooting</h4>
+
+<p>Sometimes when you install Laravel it runs the first time you install on the terminal. But in the next Terminal session you get an error like this:</p>
+
+<blockquote>
+  <p>-bash: laravel: command not found</p>
+</blockquote>
+
+<p>Now to resolve this enter the following command on your termainal and add the following line at the end of the bashrc file.</p>
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code>nano ~/.bashrc
+<span class="nb">export </span><span class="nv">PATH</span><span class="o">=</span><span class="s2">"~/.composer/vendor/bin:</span><span class="nv">$PATH</span><span class="s2">"</span> 
+</code></pre>
+</div>
+
+<p>After that refresh your terminal by entering the following command in the terminal.</p>
+<div class="highlighter-rouge"><pre class="highlight"><code>source ~/.bashrc 
+</code></pre>
+</div>
+
+<p>After that run the following command to verify if the path that you put is there or not.</p>
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code><span class="nb">echo</span> <span class="nv">$PATH</span>
+laravel
+</code></pre>
+</div>
+
+<h2 id="setting-up-your-first-project-in-laravel">Setting up your first project in Laravel</h2>
+
+<p>Setting up your first project in Laravel might invlove in some changes that you have to do in the configuration setting s of your Laravel environment.</p>
+
+<p>Firstly go to your terminal and enter the following commands.</p>
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code>laravel new website
+<span class="nb">cd </span>website
+</code></pre>
+</div>
+
+<p>Now once you enter the project repository enter the following commands to set up your local environment.</p>
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code>cp .env.example .env
+composer install
+</code></pre>
+</div>
+
+<p>After that go to the file path config/app.php and then change the line <em>‘debug’ =&gt; env(‘APP_DEBUG’, true),</em> to <em>‘debug’ =&gt; env(‘APP_DEBUG’, false),</em>.</p>
+
+<p>After that enter the following command to generate a valid 64 bit key to your project.</p>
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code>php artisan key:generate
+</code></pre>
+</div>
+
+<p>Now you are all set to run your first Laravel project. Waste no time and run the project by running the following command.</p>
+
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code>php artisan serve
+</code></pre>
+</div>
+
+<p>Open up the development environment in your favourite browser and start developing with Laravel.</p>
+
+<p>That’s all for this blog post. In case you have any doubts please feel free to leave your comments in the Comments section below. Would love to hear your feedback on this as well! Here are a set of resources that I’m attaching in case you need further help.</p>
+
+<h2 id="laravel-resources">Laravel Resources</h2>
+<ul>
+  <li><a href="https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93controller">Model View Controller</a></li>
+  <li><a href="https://laracasts.com/series/laravel-from-scratch-2017">Starting Laravel 5</a></li>
+  <li><a href="https://laravel.com/docs/5.4/installation">Laravel Documentation</a></li>
+</ul>
+
+	
+	<h4 class="pt-sans">Tags</h4>
+	
+		<!-- <a class="chip" href="/tags#"></a> -->
+		<a href="/" class="button orange-text" style="border: 1px solid orange; display: inline-block;">Laravel</a>
+	
+		<!-- <a class="chip" href="/tags#"></a> -->
+		<a href="/" class="button orange-text" style="border: 1px solid orange; display: inline-block;">Ubuntu</a>
+	 
+	
+	<br><br>
+	<h3 class="pt-sans">About the Author</h2>
+<div class="row">
+	<div class="col s12 m3 l3">
+		<img src="https://media.licdn.com/mpr/mpr/shrinknp_200_200/AAEAAQAAAAAAAAj3AAAAJGY4ZDFkYzY5LTJiZTgtNGM1My1hZDU4LWVjMjI1ZWViMDY4NQ.jpg" class="responsive-img circle" alt="Salman Shah">
+	</div>
+	<div class="col s12 m9 l9">
+		<h4 class="pt-sans">Salman Shah</h4>
+		<p class="flow-text">My life mantra: Eat, Sleep, Code Repeat :p</p>
+	</div>
+</div>
+
+	<div class="fb-comments" data-href="salman-bhai.github.io/blog//how-to-set-up-laravel-on-ubuntu/" data-width="500px" data-numposts="20">
+</div>
+	<!-- <div class="share">
+    <h3 class="pt-sans">Share</h3>
+    <a aria-label="Share on Twitter" href="https://twitter.com/intent/tweet?text=&quot;&quot;%20salman-bhai.github.io/blog/how-to-set-up-laravel-on-ubuntu/%20via%20&#64;&hashtags=Laravel,Ubuntu,"
+    onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;" title="Share on Twitter">
+        <svg class="icon icon-twitter"><use xlink:href="#icon-twitter"></use></svg>
+    </a>
+    <a aria-label="Share on Facebook" href="https://www.facebook.com/sharer/sharer.php?u=salman-bhai.github.io//blog//how-to-set-up-laravel-on-ubuntu/"
+    onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;" title="Share on Facebook">
+        <svg class="icon icon-facebook"><use xlink:href="#icon-facebook"></use></svg>
+    </a>
+    <a aria-label="Share on Google Plus" href="https://plus.google.com/share?url=salman-bhai.github.io//blog//how-to-set-up-laravel-on-ubuntu/"
+    onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;" title="Share on Google+">
+        <svg class="icon icon-google-plus"><use xlink:href="#icon-google-plus"></use></svg>
+    </a>
+</div> -->
+
+</div>
+
+		</main>
+
+				<footer class="orange">
+			
+			<div class="row center">
+				<div class="col s12 m4 l4">
+					<h4 class="welcome-text white-text">Links</h4>
+					<div class="row">
+						<div class="icon-image" id="icons">
+							<a href="https://github.com/salman-bhai"><img class="responsive-image" src="/images/logo_github_white.png" alt="GitHub"></a>
+							<a href="https://www.linkedin.com/in/sbshah97"><img class="responsive-image" src="/images/logo_linkedin_white.png" alt="LinkedIn"></a>
+							<a href="https://www.facebook.com/salman.shah.92775"><img class="responsive-image" src="/images/logo_fb_white.png" alt="Facebook"></a>
+							<a href="https://www.instagram.com/salmanbhai_97/?hl=en"><img class="responsive-image" src="/images/logo_instagram_white.png" alt="Instagram"></a>
+						</div>							
+					</div>
+				</div>
+
+				<div class="col s12 m4 l4 right flow-text">
+					<div class="contact">
+						<h4 class="white-text">Contact</h4>
+					</div>
+					<div class="row">
+							<p class="white-text" style="font-size: 18px;">Salman Shah, Room D209, Mega Tower 3, NITK Hostels, Srinivas Nagar, Surathkal, Mangalore, Karnataka - 575025.</p>
+					</div>
+				</div>
+			</div>
+
+		</footer>
+
+	</body>
+</html>

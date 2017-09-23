@@ -1,4 +1,179 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.5.1">Jekyll</generator><link href="salman-bhai.github.io/blog/feed.xml" rel="self" type="application/atom+xml" /><link href="salman-bhai.github.io/blog/" rel="alternate" type="text/html" /><updated>2017-09-16T02:52:33+05:30</updated><id>salman-bhai.github.io/blog/</id><title type="html">Salman Shah - Blog</title><subtitle>This is my technical blog where I'll be sharing insights to some of the projects that I have undertaken.</subtitle><entry><title type="html">How to use Travis for CI and CD</title><link href="salman-bhai.github.io/blog/how-to-use-travis-ci/" rel="alternate" type="text/html" title="How to use Travis for CI and CD" /><published>2017-09-15T00:00:00+05:30</published><updated>2017-09-15T00:00:00+05:30</updated><id>salman-bhai.github.io/blog/how-to-use-travis-ci</id><content type="html" xml:base="salman-bhai.github.io/blog/how-to-use-travis-ci/"></content><author><name></name></author><category term="Travis CI/CD" /><category term="Software Testing" /><summary type="html"></summary></entry><entry><title type="html">Introduction to Intrumentation Tests in Android using Espresso</title><link href="salman-bhai.github.io/blog/ui-testing-android/" rel="alternate" type="text/html" title="Introduction to Intrumentation Tests in Android using Espresso" /><published>2017-07-18T00:00:00+05:30</published><updated>2017-07-18T00:00:00+05:30</updated><id>salman-bhai.github.io/blog/ui-testing-android</id><content type="html" xml:base="salman-bhai.github.io/blog/ui-testing-android/">&lt;p&gt;In the &lt;a href=&quot;/blog/unit-testing-android/&quot;&gt;previous tutorial&lt;/a&gt;, the article how to write a simple Unit Test for Android. This article however deals with Instrumentation Tests and how to get started with them for Android. Like the previous article, for this article we will re-use the same simple &lt;a href=&quot;https://github.com/salman-bhai/Calculator-Demo-App/tree/ui-testing&quot;&gt;Calculator App&lt;/a&gt; that we built.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.5.1">Jekyll</generator><link href="salman-bhai.github.io/blog/feed.xml" rel="self" type="application/atom+xml" /><link href="salman-bhai.github.io/blog/" rel="alternate" type="text/html" /><updated>2017-09-23T12:04:03+05:30</updated><id>salman-bhai.github.io/blog/</id><title type="html">Salman Shah - Blog</title><subtitle>This is my technical blog where I'll be sharing insights to some of the projects that I have undertaken.</subtitle><entry><title type="html">How to set up Laravel on Ubuntu</title><link href="salman-bhai.github.io/blog/how-to-set-up-laravel-on-ubuntu/" rel="alternate" type="text/html" title="How to set up Laravel on Ubuntu" /><published>2017-09-22T00:00:00+05:30</published><updated>2017-09-22T00:00:00+05:30</updated><id>salman-bhai.github.io/blog/how-to-set-up-laravel-on-ubuntu</id><content type="html" xml:base="salman-bhai.github.io/blog/how-to-set-up-laravel-on-ubuntu/">&lt;h2 id=&quot;what-is-laravel&quot;&gt;What is Laravel?&lt;/h2&gt;
+&lt;p&gt;Laravel is a simple PHP based framework which implements the &lt;a href=&quot;https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93controller&quot;&gt;Model View Controller&lt;/a&gt; architectural pattern to allow complete organisation of code to deploy a web app. Laravel with its simple architecture makes common tasks such as authentication, routing, sessions and caching very simple. This allows developers to code more elegantly without compromising application functionality.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable, creative experience to be truly fulfilling. Laravel attempts to take the pain out of development by easing common tasks used in the majority of web projects, such as authentication, routing, sessions, and caching.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&quot;why-laravel&quot;&gt;Why Laravel?&lt;/h2&gt;
+
+&lt;p&gt;Among the major reasons why I personally favour Laravel are some of these:&lt;/p&gt;
+
+&lt;h4 id=&quot;1-artisan&quot;&gt;1. Artisan&lt;/h4&gt;
+
+&lt;p&gt;Laravel offers a builtin tool called Artisan which allows developers to interact with the Laravel instance using a command line that creates and handles the Laravel Project Environment. Artisan basically allows developers to avoid tasks that would have to be done manually and instead performs these tasks by itself!&lt;/p&gt;
+
+&lt;h4 id=&quot;2-mvc-support&quot;&gt;2. MVC Support&lt;/h4&gt;
+
+&lt;p&gt;Another reason which makes Laravel an amazing choice is MVC Architecture which allows developers to differentiate between logic and presentation/view. MVC in Laravel has its own set of functionality and allows for better performance and easier documentation.&lt;/p&gt;
+
+&lt;h4 id=&quot;3-blade-templates&quot;&gt;3. Blade Templates&lt;/h4&gt;
+
+&lt;p&gt;Blade Templating allows developers to work with the Views efficiently rather than writing inefficient code to do simple tasks like restrict the amount of words in a particular text. The blade engine also allows developers to avoid repetitive piece of codes like header and footer where the code can be simply called by the includes folder.&lt;/p&gt;
+
+&lt;h2 id=&quot;pre-requisite-installation&quot;&gt;Pre-Requisite Installation&lt;/h2&gt;
+
+&lt;h4 id=&quot;warning-&quot;&gt;Warning :&lt;/h4&gt;
+&lt;p&gt;This tutorial assumes you’re working on a Linux environment and not any other Operating System. For other Operating Systems please look at the resources link for more information.&lt;/p&gt;
+
+&lt;p&gt;Now as a pre-requisite, it is preferable that you install PHP7 on your local machine. You can do that by running the following commands.&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo apt update
+sudo apt upgrade
+
+sudo apt install php libapache2-mod-php
+sudo apt install php-cli
+sudo apt install php-mysql
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;The above commands install PHP7 on your system. Now to install required dependencies on your system.&lt;/p&gt;
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo apt install curl php-curl php-mcrypt php-mbstring php-gettext php-gd
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;After that you can enable mods by,&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo phpenmod mcrypt
+sudo phpenmod mbstring
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;After that a PHP7 ZIP update needs to be installed for working with composer&lt;/p&gt;
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo apt-get install php7.0-zip
+
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&quot;installing-composer-and-laravel-via-composer&quot;&gt;Installing Composer and Laravel via Composer&lt;/h2&gt;
+
+&lt;h4 id=&quot;installing-composer&quot;&gt;Installing Composer&lt;/h4&gt;
+
+&lt;p&gt;Composer installation can be done in a single command with the following command.&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;curl -sS https://getcomposer.org/installer | sudo php -- --install-dir=/usr/local/bin --filename=composer
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;The output for this will look something like this:
+&lt;strong&gt;Output&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;#!/usr/bin/env php
+All settings correct for using Composer
+Downloading...
+
+Composer successfully installed to: /usr/local/bin/composer
+Use it: php /usr/local/bin/composer
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;To test if you’ve installed Composer, properly or not run the following command:&lt;/p&gt;
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;composer
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;It should give you an appropriate output which should help you understand the output value.&lt;/p&gt;
+
+&lt;h4 id=&quot;installing-laravel-via-composer&quot;&gt;Installing Laravel via Composer&lt;/h4&gt;
+
+&lt;p&gt;Now you can install Laravel via Composer.&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;composer global require &quot;laravel/installer&quot;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;As the documentation tells us,&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Make sure to place the $HOME/.composer/vendor/bin directory (or the equivalent directory for your OS) in your $PATH so the laravel executable can be located by your system.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Make sure you configure your path properly for the same and it needs to be updated along those lines! Take a look at your &lt;strong&gt;bashrc&lt;/strong&gt; file for understanding how it works.&lt;/p&gt;
+
+&lt;p&gt;To check if you’re laravel has been installed correctly or not run the following commad to check for the same.&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;laravel
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h4 id=&quot;troubleshooting&quot;&gt;Troubleshooting&lt;/h4&gt;
+
+&lt;p&gt;Sometimes when you install Laravel it runs the first time you install on the terminal. But in the next Terminal session you get an error like this:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;-bash: laravel: command not found&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Now to resolve this enter the following command on your termainal and add the following line at the end of the bashrc file.&lt;/p&gt;
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;nano ~/.bashrc
+&lt;span class=&quot;nb&quot;&gt;export &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;PATH&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;~/.composer/vendor/bin:&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$PATH&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt; 
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;After that refresh your terminal by entering the following command in the terminal.&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;source ~/.bashrc 
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;After that run the following command to verify if the path that you put is there or not.&lt;/p&gt;
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$PATH&lt;/span&gt;
+laravel
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&quot;setting-up-your-first-project-in-laravel&quot;&gt;Setting up your first project in Laravel&lt;/h2&gt;
+
+&lt;p&gt;Setting up your first project in Laravel might invlove in some changes that you have to do in the configuration setting s of your Laravel environment.&lt;/p&gt;
+
+&lt;p&gt;Firstly go to your terminal and enter the following commands.&lt;/p&gt;
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;laravel new website
+&lt;span class=&quot;nb&quot;&gt;cd &lt;/span&gt;website
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Now once you enter the project repository enter the following commands to set up your local environment.&lt;/p&gt;
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;cp .env.example .env
+composer install
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;After that go to the file path config/app.php and then change the line &lt;em&gt;‘debug’ =&amp;gt; env(‘APP_DEBUG’, true),&lt;/em&gt; to &lt;em&gt;‘debug’ =&amp;gt; env(‘APP_DEBUG’, false),&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;After that enter the following command to generate a valid 64 bit key to your project.&lt;/p&gt;
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;php artisan key:generate
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Now you are all set to run your first Laravel project. Waste no time and run the project by running the following command.&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;php artisan serve
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Open up the development environment in your favourite browser and start developing with Laravel.&lt;/p&gt;
+
+&lt;p&gt;That’s all for this blog post. In case you have any doubts please feel free to leave your comments in the Comments section below. Would love to hear your feedback on this as well! Here are a set of resources that I’m attaching in case you need further help.&lt;/p&gt;
+
+&lt;h2 id=&quot;laravel-resources&quot;&gt;Laravel Resources&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93controller&quot;&gt;Model View Controller&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://laracasts.com/series/laravel-from-scratch-2017&quot;&gt;Starting Laravel 5&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://laravel.com/docs/5.4/installation&quot;&gt;Laravel Documentation&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><author><name></name></author><category term="Laravel" /><category term="Ubuntu" /><summary type="html">What is Laravel? Laravel is a simple PHP based framework which implements the Model View Controller architectural pattern to allow complete organisation of code to deploy a web app. Laravel with its simple architecture makes common tasks such as authentication, routing, sessions and caching very simple. This allows developers to code more elegantly without compromising application functionality.</summary></entry><entry><title type="html">How to use Travis for CI and CD</title><link href="salman-bhai.github.io/blog/how-to-use-travis-ci/" rel="alternate" type="text/html" title="How to use Travis for CI and CD" /><published>2017-09-15T00:00:00+05:30</published><updated>2017-09-15T00:00:00+05:30</updated><id>salman-bhai.github.io/blog/how-to-use-travis-ci</id><content type="html" xml:base="salman-bhai.github.io/blog/how-to-use-travis-ci/">&lt;h2 id=&quot;what-is-cicl-and-why-is-it-needed&quot;&gt;What is CI/CL and why is it needed?&lt;/h2&gt;
+
+&lt;h2 id=&quot;what-is-travis-ci&quot;&gt;What is Travis CI?&lt;/h2&gt;
+
+&lt;h2 id=&quot;why-travis-ci&quot;&gt;Why Travis CI?&lt;/h2&gt;
+
+&lt;h2 id=&quot;using-travis-for-your-first-github-project&quot;&gt;Using Travis for your first Github project?&lt;/h2&gt;
+
+&lt;h2 id=&quot;resources&quot;&gt;Resources&lt;/h2&gt;</content><author><name></name></author><category term="Travis CI/CD" /><category term="Software Testing" /><summary type="html">What is CI/CL and why is it needed?</summary></entry><entry><title type="html">Introduction to Intrumentation Tests in Android using Espresso</title><link href="salman-bhai.github.io/blog/ui-testing-android/" rel="alternate" type="text/html" title="Introduction to Intrumentation Tests in Android using Espresso" /><published>2017-07-18T00:00:00+05:30</published><updated>2017-07-18T00:00:00+05:30</updated><id>salman-bhai.github.io/blog/ui-testing-android</id><content type="html" xml:base="salman-bhai.github.io/blog/ui-testing-android/">&lt;p&gt;In the &lt;a href=&quot;/blog/unit-testing-android/&quot;&gt;previous tutorial&lt;/a&gt;, the article how to write a simple Unit Test for Android. This article however deals with Instrumentation Tests and how to get started with them for Android. Like the previous article, for this article we will re-use the same simple &lt;a href=&quot;https://github.com/salman-bhai/Calculator-Demo-App/tree/ui-testing&quot;&gt;Calculator App&lt;/a&gt; that we built.&lt;/p&gt;
 
 &lt;p&gt;&lt;em&gt;Instrumentation tests they are also into the Junit package, but the control of the Android API is quite total because Instrumentation Tests are instantiated in the system before any application code is run, and to test you need to open the real application(emulator or a phone connected with USB).&lt;/em&gt;&lt;/p&gt;
 
