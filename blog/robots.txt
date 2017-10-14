@@ -1,1 +1,1 @@
-Sitemap: salman-bhai.github.io/blog/sitemap.xml
+Sitemap: https://salman-bhai.github.io/blog/sitemap.xml

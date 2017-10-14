@@ -2,7 +2,7 @@
 title: Salman Shah - Blog
 description: This is my technical blog where I'll be sharing insights to some of the projects that I have undertaken.
 baseurl: "/blog" # the subpath of your site, e.g. /blog
-url: "salman-bhai.github.io" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://salman-bhai.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 
 #User Settings
 username: Salman Shah
