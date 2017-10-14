@@ -1,5 +1,1 @@
-User-agent: *
-
-Disallow: /blog_src/ /css/ /images/ /js/ /scripts/
-
-Allow: / /blog/
+Sitemap: salman-bhai.github.io/blog/sitemap.xml
