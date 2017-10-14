@@ -1,0 +1,5 @@
+User-agent: *
+
+Disallow: /blog_src/ /css/ /images/ /js/ /scripts/
+
+Allow: / /blog/
