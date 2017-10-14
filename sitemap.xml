@@ -13,13 +13,13 @@
   <priority>1.00</priority>
 </url>
 <url>
-  <loc>https://salman-bhai.github.io/projects.html</loc>
+  <loc>https://salman-bhai.github.io/projects</loc>
   <lastmod>2017-09-23T06:39:16+00:00</lastmod>
   <changefreq>weekly</changefreq>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://salman-bhai.github.io/academics.html</loc>
+  <loc>https://salman-bhai.github.io/academics</loc>
   <lastmod>2017-09-23T06:39:16+00:00</lastmod>
   <changefreq>weekly</changefreq>
   <priority>0.80</priority>
@@ -29,65 +29,5 @@
   <lastmod>2017-09-23T06:39:16+00:00</lastmod>
   <changefreq>weekly</changefreq>
   <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://salman-bhai.github.io/index.html</loc>
-  <lastmod>2017-09-23T06:39:16+00:00</lastmod>
-  <changefreq>weekly</changefreq>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://salman-bhai.github.io/blog/how-to-set-up-laravel-on-ubuntu/</loc>
-  <lastmod>2017-09-23T06:39:16+00:00</lastmod>
-  <changefreq>weekly</changefreq>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://salman-bhai.github.io/blog/how-to-use-travis-ci/</loc>
-  <lastmod>2017-09-23T06:39:16+00:00</lastmod>
-  <changefreq>weekly</changefreq>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://salman-bhai.github.io/blog/ui-testing-android/</loc>
-  <lastmod>2017-09-23T06:39:16+00:00</lastmod>
-  <changefreq>weekly</changefreq>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://salman-bhai.github.io/blog/unit-testing-android/</loc>
-  <lastmod>2017-09-23T06:39:16+00:00</lastmod>
-  <changefreq>weekly</changefreq>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://salman-bhai.github.io/blog/sieve-of-eratosthenes/</loc>
-  <lastmod>2017-09-23T06:39:16+00:00</lastmod>
-  <changefreq>weekly</changefreq>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://salman-bhai.github.io/blog/introduction-to-python-part-1/</loc>
-  <lastmod>2017-09-23T06:39:16+00:00</lastmod>
-  <changefreq>weekly</changefreq>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://salman-bhai.github.io/blog/introduction-to-git-part-3/</loc>
-  <lastmod>2017-09-23T06:39:16+00:00</lastmod>
-  <changefreq>weekly</changefreq>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://salman-bhai.github.io/blog/introduction-to-git-part-2/</loc>
-  <lastmod>2017-09-23T06:39:16+00:00</lastmod>
-  <changefreq>weekly</changefreq>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://salman-bhai.github.io/blog/introduction-to-git/</loc>
-  <lastmod>2017-09-23T06:39:16+00:00</lastmod>
-  <changefreq>weekly</changefreq>
-  <priority>0.64</priority>
 </url>
 </urlset>
