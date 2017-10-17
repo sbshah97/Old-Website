@@ -1,15 +1,23 @@
 function init_home() {
 	$( document ).ready(function(){
+		
 		$('.button-collapse').sideNav({
 		      closeOnClick: true
 		    }
 		  );
+     //    $('.carousel').carousel(); //carousel init
+    	// $('.carousel-slider').carousel({
+    	// 	fullWidth: true,
+    	// 	indicators: true
+    	// });
+    	// console.log("Called"); 
 	});	
 	$(document).scroll(function() { 
 		var $nav = $('.navbar-fixed');
 		$nav.find('nav').toggleClass('orange', $(this).scrollTop() > $('.home-page-banner').height());
 		$nav.find('nav').toggleClass('transparent', $(this).scrollTop() < $('.home-page-banner').height());
     });
+
 }
 
 function init_projects() {
