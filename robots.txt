@@ -1,3 +1,6 @@
 
 User-agent: *
-Sitemap: https://salman-bhai.github.io/sitemap.xml
+
+Disallow: /blog_src/ /css/ /images/ /js/ /scripts/
+
+Allow: / /blog/ 
