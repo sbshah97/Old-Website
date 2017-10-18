@@ -62,15 +62,42 @@
 		ga('send', 'pageview');
 	</script>
 
-		<script type="application/ld+json">
-		{
-			"@context": "https://salman-bhai.github.io",
-			"@type": "Person",
-			"url": "https://salman-bhai.github.io",
-			"name": "Salman Shah",
-			"email": "sbs.191197@gmail.com"
-		}
-		</script>
+	<script type="application/ld+json">
+	{
+		"@context": "https://salman-bhai.github.io",
+		"@type": "Person",
+		"url": "https://salman-bhai.github.io",
+		"name": "Salman Shah",
+		"email": "sbs.191197@gmail.com"
+	}
+	</script>
+
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+
+        var data = google.visualization.arrayToDataTable([
+          ['Project Type', 'Number of Projects'],
+          ['Android', 3],
+          ['Web', 8],
+          ['Data Science', 6],
+          ['Systems', 3],
+        ]);
+
+        var options = {
+          title: 'Projects Distribution'
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+
+        chart.draw(data, options);
+      }
+    </script>
+  </head>
+
 
 </head>
 
@@ -130,6 +157,15 @@
 		</div>
 
 		<br><br>
+
+		<div class="container">
+			<div class="row center">
+				<div class="col s12 m6 l6">
+					<div id="piechart">	
+					</div>
+				</div>
+		    </div>
+		</div>
 
 		<div class="container">
 			<div class="card-horizontal indicator" style="z-index:1">

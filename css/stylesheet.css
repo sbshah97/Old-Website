@@ -1,3 +1,5 @@
+/*Main CSS Code*/
+
 .home-page-banner {
 	margin-top: -64px;
 	width: 100%;
@@ -37,8 +39,9 @@
 }
 
 .pt-sans {
-	font-family: 'PT Sans', sans-serif;
-	font-weight: bold;
+  text-align:center;
+  text-shadow:0 1px white;
+  color:#02303F;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -190,24 +193,32 @@ img {
 .highlighter-rouge .vi { color: #268bd2 } /* Name.Variable.Instance */
 .highlighter-rouge .il { color: #2aa198 } /* Literal.Number.Integer.Long */
 
-/*pre,
-code {
-    font-size: 15px;
-    border: 1px solid $grey-color-light;
-    border-radius: 3px;
+.quote-carousel {
+  height: 220px !important;
+  max-width: 85vw;
+  width: 100%;
 }
-
-code {
-    padding: 1px 5px;
+@media screen and (max-width: 600px) {
+  .quote-carousel {
+    height: 340px !important;
+  }
 }
-
-pre {
-    padding: 8px 12px;
-    overflow-x: auto;
-
-    > code {
-        border: 0;
-        padding-right: 0;
-        padding-left: 0;
-    }
-}*/
+ 
+.img-testimonial {
+  width: 120px;
+  height: auto;
+  max-width: 150px;
+  background-color: orange;
+  border-radius: 50%;
+}
+ 
+.indicator-item {
+  background-color: #262626 !important;
+}
+.indicator-item.active {
+  background-color: orange !important;
+}
+ 
+blockquote {
+  border-left-color: orange;
+}
